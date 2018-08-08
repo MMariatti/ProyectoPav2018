@@ -63,5 +63,10 @@ namespace ScheDulJ
         {
             txtUsuarioInsert.Text = "";
         }
+
+        private void btnExitLogin_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }
