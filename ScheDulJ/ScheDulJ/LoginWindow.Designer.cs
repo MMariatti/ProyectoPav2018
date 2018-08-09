@@ -1,6 +1,6 @@
 ﻿namespace ScheDulJ
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUsuarioInsert = new System.Windows.Forms.TextBox();
             this.txtPasswordInsert = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(340, 340);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(104, 37);
+            this.btnLogin.Size = new System.Drawing.Size(104, 38);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Iniciar Sesion";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -63,7 +63,6 @@
             this.txtUsuarioInsert.TabIndex = 3;
             this.txtUsuarioInsert.Text = "Usuario";
             this.txtUsuarioInsert.Click += new System.EventHandler(this.txtUsuarioInsert_Clicked);
-            this.txtUsuarioInsert.TextChanged += new System.EventHandler(this.txtUsuarioInsert_TextChanged);
             // 
             // txtPasswordInsert
             // 
@@ -75,7 +74,6 @@
             this.txtPasswordInsert.TabIndex = 4;
             this.txtPasswordInsert.Text = "Contrasena ";
             this.txtPasswordInsert.Click += new System.EventHandler(this.txtPasswordInsert_Clicked);
-            this.txtPasswordInsert.TextChanged += new System.EventHandler(this.txtPasswordInsert_TextChanged);
             // 
             // imgLoginBackBox
             // 
@@ -92,7 +90,7 @@
             this.btnExitLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitLogin.Location = new System.Drawing.Point(668, 512);
             this.btnExitLogin.Name = "btnExitLogin";
-            this.btnExitLogin.Size = new System.Drawing.Size(104, 37);
+            this.btnExitLogin.Size = new System.Drawing.Size(104, 38);
             this.btnExitLogin.TabIndex = 6;
             this.btnExitLogin.Text = "Salir";
             this.btnExitLogin.UseVisualStyleBackColor = true;
@@ -119,7 +117,7 @@
             this.imgPasswordImage.TabIndex = 8;
             this.imgPasswordImage.TabStop = false;
             // 
-            // frmLogin
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,9 +132,11 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.imgLoginBackBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScheDulJ-Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLoginBackBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUserImage)).EndInit();

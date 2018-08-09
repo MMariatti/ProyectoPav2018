@@ -18,3 +18,14 @@ C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\Proyec
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.pdb
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe.config
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.pdb
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csprojAssemblyReference.cache
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.frmLogin.resources
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Properties.Resources.resources
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.GenerateResource.cache
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.exe
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.pdb
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.FrmMainMenu.resources

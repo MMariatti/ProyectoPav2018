@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ScheDulJ
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
-        }
-
-        private void lblPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUser_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -32,41 +22,46 @@ namespace ScheDulJ
             
         }
 
-        private void txtUsuarioInsert_TextChanged(object sender, EventArgs e)
-        {
-            
-         }
-
-        private void txtPasswordInsert_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txtPasswordInsert_Clicked(object sender, EventArgs e)
         {
-            txtPasswordInsert.Text = "";
+            txtPasswordInsert.Text = string.Empty;
             txtPasswordInsert.UseSystemPasswordChar = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsuarioInsert.Text == "") {
-                MessageBox.Show("Debe Ingresar el Usuario");
-            if (txtPasswordInsert.Text == "")
-                {
-                MessageBox.Show("Debe Ingresar la Contrasena"); 
-                }
+            if (txtUsuarioInsert.Text == string.Empty || txtPasswordInsert.Text == string.Empty) {
+                MessageBox.Show("Ingrese Usuario y/o Contrasena" , "Error al Iniciar Sesion" , MessageBoxButtons.OK , MessageBoxIcon.Error);
+            }
+            else
+            {
+                //Logueo satisfactorio, creacion de instancia de menu principal 
+                FrmMainMenu frmMainMenu;
+                frmMainMenu = new FrmMainMenu();
+                frmMainMenu.Show();
+                //Minimizacion del frmLogin y eliminacion del TaskBar 
+                this.WindowState = FormWindowState.Minimized;
+                this.ShowInTaskbar = false; 
             }
         }
 
+
         private void txtUsuarioInsert_Clicked(object sender, EventArgs e)
         {
-            txtUsuarioInsert.Text = "";
+            txtUsuarioInsert.Text = string.Empty;
         }
 
         private void btnExitLogin_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
         }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro de cerrar la aplicacion", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
+        }     
     }
 }
