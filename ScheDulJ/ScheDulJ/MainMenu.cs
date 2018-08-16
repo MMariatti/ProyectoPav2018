@@ -38,7 +38,10 @@ namespace ScheDulJ
 
         private void btnExitMainMenu_Click(object sender, EventArgs e)
         {
-                Environment.Exit(1);
+          if (MessageBox.Show("Esta seguro de cerrar la aplicacion", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+          {
+        Environment.Exit(1);
+          }        
         }
     }
 }
