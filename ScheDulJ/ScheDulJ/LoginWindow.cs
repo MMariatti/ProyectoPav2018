@@ -53,7 +53,10 @@ namespace ScheDulJ
 
         private void btnExitLogin_Click(object sender, EventArgs e)
         {
+             if (MessageBox.Show("Esta seguro de cerrar la aplicacion", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+             {
             Environment.Exit(1);
+             }
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
