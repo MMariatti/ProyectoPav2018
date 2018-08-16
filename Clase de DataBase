@@ -1,0 +1,48 @@
+1)Incorporar using System.Data.SqlClient al main form.
+2) Objetos ADO (Acces Data Object): 
+  SqlConnection, SqlCommand , SqlDataReader, DataTable ;
+3)Instanciar los objetos dentro del evento load del form; 
+
+Ejemplo Para Cargar Usuarios:
+  Herramientas, conectar con BD, M SQL Server , .Net;
+  Obtener cadena de conexion a bd y colocarla en un string 
+  Data  @"Source=maquis;Initial Catalog=BUGS;User ID=avisuales1;Password=***********" 
+  conexion.ConnectionString = cadenaConexion; 
+  //Iniciar Conexion con la DB
+  conexion.Open(); 
+  //Comando que se envia al DB 
+   comando.CommandType = CommandType.Text;
+    comando.CommandText = "SELECT * FROM users";
+    //DOS ALTERNATIVAS:
+        //Para almacenar en Lector
+        lector = comando.ExecuteReader(); (Instancia de DataReader) 
+        //Para almacenar en Tabla
+        tabla = newDataTable(); 
+        tabla.Load(comando.ExecuteReader()); 
+    //Cerrar Conexion
+    conexion.Close(); 
+    //Unir el Combo Box con la informacion que llega.  
+      cmbUsuarios.DataSource = tabla;
+      cmbUsuarios.DisplayMember = "n_usuario";
+      cmbUsuarios.ValueMember = "id_usuario"; 
+  
+    CODIGO EJEMPLO: 
+     SqlConnection conexion = new SqlConnection();
+            
+            DataTable table = new DataTable();
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+            comando = new SqlCommand();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM users";
+            tabla = new DataTable(); 
+            tabla.Load(comando.ExecuteReader());
+            conexion.Close();
+            cmbUsuarios.DataSource = tabla;
+            cmbUsuarios.DisplayMember = "n_usuario";
+            cmbUsuarios.ValueMember = "id_usuario"; 
+            
+            
+            
+            
