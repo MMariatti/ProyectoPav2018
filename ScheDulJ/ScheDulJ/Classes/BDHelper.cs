@@ -57,7 +57,7 @@ namespace ScheDulJ
             Desconectar();
             return tabla; 
         }
-        //METODO CONSULTA GENERAL
+        //METODO CONSULTA ESPECIFICA
         public DataTable ConsultarSQL(string consultaSQL)
         {
             DataTable tabla = new DataTable();

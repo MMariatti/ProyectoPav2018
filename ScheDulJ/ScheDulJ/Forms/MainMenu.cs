@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Forms; 
 
 namespace ScheDulJ
 {
@@ -18,30 +19,23 @@ namespace ScheDulJ
         {
             InitializeComponent();
         }
-
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
            
         }
-
-        private void FrmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Esta seguro de cerrar la aplicacion", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                //El enviroment cierra toda la aplicacion sin tener que pasar por el evento de frmLogin_Closing 
-                //Sino se ejecuta dos veces la misma ventana 
-                Environment.Exit(1);
-            } 
-            else
-                e.Cancel = true;
-        }
-
         private void btnExitMainMenu_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion?", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Environment.Exit(1);
+                Application.Exit();
             }
         }
+
+        private void btnAdministrarUsuarios_Click(object sender, EventArgs e)
+        {
+            frmUserAdmin frmUserAdmin = new frmUserAdmin();
+            frmUserAdmin.Show(); 
+        }
     }
-}
+    }
+
