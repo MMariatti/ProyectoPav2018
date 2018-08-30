@@ -16,12 +16,11 @@ namespace ScheDulJ
         {
             InitializeComponent();
         }
-        //INSTANCIA DE BDHELPER
-        BDHelper bdHelper = new BDHelper();
-        //METODO LOGUEO
+        BDHelper bdHelper = new BDHelper(); 
+       
+
         private bool Loguear(string usuario, string password)
         {
-            bdHelper.CadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
             DataTable tabla;
             string consulta = "SELECT Usuario , Password FROM Usuarios U WHERE " +
                 "U.Usuario = '" + usuario + "' AND U.Password = '" + password + "'"; 

@@ -8,35 +8,30 @@ using System.Data.SqlClient;
 
 namespace ScheDulJ
 {
-    class BDHelper
+    public class BDHelper
     {
         //CONSTRUCTOR DE LA CLASE 
-        public BDHelper()
+        private static BDHelper instance; 
+
+        public static BDHelper getBDHelper()
         {
-            cadenaConexion = "";
-            conexion = new SqlConnection();
-            comando = null; 
+            if (instance != null)
+                instance = new BDHelper();
+            return instance; 
         }
-        //CONSTRUCTOR ALTERNATIVO
-        public BDHelper(string cadenaConexion)
-        {
-            this.cadenaConexion = cadenaConexion;
-            conexion = new SqlConnection();
-            comando = new SqlCommand(); 
-        }
-        //ATRIBUTOS DE LA CLASE
-        private string cadenaConexion;
+       
+        private string cadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
         private SqlConnection conexion;
         private SqlCommand comando; 
         //PROPIEDAD QUE IMPLEMENTA SET Y GET DE CADA ATRIBUTO
         public SqlConnection Conexion { get => conexion; set => conexion = value; }
         public SqlCommand Comando { get => comando; set => comando = value; }
-        public string CadenaConexion { get => cadenaConexion; set => cadenaConexion = value; }
+         
         //METODO CONECTAR
-        public void Conectar()
+        private void Conectar()
         {
             conexion = new SqlConnection();
-            conexion.ConnectionString = this.CadenaConexion;
+            conexion.ConnectionString = this.cadenaConexion;
             conexion.Open();
             comando = new SqlCommand();
             comando.Connection = conexion;
@@ -66,6 +61,14 @@ namespace ScheDulJ
             tabla.Load(comando.ExecuteReader());
             Desconectar();
             return tabla;
+        }
+        //METODO CARGAR VOID (AGREGAR DATOS A BD) 
+        public void ConsultarSQLVoid(string consultaSQL)
+        {
+            Conectar();
+            comando.CommandText = consultaSQL;
+            comando.ExecuteReader();
+            Desconectar();
         }
 
 

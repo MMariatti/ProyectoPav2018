@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ScheDulJ.Forms
+{
+    public partial class frmAgregarCliente : Form
+    {
+        public frmAgregarCliente()
+        {
+            InitializeComponent();
+        }
+
+        private void LimpiarCampos()
+        {
+            txtApellido.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtTelefono.Text = string.Empty; 
+        }   
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+       
+        private void frmAgregarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CorroborarDatos()
+        {
+            if(txtNombre.Text == string.Empty || txtApellido.Text == string.Empty || txtTelefono.Text == string.Empty)
+            {
+                MessageBox.Show("Ingrese Nombre,Apellido y Telefono", "Error al Crear Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AgregarCliente(string nombre, string apellido, string telefono)
+        {
+            BDHelper bdHelper = new BDHelper();
+            string consultaSQL = "INSERT INTO Clientes (Nombre,Apellido,Telefono)" +
+                " VALUES ('" + nombre + "','" + apellido + "','" + telefono + "');";
+            bdHelper.ConsultarSQLVoid(consultaSQL);
+            this.Close();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            CorroborarDatos();
+            if (MessageBox.Show("Esta seguro que desea crear el cliente?", "Confirmar Creacion Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+           
+                AgregarCliente(txtNombre.Text, txtApellido.Text, txtTelefono.Text);
+                MessageBox.Show("Cliente Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarCampos(); 
+            }
+        }
+
+    }   
+}
+

@@ -36,6 +36,8 @@
             this.btnEliminarEvento = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdministrarUsuarios = new System.Windows.Forms.Button();
+            this.lblEventos = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,9 +92,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(399, 285);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -106,12 +108,36 @@
             this.btnAdministrarUsuarios.UseVisualStyleBackColor = true;
             this.btnAdministrarUsuarios.Click += new System.EventHandler(this.btnAdministrarUsuarios_Click);
             // 
+            // lblEventos
+            // 
+            this.lblEventos.AutoSize = true;
+            this.lblEventos.BackColor = System.Drawing.Color.LightGray;
+            this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventos.ForeColor = System.Drawing.Color.Black;
+            this.lblEventos.Location = new System.Drawing.Point(40, 19);
+            this.lblEventos.Name = "lblEventos";
+            this.lblEventos.Size = new System.Drawing.Size(66, 18);
+            this.lblEventos.TabIndex = 7;
+            this.lblEventos.Text = "Eventos:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(668, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 38);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Administrar \r\nClientes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblEventos);
             this.Controls.Add(this.btnAdministrarUsuarios);
             this.Controls.Add(this.btnNuevoEvento);
             this.Controls.Add(this.btnEliminarEvento);
@@ -127,6 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -139,5 +166,7 @@
         private System.Windows.Forms.Button btnEliminarEvento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAdministrarUsuarios;
+        private System.Windows.Forms.Label lblEventos;
+        private System.Windows.Forms.Button button1;
     }
 }
