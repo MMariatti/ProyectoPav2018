@@ -56,6 +56,7 @@
             this.btnEliminarCliente.TabIndex = 1;
             this.btnEliminarCliente.Text = "Eliminar Cliente";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnSalir
             // 
@@ -91,8 +92,9 @@
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(100, 39);
             this.btnModificarCliente.TabIndex = 5;
-            this.btnModificarCliente.Text = "Modificar\r\nCliente";
+            this.btnModificarCliente.Text = "Cambiar Telefono";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // lblClientes
             // 
@@ -120,7 +122,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Clientes";
-            this.Load += new System.EventHandler(this.AdministrarClientes_Load);
+            this.Load += new System.EventHandler(this.administrarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

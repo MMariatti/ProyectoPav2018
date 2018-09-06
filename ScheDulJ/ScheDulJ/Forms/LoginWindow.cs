@@ -16,15 +16,13 @@ namespace ScheDulJ
         {
             InitializeComponent();
         }
-        BDHelper bdHelper = new BDHelper(); 
        
-
-        private bool Loguear(string usuario, string password)
+        private bool loguear(string usuario, string password)
         {
             DataTable tabla;
             string consulta = "SELECT Usuario , Password FROM Usuarios U WHERE " +
-                "U.Usuario = '" + usuario + "' AND U.Password = '" + password + "'"; 
-            tabla = bdHelper.ConsultarSQL(consulta);
+                "U.Usuario = '" + usuario + "' AND U.Password = '" + password + "' AND U.Activo = 1"; 
+            tabla = BDHelper.ConsultarSQL(consulta);
             if (tabla.Rows.Count == 0)
             {
                 return false; 
@@ -46,10 +44,9 @@ namespace ScheDulJ
             else
             {
                 //Logueo con base de datos 
-                if (Loguear(txtUsuarioInsert.Text, txtPasswordInsert.Text))
+                if (loguear(txtUsuarioInsert.Text, txtPasswordInsert.Text))
                     {
                     //Logueo satisfactorio, creacion de instancia de menu principal 
-                    MessageBox.Show("Inicio de sesion satisfactorio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                     FrmMainMenu frmMainMenu;
                     frmMainMenu = new FrmMainMenu();
                     frmMainMenu.Show();

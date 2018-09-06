@@ -136,6 +136,7 @@
             this.Controls.Add(this.btnCrear);
             this.Name = "frmAgregarCliente";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Cliente";
             this.Load += new System.EventHandler(this.frmAgregarCliente_Load);
             this.ResumeLayout(false);

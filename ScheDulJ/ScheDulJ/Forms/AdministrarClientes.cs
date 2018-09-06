@@ -17,30 +17,60 @@ namespace ScheDulJ.Forms
             InitializeComponent();
         }
 
+
+
         private void btn_Salir(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void AdministrarClientes_Load(object sender, EventArgs e)
+        private void administrarClientes_Load(object sender, EventArgs e)
         {
-            MostrarClientes();
+            mostrarClientes();
         }
-        private void MostrarClientes()
+        private void mostrarClientes()
         {
-            BDHelper bdHelper = new BDHelper();
             DataTable tabla = new DataTable();
-            tabla = bdHelper.ConsultarSQL("SELECT * FROM Clientes");
+            tabla = BDHelper.ConsultarSQL("SELECT Nombre, Apellido , Telefono FROM Clientes WHERE Activo = 1");
             gridClientes.DataSource = tabla;
         }
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            MostrarClientes(); 
+            mostrarClientes(); 
         }
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             frmAgregarCliente frmAgregarCliente = new frmAgregarCliente();
             frmAgregarCliente.Show(); 
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridClientes.SelectedRows[0].Index != gridClientes.Rows.Count - 1)
+                {
+                    if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string consultaSQL = "UPDATE Clientes SET Activo = 0 WHERE Nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                        BDHelper.ConsultarSQLVoid(consultaSQL);
+                        MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mostrarClientes();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

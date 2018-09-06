@@ -11,39 +11,31 @@ namespace ScheDulJ
     public class BDHelper
     {
         //CONSTRUCTOR DE LA CLASE 
-        private static BDHelper instance; 
-
-        public static BDHelper getBDHelper()
-        {
-            if (instance != null)
-                instance = new BDHelper();
-            return instance; 
-        }
        
-        private string cadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
-        private SqlConnection conexion;
-        private SqlCommand comando; 
+        private static string cadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
+        private static SqlConnection conexion;
+        private static SqlCommand comando; 
         //PROPIEDAD QUE IMPLEMENTA SET Y GET DE CADA ATRIBUTO
         public SqlConnection Conexion { get => conexion; set => conexion = value; }
         public SqlCommand Comando { get => comando; set => comando = value; }
          
         //METODO CONECTAR
-        private void Conectar()
+        public static void Conectar()
         {
             conexion = new SqlConnection();
-            conexion.ConnectionString = this.cadenaConexion;
+            conexion.ConnectionString = cadenaConexion;
             conexion.Open();
             comando = new SqlCommand();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text; 
         }
        //METODO DESCONECTAR 
-        private void Desconectar()
+        public static void Desconectar()
         {
             conexion.Close();
         }
         //METODO CONSULTA GENERAL
-        public DataTable ConsultarTabla(string nombreTabla)
+        public static DataTable ConsultarTabla(string nombreTabla)
         {
             DataTable tabla = new DataTable();
             Conectar();
@@ -53,7 +45,7 @@ namespace ScheDulJ
             return tabla; 
         }
         //METODO CONSULTA ESPECIFICA
-        public DataTable ConsultarSQL(string consultaSQL)
+        public static DataTable ConsultarSQL(string consultaSQL)
         {
             DataTable tabla = new DataTable();
             Conectar();
@@ -63,7 +55,7 @@ namespace ScheDulJ
             return tabla;
         }
         //METODO CARGAR VOID (AGREGAR DATOS A BD) 
-        public void ConsultarSQLVoid(string consultaSQL)
+        public static void ConsultarSQLVoid(string consultaSQL)
         {
             Conectar();
             comando.CommandText = consultaSQL;

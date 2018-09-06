@@ -37,7 +37,7 @@ namespace ScheDulJ
             frmUserAdmin.Show(); 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void administrarClientes_Click(object sender, EventArgs e)
         {
             frmAdministrarClientes frmAdministrarClientes = new frmAdministrarClientes();
             frmAdministrarClientes.Show(); 

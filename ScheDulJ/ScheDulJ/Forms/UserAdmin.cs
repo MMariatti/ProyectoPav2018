@@ -28,9 +28,9 @@ namespace ScheDulJ.Forms
         }
         private void mostrarListaUsuarios()
         {
-            BDHelper bdHelper = new BDHelper();
+           
             DataTable tabla = new DataTable();
-            tabla = bdHelper.ConsultarSQL("SELECT Usuario FROM Usuarios U"); 
+            tabla = BDHelper.ConsultarSQL("SELECT Usuario FROM Usuarios U WHERE U.Activo = 1"); 
             gridUsuarios.DataSource = tabla; 
         }
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
@@ -45,20 +45,27 @@ namespace ScheDulJ.Forms
         }
         private void EliminarUsuario()
         {
-            BDHelper bdHelper = new BDHelper();
-            if (gridUsuarios.SelectedRows[0].Index != gridUsuarios.Rows.Count - 1)
+
+            try
             {
-                if (MessageBox.Show("Esta seguro que desea eliminar el usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (gridUsuarios.SelectedRows[0].Index != gridUsuarios.Rows.Count - 1)
                 {
-                    string consultaSQL = "DELETE FROM Usuarios WHERE Usuario ='" + gridUsuarios.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                    bdHelper.ConsultarSQLVoid(consultaSQL);
-                    MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    mostrarListaUsuarios();
+                    if (MessageBox.Show("Esta seguro que desea eliminar el usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string consultaSQL = "UPDATE Usuarios SET Activo = 0 WHERE Usuario ='" + gridUsuarios.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                        BDHelper.ConsultarSQLVoid(consultaSQL);
+                        MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mostrarListaUsuarios();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un usuario para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Debe seleccionar un usuario para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Debe seleccionar un usuario para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnRefrescar_Click(object sender, EventArgs e)

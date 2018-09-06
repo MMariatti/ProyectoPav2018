@@ -12,12 +12,12 @@ namespace ScheDulJ.Forms
 {
     public partial class frmAgregarUsuario : Form
     {
+
         public frmAgregarUsuario()
         {
             InitializeComponent();
         }
-
-        private void LimpiarCampos()
+        private void limpiarUsuarios()
         {
             txtUsuario.Text = string.Empty;
             txtPassword.Text = string.Empty;
@@ -34,26 +34,26 @@ namespace ScheDulJ.Forms
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             //Corroborar Datos
-            CorroborarDatos();
+            corroborarDatos();
             //Agregar Usuario a BD 
             if (MessageBox.Show("Esta seguro que desea crear el usuario?", "Confirmar Creacion Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                AgregarUsuario(txtUsuario.Text, txtPassword.Text);
+                agregarUsuario(txtUsuario.Text, txtPassword.Text);
                 MessageBox.Show("Usuario Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarCampos(); 
+                limpiarUsuarios(); 
             }           
 
         }       //AGREGAR USUARIO 
-        private void AgregarUsuario(string nombre , string password)
+        private void agregarUsuario(string nombre , string password)
         {
-            BDHelper bdHelper = new BDHelper();
-            string consultaSQL = "INSERT INTO Usuarios (Usuario,Password)" +
-                " VALUES ('"+nombre+"','"+password+"');";
-            bdHelper.ConsultarSQLVoid(consultaSQL);
+           
+            string consultaSQL = "INSERT INTO Usuarios (Usuario,Password,Activo)" +
+                " VALUES ('"+nombre+"','"+password+"', 1);";
+            BDHelper.ConsultarSQLVoid(consultaSQL);
             this.Close(); 
             
         }        //CORROBORAR DATOS
-        private void CorroborarDatos()
+        private void corroborarDatos()
         {
             if (txtUsuario.Text == string.Empty || txtPassword.Text == string.Empty || txtPasswordConfirm.Text == string.Empty)
             {
