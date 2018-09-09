@@ -1,0 +1,98 @@
+use SchDulJ
+
+CREATE TABLE Usuarios
+(Usuario varchar(25),
+ Password varchar(16),
+ Activo bit,
+ CONSTRAINT usuario_pk PRIMARY KEY(Usuario))
+
+  CREATE TABLE TipoEvento
+ (num_TipoEvento int,
+  nombre varchar(25),
+  descripcion varchar(50)
+  CONSTRAINT tipoEvento_pk PRIMARY KEY(num_TipoEvento))
+
+CREATE TABLE Clientes
+(num_cliente int,
+nombre varchar(25),
+apellido varchar(25),
+direccion varchar(50),
+CONSTRAINT cliente_pk PRIMARY KEY(num_cliente))
+
+CREATE TABLE Evento
+(num_evento int,
+ nombre varchar(50),
+ tipo_evento int,
+ fecha datetime,
+ horario time,
+ direccion varchar(50),
+ num_cliente int,
+ CONSTRAINT eventos_pk PRIMARY KEY(num_evento),
+ CONSTRAINT evetos_fk FOREIGN KEY (num_cliente)
+ REFERENCES Clientes(num_cliente),
+ CONSTRAINT tipo_fk FOREIGN KEY (tipo_evento)
+ REFERENCES TipoEvento(num_TipoEvento))
+
+ CREATE TABLE TipoItem
+ (tipo_item int,
+ nombre varchar(25),
+ descricpcion varchar(50),
+ CONSTRAINT tipoItem_pk PRIMARY KEY(tipo_item))
+
+ CREATE TABLE Item
+ (num_item int,
+ nombre varchar(25),
+ descripcion varchar(50),
+ tipo_item int,
+ costoAlquiler int,
+ CONSTRAINT item_pk PRIMARY KEY(num_item),
+ CONSTRAINT item_fk FOREIGN KEY(tipo_item)
+ REFERENCES TipoItem(tipo_item))
+
+ CREATE TABLE DetalleFactura
+ (nroFactura int,
+ num_item int,
+ costoItem int,
+ CONSTRAINT detalleF_pk PRIMARY KEY(nroFactura),
+ CONSTRAINT detalleF_fk FOREIGN KEY(num_item)
+ REFERENCES Item(num_item))
+
+ CREATE TABLE DetallePresupuesto
+ (num_presupuesto int,
+ num_evento int,
+ num_detallePresupuesto int, 
+ item varchar(25),
+ cantidad int,
+ CONSTRAINT dp_pk PRIMARY KEY(num_presupuesto, num_evento, num_detallePresupuesto),
+ CONSTRAINT dp_evento_fk FOREIGN KEY(num_evento)
+ REFERENCES Evento(num_evento),
+ CONSTRAINT dp_presupuesto_fk FOREIGN KEY(num_presupuesto)
+ REFERENCES Presupuesto(num_presupuesto) )
+
+ CREATE TABLE Presupuesto
+ (num_presupuesto int ,
+ num_evento int,
+ detalle_presupuesto int,
+ cantidadHoras int,
+ CONSTRAINT presupuesto_pk PRIMARY KEY(num_presupuesto,num_evento,detalle_presupuesto),
+ CONSTRAINT presupuesto_evento_fk FOREIGN KEY(num_evento)
+ REFERENCES Evento(num_evento),
+ CONSTRAINT presupuesto_detalle_fk FOREIGN KEY(detalle_presupuesto)
+ REFERENCES DetallePresupuesto(num_detallePresupuesto))
+
+ CREATE TABLE Factura
+ (nroFactura int,
+ num_evento int,
+ num_presupuesto int,
+ num_cliente int,
+ fecha datetime,
+ hora time,
+ CONSTRAINT factura_pk PRIMARY KEY(nroFactura,num_evento,num_presupuesto, num_cliente),
+ CONSTRAINT factura_evento_fk FOREIGN KEY(num_evento)
+ REFERENCES Evento(num_evento),
+ CONSTRAINT factura_presupuesto_fk FOREIGN KEY (num_presupuesto)
+ REFERENCES Presupuesto(num_presupuesto),
+ CONSTRAINT factura_cliente_fk FOREIGN KEY(num_cliente) 
+ REFERENCES Clientes(num_cliente))
+
+ 
