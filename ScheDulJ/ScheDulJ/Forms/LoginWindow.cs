@@ -58,8 +58,8 @@ namespace ScheDulJ
                 {
                     MessageBox.Show("Usuario Incorrecto, por favor ingrese nuevamente", "Error al Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuarioInsert.Text = "Usuario";
-                    txtPasswordInsert.UseSystemPasswordChar = false; 
-                    txtPasswordInsert.Text = "Contrasena";
+                    txtPasswordInsert.UseSystemPasswordChar = true; 
+                    txtPasswordInsert.Text = "Contraseña";
 
                 }
             }

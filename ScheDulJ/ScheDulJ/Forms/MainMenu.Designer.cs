@@ -47,7 +47,7 @@
             this.btnExitMainMenu.Location = new System.Drawing.Point(668, 511);
             this.btnExitMainMenu.Name = "btnExitMainMenu";
             this.btnExitMainMenu.Size = new System.Drawing.Size(104, 38);
-            this.btnExitMainMenu.TabIndex = 0;
+            this.btnExitMainMenu.TabIndex = 6;
             this.btnExitMainMenu.Text = "Salir";
             this.btnExitMainMenu.UseVisualStyleBackColor = true;
             this.btnExitMainMenu.Click += new System.EventHandler(this.btnExitMainMenu_Click);
@@ -59,7 +59,7 @@
             this.gridEventos.Location = new System.Drawing.Point(27, 40);
             this.gridEventos.Name = "gridEventos";
             this.gridEventos.Size = new System.Drawing.Size(370, 203);
-            this.gridEventos.TabIndex = 1;
+            this.gridEventos.TabIndex = 0;
             // 
             // btnNuevoEvento
             // 
@@ -67,7 +67,7 @@
             this.btnNuevoEvento.Location = new System.Drawing.Point(27, 249);
             this.btnNuevoEvento.Name = "btnNuevoEvento";
             this.btnNuevoEvento.Size = new System.Drawing.Size(110, 38);
-            this.btnNuevoEvento.TabIndex = 2;
+            this.btnNuevoEvento.TabIndex = 1;
             this.btnNuevoEvento.Text = "Nuevo Evento";
             this.btnNuevoEvento.UseVisualStyleBackColor = false;
             // 
@@ -76,7 +76,7 @@
             this.btnModificarEvento.Location = new System.Drawing.Point(155, 249);
             this.btnModificarEvento.Name = "btnModificarEvento";
             this.btnModificarEvento.Size = new System.Drawing.Size(110, 38);
-            this.btnModificarEvento.TabIndex = 3;
+            this.btnModificarEvento.TabIndex = 2;
             this.btnModificarEvento.Text = "Modificar Evento";
             this.btnModificarEvento.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +85,7 @@
             this.btnEliminarEvento.Location = new System.Drawing.Point(287, 249);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
             this.btnEliminarEvento.Size = new System.Drawing.Size(110, 38);
-            this.btnEliminarEvento.TabIndex = 4;
+            this.btnEliminarEvento.TabIndex = 3;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +103,7 @@
             this.btnAdministrarUsuarios.Location = new System.Drawing.Point(668, 416);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
             this.btnAdministrarUsuarios.Size = new System.Drawing.Size(100, 38);
-            this.btnAdministrarUsuarios.TabIndex = 6;
+            this.btnAdministrarUsuarios.TabIndex = 5;
             this.btnAdministrarUsuarios.Text = "Administrar Usuarios";
             this.btnAdministrarUsuarios.UseVisualStyleBackColor = true;
             this.btnAdministrarUsuarios.Click += new System.EventHandler(this.btnAdministrarUsuarios_Click);
@@ -125,7 +125,7 @@
             this.button1.Location = new System.Drawing.Point(668, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 38);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Administrar \r\nClientes";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.administrarClientes_Click);

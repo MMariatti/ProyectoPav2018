@@ -49,7 +49,7 @@ namespace ScheDulJ.Forms
            
             string consultaSQL = "INSERT INTO Usuarios (Usuario,Password,Activo)" +
                 " VALUES ('"+nombre+"','"+password+"', 1);";
-            BDHelper.ConsultarSQLVoid(consultaSQL);
+            BDHelper.ConsultarSQL(consultaSQL);
             this.Close(); 
             
         }        //CORROBORAR DATOS

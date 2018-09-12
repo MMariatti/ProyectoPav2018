@@ -34,6 +34,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.lblUsuarios = new System.Windows.Forms.Label();
+            this.btnModificarPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(158, 71);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(158, 114);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(100, 38);
             this.btnEliminarUsuario.TabIndex = 3;
@@ -73,7 +74,7 @@
             this.btnSalir.Location = new System.Drawing.Point(196, 158);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(62, 28);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -83,7 +84,7 @@
             this.btnRefrescar.Location = new System.Drawing.Point(12, 158);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(75, 28);
-            this.btnRefrescar.TabIndex = 5;
+            this.btnRefrescar.TabIndex = 4;
             this.btnRefrescar.Text = "Refrescar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
@@ -98,11 +99,22 @@
             this.lblUsuarios.TabIndex = 6;
             this.lblUsuarios.Text = "Usuarios";
             // 
+            // btnModificarPassword
+            // 
+            this.btnModificarPassword.Location = new System.Drawing.Point(158, 70);
+            this.btnModificarPassword.Name = "btnModificarPassword";
+            this.btnModificarPassword.Size = new System.Drawing.Size(100, 38);
+            this.btnModificarPassword.TabIndex = 2;
+            this.btnModificarPassword.Text = "Modificar Contraseña";
+            this.btnModificarPassword.UseVisualStyleBackColor = true;
+            this.btnModificarPassword.Click += new System.EventHandler(this.btnModificarPassword_Click);
+            // 
             // frmUserAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 194);
+            this.Controls.Add(this.btnModificarPassword);
             this.Controls.Add(this.lblUsuarios);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnSalir);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label lblUsuarios;
+        private System.Windows.Forms.Button btnModificarPassword;
     }
 }

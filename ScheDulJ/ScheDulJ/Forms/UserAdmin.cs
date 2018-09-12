@@ -53,7 +53,7 @@ namespace ScheDulJ.Forms
                     if (MessageBox.Show("Esta seguro que desea eliminar el usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         string consultaSQL = "UPDATE Usuarios SET Activo = 0 WHERE Usuario ='" + gridUsuarios.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                        BDHelper.ConsultarSQLVoid(consultaSQL);
+                        BDHelper.ConsultarSQL(consultaSQL);
                         MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         mostrarListaUsuarios();
                     }
@@ -72,6 +72,12 @@ namespace ScheDulJ.Forms
         {
             mostrarListaUsuarios();
         }
-       
+
+        private void btnModificarPassword_Click(object sender, EventArgs e)
+        {
+            FrmModificarContraseñaUsuario frmModificarContraseñaUsuario;
+            frmModificarContraseñaUsuario = new FrmModificarContraseñaUsuario();
+            frmModificarContraseñaUsuario.Show();
+        }
     }   
 }

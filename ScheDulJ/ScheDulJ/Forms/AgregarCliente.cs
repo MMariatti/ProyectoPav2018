@@ -47,7 +47,7 @@ namespace ScheDulJ.Forms
         {
             string consultaSQL = "INSERT INTO Clientes (Nombre,Apellido,Telefono,Activo)" +
                 " VALUES ('" + nombre + "','" + apellido + "','" + telefono + "', 1);";
-           BDHelper.ConsultarSQLVoid(consultaSQL);
+           BDHelper.ConsultarSQL(consultaSQL);
             this.Close();
         }
 

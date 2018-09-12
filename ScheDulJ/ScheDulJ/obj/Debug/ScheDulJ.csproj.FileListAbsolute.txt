@@ -44,3 +44,19 @@ C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDu
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarUsuario.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarClientes.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarCliente.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe.config
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.pdb
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csprojAssemblyReference.cache
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarClientes.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarCliente.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarUsuario.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarContraseñaUsuario.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.FrmMainMenu.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.FrmLogin.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmUserAdmin.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Properties.Resources.resources
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.GenerateResource.cache
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.exe
+C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.pdb
