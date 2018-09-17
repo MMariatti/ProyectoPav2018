@@ -20,13 +20,13 @@ namespace ScheDulJ.Forms
 
         private void FrmModificarContraseñaUsuario_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
         }
 
         // Corroborar que el usuario que ingresa no sea vacio 
-        private  bool  CorroborarUsuario()
+        private bool CorroborarUsuario()
         {
-            if (txtUsuario.Text == string.Empty)
+            if (txtUsuario.Text.ToLower() == string.Empty)
             {
                 MessageBox.Show("No ha ingresado el nombre del usuario", "Error al cargar el usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsuario.Focus();
@@ -38,16 +38,16 @@ namespace ScheDulJ.Forms
             {
                 return true;
             }
-            
-   
+
+
         }
         //Metodo para buscar el usuario al que le vamos a cambiar la contraseña
-        private  bool BuscarUsuario(string nombre)
+        private bool BuscarUsuario(string nombre)
         {
             DataTable tabla = new DataTable();
-            string consultaSql = "SELECT Usuario FROM Usuarios Where Usuario = '" + nombre +"' AND Activo =1";
+            string consultaSql = "SELECT usuario FROM Usuarios Where usuario = '" + nombre + "' AND Activo =1";
             tabla = BDHelper.ConsultarSQL(consultaSql);
-            if(tabla.Rows.Count == 0)
+            if (tabla.Rows.Count == 0)
             {
                 return false;
             }
@@ -61,26 +61,33 @@ namespace ScheDulJ.Forms
         }
 
         //Corroborar que las contraseñas coincidan
-        private void CorroborarContraseñas()
+        private bool CorroborarContraseñas()
         {
             if (txtPassword.Text != txtPasswordConfirmada.Text)
             {
                 MessageBox.Show("Las contraseñas no son identicas", "Error al cargar las contraseñas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
             }
 
-      
+
+
+
         }
 
         //Cambia la contraseña actual por la nueva que ingresamos
 
-        private void CambiarContraseña(string password, string nombre)
+        private void CambiarContraseña(string contra, string nombre)
         {
-            string consultaSql = "BEGIN TRANSACTION  UPDATE Usuarios SET Password = '"+ password + "' WHERE Usuario = '" + nombre + "' COMMIT";
+            string consultaSql = "UPDATE Usuarios SET contra = '" + contra + "' WHERE usuario = '" + nombre + "'";
             BDHelper.ConsultarSQLVoid(consultaSql);
         }
 
 
-            private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -92,15 +99,15 @@ namespace ScheDulJ.Forms
 
                 if (BuscarUsuario(txtUsuario.Text) == true)
                 {
-                txtPassword.Enabled = true;
-                txtPasswordConfirmada.Enabled = true;
-                txtPassword.Focus();
+                    txtPassword.Enabled = true;
+                    txtPasswordConfirmada.Enabled = true;
+                    txtPassword.Focus();
                 }
                 else
                 {
-                MessageBox.Show("El usuario ingresado no existe", "Busqueda de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsuario.Focus();
-                txtUsuario.Clear();
+                    MessageBox.Show("El usuario ingresado no existe", "Busqueda de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsuario.Focus();
+                    txtUsuario.Clear();
                 }
             }
         }
@@ -112,15 +119,24 @@ namespace ScheDulJ.Forms
 
         private void btnModificarContraseña_Click(object sender, EventArgs e)
         {
-            CorroborarContraseñas();
-            if (MessageBox.Show("¿Está seguro que quiere cambiar su contraseña?","Cambiar contraseña",MessageBoxButtons.YesNo,MessageBoxIcon.Information) ==DialogResult.Yes)
+            if (CorroborarContraseñas() == true)
             {
-                CambiarContraseña(txtPasswordConfirmada.Text, txtUsuario.Text);
-                MessageBox.Show("Contraseña cambiada correctamente", "Cambiar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                if (MessageBox.Show("¿Está seguro que quiere cambiar su contraseña?", "Cambiar contraseña", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    CambiarContraseña(txtPasswordConfirmada.Text, txtUsuario.Text);
+                    MessageBox.Show("Contraseña cambiada correctamente", "Cambiar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
             }
-            
-            
+            else
+            {
+                txtPassword.Clear();
+                txtPasswordConfirmada.Clear();
+                txtPassword.Focus();
+            }
+
+
+
         }
     }
 }

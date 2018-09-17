@@ -44,7 +44,7 @@ namespace ScheDulJ.Forms
             }           
 
         }       //AGREGAR USUARIO 
-        private void agregarUsuario(string nombre , string password)
+        private void agregarUsuario(string nombre , string contra)
         {
            
             string consultaSQL = "INSERT INTO Usuarios(usuario,contra,activo)" +
