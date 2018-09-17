@@ -47,8 +47,8 @@ namespace ScheDulJ.Forms
         private void agregarUsuario(string nombre , string password)
         {
            
-            string consultaSQL = "INSERT INTO Usuarios (Usuario,Password,Activo)" +
-                " VALUES ('"+nombre+"','"+password+"', 1);";
+            string consultaSQL = "INSERT INTO Usuarios(usuario,contra,activo)" +
+                " VALUES ('"+nombre+"','"+contra+"', 1);";
             BDHelper.ConsultarSQL(consultaSQL);
             this.Close(); 
             

@@ -30,7 +30,7 @@ namespace ScheDulJ.Forms
         private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla = BDHelper.ConsultarSQL("SELECT Nombre, Apellido , Telefono FROM Clientes WHERE Activo = 1");
+            tabla = BDHelper.ConsultarSQL("SELECT nombre, apellido, telefono FROM Clientes WHERE activo = 1");
             gridClientes.DataSource = tabla;
         }
         private void btnRefrescar_Click(object sender, EventArgs e)
