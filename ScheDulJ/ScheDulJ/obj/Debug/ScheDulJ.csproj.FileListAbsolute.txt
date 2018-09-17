@@ -60,3 +60,19 @@ C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion
 C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\User\Documents\Trabajos Marcos\Ingenieria en Sistemas de la Informacion\3er año\PAV\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.pdb
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe.config
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.pdb
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csprojAssemblyReference.cache
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarClientes.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarCliente.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarUsuario.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarContraseñaUsuario.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.FrmMainMenu.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.FrmLogin.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmUserAdmin.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Properties.Resources.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.GenerateResource.cache
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.exe
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.pdb

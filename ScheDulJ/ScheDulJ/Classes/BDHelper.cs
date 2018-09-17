@@ -11,8 +11,9 @@ namespace ScheDulJ
     public class BDHelper
     {
         //CONSTRUCTOR DE LA CLASE 
-       
-        private static string cadenaConexion = @"Data Source=MARKY\PAV1;Initial Catalog=pav1;Integrated Security=True";
+
+        //private static string cadenaConexion = @"Data Source=MARKY\PAV1;Initial Catalog=pav1;Integrated Security=True";
+        private static string cadenaConexion = @"Data Source=NICOB\NICODB;Initial Catalog = ScheDulJ; Integrated Security = True";
         private static SqlConnection conexion;
         private static SqlCommand comando; 
         //PROPIEDAD QUE IMPLEMENTA SET Y GET DE CADA ATRIBUTO

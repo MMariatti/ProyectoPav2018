@@ -17,11 +17,11 @@ namespace ScheDulJ
             InitializeComponent();
         }
        
-        private bool loguear(string usuario, string password)
+        private bool loguear(string usuario, string contra)
         {
             DataTable tabla;
-            string consulta = "SELECT Usuario , Password FROM Usuarios U WHERE " +
-                "U.Usuario = '" + usuario + "' AND U.Password = '" + password + "' AND U.Activo = 1"; 
+            string consulta = "SELECT usuario , contra FROM Usuarios U WHERE " +
+                "U.usuario = '" + usuario + "' AND U.contra = '" + contra + "' AND U.activo = 1"; 
             tabla = BDHelper.ConsultarSQL(consulta);
             if (tabla.Rows.Count == 0)
             {
