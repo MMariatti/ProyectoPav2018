@@ -45,9 +45,14 @@ namespace ScheDulJ.Forms
 
         private void agregarCliente(string nombre, string apellido, string direccion, string telefono)
         {
+
             string consultaSQL = "INSERT INTO Clientes (nombre,apellido,direccion,telefono,activo)" +
                 " VALUES ('" + nombre + "','" + apellido + "','" + direccion +"','" + telefono + "', 1);";
            BDHelper.ConsultarSQL(consultaSQL);
+            string consultaSQL = "INSERT INTO Clientes (Nombre,Apellido,Telefono,Activo)" +
+                " VALUES ('" + nombre + "','" + apellido + "','" + telefono + "', 1);";
+           DBHelper.ConsultarSQL(consultaSQL);
+
             this.Close();
         }
 
