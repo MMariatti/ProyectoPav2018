@@ -30,7 +30,7 @@ namespace ScheDulJ.Forms
         {
            
             DataTable tabla = new DataTable();
-            tabla = BDHelper.ConsultarSQL("SELECT Usuario FROM Usuarios U WHERE U.Activo = 1"); 
+            tabla = DBHelper.ConsultarSQL("SELECT Usuario FROM Usuarios U WHERE U.Activo = 1"); 
             gridUsuarios.DataSource = tabla; 
         }
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace ScheDulJ.Forms
                     if (MessageBox.Show("Esta seguro que desea eliminar el usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         string consultaSQL = "UPDATE Usuarios SET Activo = 0 WHERE Usuario ='" + gridUsuarios.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                        BDHelper.ConsultarSQL(consultaSQL);
+                        DBHelper.ConsultarSQL(consultaSQL);
                         MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         mostrarListaUsuarios();
                     }
