@@ -25,17 +25,18 @@ namespace ScheDulJ.Forms
         }
         private void administrarClientes_Load(object sender, EventArgs e)
         {
-            mostrarClientes();
+            gridClientes.DataSource = Clientes.GetAll();
         }
-        private void mostrarClientes()
+        /*private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla = BDHelper.ConsultarSQL("SELECT nombre, apellido, telefono FROM Clientes WHERE activo = 1");
+            tabla = DBHelper.ConsultarSQL("SELECT nombre, apellido, telefono FROM Clientes WHERE activo = 1");
             gridClientes.DataSource = tabla;
         }
+        */
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            mostrarClientes(); 
+            gridClientes.DataSource = Clientes.GetAll();
         }
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
@@ -53,9 +54,9 @@ namespace ScheDulJ.Forms
                     if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                        BDHelper.ConsultarSQL(consultaSQL);
+                        DBHelper.ConsultarSQL(consultaSQL);
                         MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        mostrarClientes();
+                        Clientes.GetAll();
                     }
                 }
                 else

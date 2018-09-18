@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Classes\ClassLayer.cs" />
     <Compile Include="Forms\AdministrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +90,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\BDHelper.cs" />
+    <Compile Include="Classes\DBHelper.cs" />
     <EmbeddedResource Include="Forms\AdministrarClientes.resx">
       <DependentUpon>AdministrarClientes.cs</DependentUpon>
     </EmbeddedResource>

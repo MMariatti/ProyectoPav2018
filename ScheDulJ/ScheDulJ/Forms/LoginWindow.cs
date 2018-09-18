@@ -22,7 +22,7 @@ namespace ScheDulJ
             DataTable tabla;
             string consulta = "SELECT usuario , contra FROM Usuarios U WHERE " +
                 "U.usuario = '" + usuario + "' AND U.contra = '" + contra + "' AND U.activo = 1"; 
-            tabla = BDHelper.ConsultarSQL(consulta);
+            tabla = DBHelper.ConsultarSQL(consulta);
             if (tabla.Rows.Count == 0)
             {
                 return false; 

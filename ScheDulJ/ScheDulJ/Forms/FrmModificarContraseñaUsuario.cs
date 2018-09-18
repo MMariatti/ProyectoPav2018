@@ -45,8 +45,8 @@ namespace ScheDulJ.Forms
         private bool BuscarUsuario(string nombre)
         {
             DataTable tabla = new DataTable();
-            string consultaSql = "SELECT usuario FROM Usuarios Where usuario = '" + nombre + "' AND Activo =1";
-            tabla = BDHelper.ConsultarSQL(consultaSql);
+            string consultaSql = "SELECT usuario FROM Usuarios Where usuario = '" + nombre + "' AND activo =1";
+            tabla = DBHelper.ConsultarSQL(consultaSql);
             if (tabla.Rows.Count == 0)
             {
                 return false;
@@ -83,7 +83,7 @@ namespace ScheDulJ.Forms
         private void CambiarContraseña(string contra, string nombre)
         {
             string consultaSql = "UPDATE Usuarios SET contra = '" + contra + "' WHERE usuario = '" + nombre + "'";
-            BDHelper.ConsultarSQLVoid(consultaSql);
+            DBHelper.ConsultarSQLVoid(consultaSql);
         }
 
 
