@@ -55,13 +55,6 @@ namespace ScheDulJ.Forms
 
 
                         string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE Nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
-
-                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
-
-                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
-
-                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
-
                         BDHelper.ConsultarSQL(consultaSQL);
                         MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         mostrarClientes();
@@ -79,6 +72,9 @@ namespace ScheDulJ.Forms
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
+            FrmCambiarTelefono cambiarTelefono;
+            cambiarTelefono = new FrmCambiarTelefono();
+            cambiarTelefono.Show();
 
         }
     }

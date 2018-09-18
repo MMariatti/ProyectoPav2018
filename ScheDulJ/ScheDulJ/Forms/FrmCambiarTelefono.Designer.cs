@@ -30,21 +30,24 @@
         {
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtClienteNombre = new System.Windows.Forms.TextBox();
+            this.lblNuevoTelefono = new System.Windows.Forms.Label();
             this.txtNuevoTelefono = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnModificarTelefono = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.txtClienteApellido = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(22, 67);
+            this.btnBuscar.Location = new System.Drawing.Point(22, 85);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(255, 31);
-            this.btnBuscar.TabIndex = 0;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblCliente
             // 
@@ -52,67 +55,90 @@
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblCliente.Location = new System.Drawing.Point(19, 20);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(56, 18);
-            this.lblCliente.TabIndex = 1;
-            this.lblCliente.Text = "Ciente*";
+            this.lblCliente.Size = new System.Drawing.Size(59, 18);
+            this.lblCliente.TabIndex = 0;
+            this.lblCliente.Text = "Cliente*";
             // 
-            // txtCliente
+            // txtClienteNombre
             // 
-            this.txtCliente.Location = new System.Drawing.Point(152, 21);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(125, 20);
-            this.txtCliente.TabIndex = 2;
+            this.txtClienteNombre.Location = new System.Drawing.Point(152, 21);
+            this.txtClienteNombre.Name = "txtClienteNombre";
+            this.txtClienteNombre.Size = new System.Drawing.Size(125, 20);
+            this.txtClienteNombre.TabIndex = 0;
             // 
-            // label2
+            // lblNuevoTelefono
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.Location = new System.Drawing.Point(19, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nuevo Telefono *";
+            this.lblNuevoTelefono.AutoSize = true;
+            this.lblNuevoTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblNuevoTelefono.Location = new System.Drawing.Point(19, 136);
+            this.lblNuevoTelefono.Name = "lblNuevoTelefono";
+            this.lblNuevoTelefono.Size = new System.Drawing.Size(123, 18);
+            this.lblNuevoTelefono.TabIndex = 3;
+            this.lblNuevoTelefono.Text = "Nuevo Telefono *";
             // 
             // txtNuevoTelefono
             // 
-            this.txtNuevoTelefono.Location = new System.Drawing.Point(152, 119);
+            this.txtNuevoTelefono.Enabled = false;
+            this.txtNuevoTelefono.Location = new System.Drawing.Point(152, 137);
             this.txtNuevoTelefono.Name = "txtNuevoTelefono";
             this.txtNuevoTelefono.Size = new System.Drawing.Size(125, 20);
-            this.txtNuevoTelefono.TabIndex = 4;
+            this.txtNuevoTelefono.TabIndex = 3;
             // 
-            // button2
+            // btnModificarTelefono
             // 
-            this.button2.Location = new System.Drawing.Point(22, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnModificarTelefono.Location = new System.Drawing.Point(22, 181);
+            this.btnModificarTelefono.Name = "btnModificarTelefono";
+            this.btnModificarTelefono.Size = new System.Drawing.Size(100, 28);
+            this.btnModificarTelefono.TabIndex = 4;
+            this.btnModificarTelefono.Text = "Modificar";
+            this.btnModificarTelefono.UseVisualStyleBackColor = true;
+            this.btnModificarTelefono.Click += new System.EventHandler(this.btnModificarTelefono_Click);
             // 
-            // button3
+            // btnSalir
             // 
-            this.button3.Location = new System.Drawing.Point(185, 165);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(177, 181);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // txtClienteApellido
+            // 
+            this.txtClienteApellido.Location = new System.Drawing.Point(152, 47);
+            this.txtClienteApellido.Name = "txtClienteApellido";
+            this.txtClienteApellido.Size = new System.Drawing.Size(125, 20);
+            this.txtClienteApellido.TabIndex = 1;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblApellido.Location = new System.Drawing.Point(19, 46);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(65, 18);
+            this.lblApellido.TabIndex = 0;
+            this.lblApellido.Text = "Apellido*";
             // 
             // FrmCambiarTelefono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 213);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(284, 213);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.txtClienteApellido);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnModificarTelefono);
             this.Controls.Add(this.txtNuevoTelefono);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCliente);
+            this.Controls.Add(this.lblNuevoTelefono);
+            this.Controls.Add(this.txtClienteNombre);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.btnBuscar);
             this.Name = "FrmCambiarTelefono";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambiar telefono";
+            this.Load += new System.EventHandler(this.FrmCambiarTelefono_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +148,12 @@
 
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtClienteNombre;
+        private System.Windows.Forms.Label lblNuevoTelefono;
         private System.Windows.Forms.TextBox txtNuevoTelefono;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnModificarTelefono;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox txtClienteApellido;
+        private System.Windows.Forms.Label lblApellido;
     }
 }

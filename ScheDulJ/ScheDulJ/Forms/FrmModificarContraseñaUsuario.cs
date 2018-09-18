@@ -26,7 +26,7 @@ namespace ScheDulJ.Forms
         // Corroborar que el usuario que ingresa no sea vacio 
         private bool CorroborarUsuario()
         {
-            if (txtUsuario.Text.ToLower() == string.Empty)
+            if (txtUsuario.Text == string.Empty)
             {
                 MessageBox.Show("No ha ingresado el nombre del usuario", "Error al cargar el usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsuario.Focus();
@@ -45,7 +45,7 @@ namespace ScheDulJ.Forms
         private bool BuscarUsuario(string nombre)
         {
             DataTable tabla = new DataTable();
-            string consultaSql = "SELECT usuario FROM Usuarios Where usuario = '" + nombre + "' AND Activo =1";
+            string consultaSql = "SELECT usuario FROM Usuarios Where usuario = '" + nombre + "' AND activo =1";
             tabla = BDHelper.ConsultarSQL(consultaSql);
             if (tabla.Rows.Count == 0)
             {

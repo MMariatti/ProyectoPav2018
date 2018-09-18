@@ -139,6 +139,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Name = "FrmModificarContraseñaUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambiar contraseña";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmModificarContraseñaUsuario_FormClosing);
             this.Load += new System.EventHandler(this.FrmModificarContraseñaUsuario_Load);
