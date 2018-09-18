@@ -44,6 +44,7 @@ CREATE TABLE TiposItems(
 	idTipoItem int IDENTITY(1,1),
 	nombre varchar(25),
 	descricpcion varchar(50),
+	activo bit,
 	CONSTRAINT tiposItems_pk PRIMARY KEY(idTipoItem)
 	);
 
