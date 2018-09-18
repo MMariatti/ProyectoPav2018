@@ -38,6 +38,7 @@
             this.btnAdministrarUsuarios = new System.Windows.Forms.Button();
             this.lblEventos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +101,7 @@
             // 
             // btnAdministrarUsuarios
             // 
-            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(668, 416);
+            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(672, 399);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
             this.btnAdministrarUsuarios.Size = new System.Drawing.Size(100, 38);
             this.btnAdministrarUsuarios.TabIndex = 5;
@@ -122,7 +123,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(668, 372);
+            this.button1.Location = new System.Drawing.Point(672, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 38);
             this.button1.TabIndex = 4;
@@ -130,12 +131,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.administrarClientes_Click);
             // 
+            // btnAdministrarEquipamiento
+            // 
+            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(672, 443);
+            this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
+            this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
+            this.btnAdministrarEquipamiento.TabIndex = 8;
+            this.btnAdministrarEquipamiento.Text = "Administrar Equipamiento";
+            this.btnAdministrarEquipamiento.UseVisualStyleBackColor = true;
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnAdministrarEquipamiento);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblEventos);
             this.Controls.Add(this.btnAdministrarUsuarios);
@@ -168,5 +179,6 @@
         private System.Windows.Forms.Button btnAdministrarUsuarios;
         private System.Windows.Forms.Label lblEventos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdministrarEquipamiento;
     }
 }
