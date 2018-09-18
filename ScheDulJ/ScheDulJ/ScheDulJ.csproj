@@ -45,6 +45,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Forms\AdministrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministrarClientes.Designer.cs">
+      <DependentUpon>AdministrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AgregarCliente.Designer.cs">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmModificarContraseñaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmModificarContraseñaUsuario.Designer.cs">
+      <DependentUpon>FrmModificarContraseñaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +91,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\BDHelper.cs" />
+    <EmbeddedResource Include="Forms\AdministrarClientes.resx">
+      <DependentUpon>AdministrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmModificarContraseñaUsuario.resx">
+      <DependentUpon>FrmModificarContraseñaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

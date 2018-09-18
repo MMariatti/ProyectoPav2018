@@ -48,7 +48,7 @@
             this.btnLogin.Location = new System.Drawing.Point(340, 340);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(104, 38);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Iniciar Sesion";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -60,7 +60,7 @@
             this.txtUsuarioInsert.Location = new System.Drawing.Point(315, 268);
             this.txtUsuarioInsert.Name = "txtUsuarioInsert";
             this.txtUsuarioInsert.Size = new System.Drawing.Size(178, 24);
-            this.txtUsuarioInsert.TabIndex = 3;
+            this.txtUsuarioInsert.TabIndex = 0;
             this.txtUsuarioInsert.Text = "Usuario";
             this.txtUsuarioInsert.Click += new System.EventHandler(this.txtUsuarioInsert_Clicked);
             // 
@@ -71,7 +71,7 @@
             this.txtPasswordInsert.Location = new System.Drawing.Point(315, 298);
             this.txtPasswordInsert.Name = "txtPasswordInsert";
             this.txtPasswordInsert.Size = new System.Drawing.Size(178, 24);
-            this.txtPasswordInsert.TabIndex = 4;
+            this.txtPasswordInsert.TabIndex = 1;
             this.txtPasswordInsert.Text = "Contrasena ";
             this.txtPasswordInsert.Click += new System.EventHandler(this.txtPasswordInsert_Clicked);
             // 
@@ -91,7 +91,7 @@
             this.btnExitLogin.Location = new System.Drawing.Point(668, 512);
             this.btnExitLogin.Name = "btnExitLogin";
             this.btnExitLogin.Size = new System.Drawing.Size(104, 38);
-            this.btnExitLogin.TabIndex = 6;
+            this.btnExitLogin.TabIndex = 3;
             this.btnExitLogin.Text = "Salir";
             this.btnExitLogin.UseVisualStyleBackColor = true;
             this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);

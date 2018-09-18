@@ -1,0 +1,111 @@
+use ScheDulJ
+
+CREATE TABLE Usuarios(
+	idUsuario int IDENTITY(1,1),
+	usuario varchar(25) UNIQUE,
+	contra varchar(16),
+	activo bit,
+	CONSTRAINT usuarios_pk PRIMARY KEY(idUsuario)
+	);
+
+CREATE TABLE TiposEventos(
+	idTipoEvento int IDENTITY(1,1),
+	nombre varchar(25),
+	descripcion varchar(50)
+	CONSTRAINT tiposEventos_pk PRIMARY KEY(idTipoEvento)
+	);
+
+CREATE TABLE Clientes(
+	idCliente int IDENTITY(1,1),
+	nombre varchar(25),
+	apellido varchar(25),
+	direccion varchar(50),
+	telefono int,
+	activo bit,
+	CONSTRAINT clientes_pk PRIMARY KEY(idCliente)
+	);
+
+CREATE TABLE Eventos(
+	idEvento int IDENTITY(1,1),
+	nombre varchar(50),
+	idTipoEvento int,
+	fecha datetime,
+	horario time,
+	direccion varchar(50),
+	idCliente int,
+	CONSTRAINT eventos_pk PRIMARY KEY(idEvento),
+	CONSTRAINT eventos_fk FOREIGN KEY(idCliente)
+		REFERENCES Clientes(idCliente),
+	CONSTRAINT tipoEventos_fk FOREIGN KEY (idTipoEvento)
+		REFERENCES TiposEventos(idTipoEvento)
+		);
+
+CREATE TABLE TiposItems(
+	idTipoItem int IDENTITY(1,1),
+	nombre varchar(25),
+	descricpcion varchar(50),
+	CONSTRAINT tiposItems_pk PRIMARY KEY(idTipoItem)
+	);
+
+CREATE TABLE Items(
+	idItem int IDENTITY(1,1),
+	nombre varchar(25),
+	descripcion varchar(50),
+	idTipoItem int,
+	costoAlquiler int,
+	CONSTRAINT items_pk PRIMARY KEY(idItem),
+	CONSTRAINT items_tipos_fk FOREIGN KEY(idTipoItem)
+		REFERENCES TiposItems(idTipoItem)
+		);
+
+CREATE TABLE Presupuestos(
+	idPresupuesto int IDENTITY(1,1),
+	idEvento int,
+	cantidadHoras int,
+	CONSTRAINT presupuestos_pk PRIMARY KEY(idPresupuesto, idEvento),
+	CONSTRAINT presupuestos_eventos_fk FOREIGN KEY(idEvento)
+		REFERENCES Eventos(idEvento)
+		);
+
+CREATE TABLE Facturas(
+	idFactura int IDENTITY(1,1),
+	idEvento int,
+	idPresupuesto int,
+	idCliente int,
+	fecha datetime,
+	hora time,
+	CONSTRAINT facturas_pk PRIMARY KEY(idFactura, idEvento, idPresupuesto, idCliente),
+	CONSTRAINT facturas_presupuestos_fk FOREIGN KEY (idPresupuesto, idEvento)
+		REFERENCES Presupuestos(idPresupuesto, idEvento),
+	CONSTRAINT facturas_clientes_fk FOREIGN KEY(idCliente)
+		REFERENCES Clientes(idCliente)
+	);
+
+CREATE TABLE DetalleFacturas(
+	idDetalleFactura int,
+	idFactura int,
+	idEvento int,
+	idPresupuesto int,
+	idCliente int,
+	idItem int,
+	costoItem int,
+	CONSTRAINT detalleF_pk PRIMARY KEY(idDetalleFactura, idFactura, idEvento, idPresupuesto, idCliente),
+	CONSTRAINT detalleF_fk FOREIGN KEY(idItem)
+		REFERENCES Items(idItem),
+	CONSTRAINT detalleF_Factura_fk FOREIGN KEY(idFactura, idEvento, idPresupuesto, idCliente)
+		REFERENCES Facturas(idFactura, idEvento, idPresupuesto, idCliente)
+		);
+
+CREATE TABLE DetallePresupuestos(
+	idPresupuesto int, 
+	idEvento int,
+	idDetallePresupuesto int, 
+	idItem int,
+	cantidad int,
+	CONSTRAINT dp_pk PRIMARY KEY(idPresupuesto, idEvento, idDetallePresupuesto),
+	CONSTRAINT dp_presupuesto_fk FOREIGN KEY(idPresupuesto, idEvento)
+		REFERENCES Presupuestos(idPresupuesto, idEvento),
+	CONSTRAINT dp_item_fk FOREIGN KEY(idItem)
+		REFERENCES Items(idItem)
+		);
+

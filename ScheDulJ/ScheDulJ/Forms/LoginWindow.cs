@@ -16,16 +16,13 @@ namespace ScheDulJ
         {
             InitializeComponent();
         }
-        //INSTANCIA DE BDHELPER
-        BDHelper bdHelper = new BDHelper();
-        //METODO LOGUEO
-        private bool Loguear(string usuario, string password)
+       
+        private bool loguear(string usuario, string contra)
         {
-            bdHelper.CadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
             DataTable tabla;
-            string consulta = "SELECT Usuario , Password FROM Usuarios U WHERE " +
-                "U.Usuario = '" + usuario + "' AND U.Password = '" + password + "'"; 
-            tabla = bdHelper.ConsultarSQL(consulta);
+            string consulta = "SELECT usuario , contra FROM Usuarios U WHERE " +
+                "U.usuario = '" + usuario + "' AND U.contra = '" + contra + "' AND U.activo = 1"; 
+            tabla = BDHelper.ConsultarSQL(consulta);
             if (tabla.Rows.Count == 0)
             {
                 return false; 
@@ -47,10 +44,9 @@ namespace ScheDulJ
             else
             {
                 //Logueo con base de datos 
-                if (Loguear(txtUsuarioInsert.Text, txtPasswordInsert.Text))
+                if (loguear(txtUsuarioInsert.Text, txtPasswordInsert.Text))
                     {
                     //Logueo satisfactorio, creacion de instancia de menu principal 
-                    MessageBox.Show("Inicio de sesion satisfactorio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                     FrmMainMenu frmMainMenu;
                     frmMainMenu = new FrmMainMenu();
                     frmMainMenu.Show();
@@ -62,8 +58,8 @@ namespace ScheDulJ
                 {
                     MessageBox.Show("Usuario Incorrecto, por favor ingrese nuevamente", "Error al Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuarioInsert.Text = "Usuario";
-                    txtPasswordInsert.UseSystemPasswordChar = false; 
-                    txtPasswordInsert.Text = "Contrasena";
+                    txtPasswordInsert.UseSystemPasswordChar = true; 
+                    txtPasswordInsert.Text = "Contraseña";
 
                 }
             }
