@@ -40,7 +40,7 @@ namespace ScheDulJ.Forms
             {
                 agregarUsuario(txtUsuario.Text, txtPassword.Text);
                 MessageBox.Show("Usuario Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiarUsuarios(); 
+                limpiarUsuarios();
             }           
 
         }       //AGREGAR USUARIO 
