@@ -40,7 +40,7 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(345, 26);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(410, 26);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(100, 38);
             this.btnAgregarCliente.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(345, 115);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(411, 115);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(100, 38);
             this.btnEliminarCliente.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(383, 159);
+            this.btnSalir.Location = new System.Drawing.Point(428, 159);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(62, 28);
             this.btnSalir.TabIndex = 2;
@@ -83,12 +83,13 @@
             this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridClientes.Location = new System.Drawing.Point(12, 26);
             this.gridClientes.Name = "gridClientes";
-            this.gridClientes.Size = new System.Drawing.Size(327, 127);
+            this.gridClientes.Size = new System.Drawing.Size(392, 127);
             this.gridClientes.TabIndex = 4;
+            this.gridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellContentClick);
             // 
             // btnModificarCliente
             // 
-            this.btnModificarCliente.Location = new System.Drawing.Point(345, 70);
+            this.btnModificarCliente.Location = new System.Drawing.Point(411, 70);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(100, 39);
             this.btnModificarCliente.TabIndex = 5;
@@ -110,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 194);
+            this.ClientSize = new System.Drawing.Size(516, 202);
             this.Controls.Add(this.lblClientes);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.gridClientes);

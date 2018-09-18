@@ -37,11 +37,13 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNuevoCliente = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(120, 148);
+            this.btnCrear.Location = new System.Drawing.Point(120, 198);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 38);
             this.btnCrear.TabIndex = 0;
@@ -51,7 +53,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(11, 148);
+            this.btnCancelar.Location = new System.Drawing.Point(11, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 38);
             this.btnCancelar.TabIndex = 1;
@@ -61,21 +63,21 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(84, 43);
+            this.txtNombre.Location = new System.Drawing.Point(95, 43);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(125, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(84, 78);
+            this.txtApellido.Location = new System.Drawing.Point(95, 78);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(125, 20);
             this.txtApellido.TabIndex = 3;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(84, 113);
+            this.txtTelefono.Location = new System.Drawing.Point(95, 116);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(125, 20);
             this.txtTelefono.TabIndex = 4;
@@ -86,9 +88,9 @@
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(12, 42);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(66, 18);
+            this.lblNombre.Size = new System.Drawing.Size(72, 18);
             this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "Nombre*:";
             // 
             // lblApellido
             // 
@@ -96,9 +98,9 @@
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.Location = new System.Drawing.Point(15, 77);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(63, 18);
+            this.lblApellido.Size = new System.Drawing.Size(69, 18);
             this.lblApellido.TabIndex = 6;
-            this.lblApellido.Text = "Apellido:";
+            this.lblApellido.Text = "Apellido*:";
             // 
             // lblTelefono
             // 
@@ -106,9 +108,9 @@
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(8, 115);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(70, 18);
+            this.lblTelefono.Size = new System.Drawing.Size(76, 18);
             this.lblTelefono.TabIndex = 7;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.Text = "Telefono*:";
             // 
             // lblNuevoCliente
             // 
@@ -120,11 +122,30 @@
             this.lblNuevoCliente.TabIndex = 8;
             this.lblNuevoCliente.Text = "Nuevo Cliente:";
             // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(8, 155);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(85, 18);
+            this.lblDireccion.TabIndex = 9;
+            this.lblDireccion.Text = "Direccion *:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(95, 155);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(125, 20);
+            this.txtDireccion.TabIndex = 10;
+            // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 198);
+            this.ClientSize = new System.Drawing.Size(232, 248);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblNuevoCliente);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblApellido);
@@ -155,5 +176,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNuevoCliente;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.TextBox txtDireccion;
     }
 }

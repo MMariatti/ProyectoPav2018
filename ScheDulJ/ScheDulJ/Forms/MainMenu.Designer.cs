@@ -48,7 +48,7 @@
             this.btnExitMainMenu.Location = new System.Drawing.Point(668, 511);
             this.btnExitMainMenu.Name = "btnExitMainMenu";
             this.btnExitMainMenu.Size = new System.Drawing.Size(104, 38);
-            this.btnExitMainMenu.TabIndex = 6;
+            this.btnExitMainMenu.TabIndex = 7;
             this.btnExitMainMenu.Text = "Salir";
             this.btnExitMainMenu.UseVisualStyleBackColor = true;
             this.btnExitMainMenu.Click += new System.EventHandler(this.btnExitMainMenu_Click);
@@ -136,9 +136,10 @@
             this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(672, 443);
             this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
             this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
-            this.btnAdministrarEquipamiento.TabIndex = 8;
+            this.btnAdministrarEquipamiento.TabIndex = 6;
             this.btnAdministrarEquipamiento.Text = "Administrar Equipamiento";
             this.btnAdministrarEquipamiento.UseVisualStyleBackColor = true;
+            this.btnAdministrarEquipamiento.Click += new System.EventHandler(this.btnAdministrarEquipamiento_Click);
             // 
             // FrmMainMenu
             // 

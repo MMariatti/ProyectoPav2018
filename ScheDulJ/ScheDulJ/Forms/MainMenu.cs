@@ -42,6 +42,13 @@ namespace ScheDulJ
             frmAdministrarClientes frmAdministrarClientes = new frmAdministrarClientes();
             frmAdministrarClientes.Show(); 
         }
+
+        private void btnAdministrarEquipamiento_Click(object sender, EventArgs e)
+        {
+            FrmAdministrarEquipamiento equipamiento;
+            equipamiento = new FrmAdministrarEquipamiento();
+            equipamiento.Show();
+        }
     }
-    }
+}
 

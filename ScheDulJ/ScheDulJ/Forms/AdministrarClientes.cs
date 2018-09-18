@@ -30,7 +30,7 @@ namespace ScheDulJ.Forms
         private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla = BDHelper.ConsultarSQL("SELECT nombre, apellido, telefono FROM Clientes WHERE activo = 1");
+            tabla = BDHelper.ConsultarSQL("SELECT nombre, apellido, telefono, direccion FROM Clientes WHERE activo = 1");
             gridClientes.DataSource = tabla;
         }
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -75,6 +75,11 @@ namespace ScheDulJ.Forms
             FrmCambiarTelefono cambiarTelefono;
             cambiarTelefono = new FrmCambiarTelefono();
             cambiarTelefono.Show();
+
+        }
+
+        private void gridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
