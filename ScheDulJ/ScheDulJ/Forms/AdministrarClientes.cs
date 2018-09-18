@@ -53,7 +53,10 @@ namespace ScheDulJ.Forms
                     if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
 
+
                         string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE Nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
+
+                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
 
                         string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
 
