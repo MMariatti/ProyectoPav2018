@@ -64,8 +64,8 @@ namespace ScheDulJ
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmAgregarTipoEvento frmAgregarTipoEvento = new frmAgregarTipoEvento();
-            frmAgregarTipoEvento.Show(); 
+            frmAdministrarTipoEventos frmAdministrarTipoEventos = new frmAdministrarTipoEventos();
+            frmAdministrarTipoEventos.Show(); 
         }
     }
 }

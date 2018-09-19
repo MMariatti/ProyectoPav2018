@@ -54,10 +54,11 @@ namespace ScheDulJ.Forms
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+           
             corroborarDatos();
             if (MessageBox.Show("Esta seguro que desea crear el cliente?", "Confirmar Creacion Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-           
+                
                 agregarCliente(txtNombre.Text, txtApellido.Text,txtDireccion.Text, txtTelefono.Text);
                 MessageBox.Show("Cliente Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiarCampos(); 

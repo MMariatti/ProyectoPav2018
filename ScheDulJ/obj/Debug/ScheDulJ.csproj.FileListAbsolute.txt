@@ -103,3 +103,4 @@ C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDu
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarTipoEvento.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmAgregarEvento.resources
+C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarTipoEventos.resources
