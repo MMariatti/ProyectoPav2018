@@ -92,7 +92,12 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheD
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe.config
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.exe
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.pdb
-C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmCambiarTelefono.resources
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAdministrarEquipamiento.resources
+<<<<<<< HEAD
 E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAdministrarEquipamiento.resources
 E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmCambiarTelefono.resources
+=======
+C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAgregarEquipo.resources
+C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources
+C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarCliente.resources
+>>>>>>> afe0ae73973189692cd955a001517211338b0387

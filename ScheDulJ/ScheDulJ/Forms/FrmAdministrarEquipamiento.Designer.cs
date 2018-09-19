@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GridItems = new System.Windows.Forms.DataGridView();
+            this.GridEquipamiento = new System.Windows.Forms.DataGridView();
             this.BtnAgregarEquipo = new System.Windows.Forms.Button();
             this.BtnModficarEquipo = new System.Windows.Forms.Button();
             this.BtnEliminarEquipo = new System.Windows.Forms.Button();
             this.BtnRefrescar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEquipamiento)).BeginInit();
             this.SuspendLayout();
             // 
-            // GridItems
+            // GridEquipamiento
             // 
-            this.GridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridItems.Location = new System.Drawing.Point(12, 12);
-            this.GridItems.Name = "GridItems";
-            this.GridItems.Size = new System.Drawing.Size(490, 195);
-            this.GridItems.TabIndex = 0;
+            this.GridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEquipamiento.Location = new System.Drawing.Point(12, 12);
+            this.GridEquipamiento.Name = "GridEquipamiento";
+            this.GridEquipamiento.Size = new System.Drawing.Size(490, 195);
+            this.GridEquipamiento.TabIndex = 0;
             // 
             // BtnAgregarEquipo
             // 
@@ -105,19 +105,19 @@
             this.Controls.Add(this.BtnEliminarEquipo);
             this.Controls.Add(this.BtnModficarEquipo);
             this.Controls.Add(this.BtnAgregarEquipo);
-            this.Controls.Add(this.GridItems);
+            this.Controls.Add(this.GridEquipamiento);
             this.Name = "FrmAdministrarEquipamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdministrarEquipamiento";
             this.Load += new System.EventHandler(this.FrmAdministrarEquipamiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEquipamiento)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GridItems;
+        private System.Windows.Forms.DataGridView GridEquipamiento;
         private System.Windows.Forms.Button BtnAgregarEquipo;
         private System.Windows.Forms.Button BtnModficarEquipo;
         private System.Windows.Forms.Button BtnEliminarEquipo;

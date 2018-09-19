@@ -17,7 +17,12 @@ namespace ScheDulJ.Forms
             InitializeComponent();
         }
 
-
+        private void mostrarClientes()
+        {
+            DataTable tabla = new DataTable();
+            tabla = DBHelper.ConsultarSQL("SELECT nombre, apellido, telefono, direccion FROM Clientes WHERE activo = 1");
+            gridClientes.DataSource = tabla;
+        }
 
         private void btn_Salir(object sender, EventArgs e)
         {
@@ -25,18 +30,16 @@ namespace ScheDulJ.Forms
         }
         private void administrarClientes_Load(object sender, EventArgs e)
         {
-            gridClientes.DataSource = Clientes.GetAll();
+            //gridClientes.DataSource = Clientes.GetAll();
+            mostrarClientes();
         }
-        /*private void mostrarClientes()
-        {
-            DataTable tabla = new DataTable();
-            tabla = DBHelper.ConsultarSQL("SELECT nombre, apellido, telefono FROM Clientes WHERE activo = 1");
-            gridClientes.DataSource = tabla;
-        }
-        */
+
+      
+        
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            gridClientes.DataSource = Clientes.GetAll();
+            //gridClientes.DataSource = Clientes.GetAll();
+            mostrarClientes();
         }
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
@@ -71,6 +74,9 @@ namespace ScheDulJ.Forms
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
+            FrmModificarCliente frmModificarCliente;
+            frmModificarCliente = new FrmModificarCliente();
+            frmModificarCliente.Show();
 
         }
     }

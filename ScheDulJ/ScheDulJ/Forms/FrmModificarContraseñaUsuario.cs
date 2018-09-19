@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> afe0ae73973189692cd955a001517211338b0387
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,6 +106,7 @@ namespace ScheDulJ.Forms
                     txtPassword.Enabled = true;
                     txtPasswordConfirmada.Enabled = true;
                     txtPassword.Focus();
+                    btnModificarContraseña.Enabled = true;
                 }
                 else
                 {
@@ -140,3 +145,7 @@ namespace ScheDulJ.Forms
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> afe0ae73973189692cd955a001517211338b0387

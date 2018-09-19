@@ -43,6 +43,18 @@ namespace ScheDulJ.Forms
             }
         }
 
+<<<<<<< HEAD
+=======
+        private void agregarCliente(string nombre, string apellido, string direccion, string telefono)
+        {
+
+            string consultaSQL = "INSERT INTO Clientes (nombre,apellido,direccion,telefono,activo)" +
+                " VALUES ('" + nombre + "','" + apellido + "','" + direccion +"','" + telefono + "', 1);";
+            DBHelper.ConsultarSQL(consultaSQL);
+            this.Close();
+        }
+
+>>>>>>> afe0ae73973189692cd955a001517211338b0387
         private void btnCrear_Click(object sender, EventArgs e)
         {
             corroborarDatos();
