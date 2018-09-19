@@ -42,9 +42,7 @@ namespace ScheDulJ.Forms
                 MessageBox.Show("Ingrese Nombre,Apellido y Telefono", "Error al Crear Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-<<<<<<< HEAD
-=======
+        
         private void agregarCliente(string nombre, string apellido, string direccion, string telefono)
         {
 
@@ -53,8 +51,7 @@ namespace ScheDulJ.Forms
             DBHelper.ConsultarSQL(consultaSQL);
             this.Close();
         }
-
->>>>>>> afe0ae73973189692cd955a001517211338b0387
+        
         private void btnCrear_Click(object sender, EventArgs e)
         {
             corroborarDatos();

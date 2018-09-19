@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 namespace ScheDulJ.Forms
 {
     partial class FrmModificarContraseñaUsuario
@@ -30,38 +28,7 @@ namespace ScheDulJ.Forms
         /// </summary>
         private void InitializeComponent()
         {
-=======
-namespace ScheDulJ.Forms
-{
-    partial class FrmModificarContraseñaUsuario
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
->>>>>>> afe0ae73973189692cd955a001517211338b0387
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -180,7 +147,6 @@ namespace ScheDulJ.Forms
             this.ResumeLayout(false);
             this.PerformLayout();
 
-<<<<<<< HEAD
         }
 
         #endregion
@@ -194,20 +160,11 @@ namespace ScheDulJ.Forms
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificarContraseña;
-=======
         }
 
-        #endregion
+        
 
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblConfirmarPassword;
-        private System.Windows.Forms.TextBox txtPasswordConfirmada;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificarContraseña;
->>>>>>> afe0ae73973189692cd955a001517211338b0387
-    }
+ 
+
+    
 }

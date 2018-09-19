@@ -85,11 +85,8 @@
             this.gridClientes.Name = "gridClientes";
             this.gridClientes.Size = new System.Drawing.Size(358, 127);
             this.gridClientes.TabIndex = 4;
-<<<<<<< HEAD
-            //this.gridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellContentClick);
-=======
->>>>>>> afe0ae73973189692cd955a001517211338b0387
-            // 
+            this.gridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellContentClick);
+
             // btnModificarCliente
             // 
             this.btnModificarCliente.Location = new System.Drawing.Point(376, 69);
@@ -122,6 +119,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.btnAgregarCliente);
+            this.Controls.Add(this.gridClientes);
             this.Name = "frmAdministrarClientes";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

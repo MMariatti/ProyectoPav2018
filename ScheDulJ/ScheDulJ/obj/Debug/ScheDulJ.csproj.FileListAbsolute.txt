@@ -101,3 +101,6 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheD
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarCliente.resources
 >>>>>>> afe0ae73973189692cd955a001517211338b0387
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAgregarEquipo.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarCliente.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources

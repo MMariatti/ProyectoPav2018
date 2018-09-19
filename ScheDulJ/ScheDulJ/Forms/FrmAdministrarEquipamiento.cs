@@ -20,13 +20,8 @@ namespace ScheDulJ.Forms
         private void mostrarEquipamiento()
         {
             DataTable tabla = new DataTable();
-<<<<<<< HEAD
-            tabla = DBHelper.ConsultarSQL("SELECT nombre, descripcion, costoAlquiler FROM Items");
-            GridItems.DataSource = tabla;
-=======
             tabla = DBHelper.ConsultarSQL("SELECT nombre, descripcion, costoAlquiler FROM Items WHERE activo=1");
             GridEquipamiento.DataSource = tabla;
->>>>>>> afe0ae73973189692cd955a001517211338b0387
         }
        
         private void FrmAdministrarEquipamiento_Load(object sender, EventArgs e)
