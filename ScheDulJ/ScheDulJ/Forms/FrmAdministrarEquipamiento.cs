@@ -20,7 +20,7 @@ namespace ScheDulJ.Forms
         private void mostrarEquipamiento()
         {
             DataTable tabla = new DataTable();
-            tabla = BDHelper.ConsultarSQL("SELECT nombre, descripcion, costoAlquiler FROM Items");
+            tabla = DBHelper.ConsultarSQL("SELECT nombre, descripcion, costoAlquiler FROM Items");
             GridItems.DataSource = tabla;
         }
        

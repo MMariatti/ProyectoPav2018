@@ -94,3 +94,5 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheD
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\bin\Debug\ScheDulJ.pdb
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmCambiarTelefono.resources
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAdministrarEquipamiento.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAdministrarEquipamiento.resources
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmCambiarTelefono.resources

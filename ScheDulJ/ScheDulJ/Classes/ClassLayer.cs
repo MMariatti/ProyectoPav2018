@@ -25,7 +25,7 @@ namespace ScheDulJ
             activo = activoCliente;
         }
 
-        private void Save() {
+        public void Save() {
             try
             { 
                 string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) "+"VALUES('" + this.nombre + "','" + this.apellido+ "'," + this.telefono + "," + this.activo + ")";

@@ -49,7 +49,7 @@ namespace ScheDulJ.Forms
         {
             DataTable tabla = new DataTable();
             string consultaSql = "SELECT nombre, apellido FROM Clientes Where nombre = '" + nombre + "' AND apellido = '"+ apellido +"' AND activo =1";
-            tabla = BDHelper.ConsultarSQL(consultaSql);
+            tabla = DBHelper.ConsultarSQL(consultaSql);
             if (tabla.Rows.Count == 0)
             {
                 return false;
@@ -62,7 +62,7 @@ namespace ScheDulJ.Forms
         private void CambiarTelefono(string apellido, string nombre, string telefono)
         {
             string consultaSql = "UPDATE Clientes SET telefono = '" + telefono + "' WHERE nombre = '" + nombre + "'"+" AND apellido = '"+ apellido +"'";
-            BDHelper.ConsultarSQLVoid(consultaSql);
+            DBHelper.ConsultarSQLVoid(consultaSql);
         }
 
             private void btnBuscar_Click(object sender, EventArgs e)
