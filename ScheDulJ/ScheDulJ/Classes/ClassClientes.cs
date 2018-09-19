@@ -37,6 +37,10 @@ namespace ScheDulJ
                 {
                     this.apellido = value;
                 }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
             }
         }
         private string direccion;
@@ -128,7 +132,7 @@ namespace ScheDulJ
         }
 
 
-        public Clientes GetClientes(string nombreCliente, string apellidoCliente, int telefonoCliente, int activoCliente)
+        public Clientes GetCliente(string nombreCliente, string apellidoCliente, int telefonoCliente, int activoCliente)
         {
             string query = "SELECT * FROM Clientes WHERE nombre = '" + nombreCliente + "' AND apellido = '" + apellidoCliente + "' AND telefono = " + telefonoCliente + " AND activo = " + activoCliente;
             DataTable tabla = DBHelper.ConsultarSQL(query);
@@ -138,6 +142,67 @@ namespace ScheDulJ
             return cliente;
         }
 
+        public void Baja(Clientes cliente)
+        {
+            if (cliente.Activo == 1)
+            {
+                cliente.Activo = 0;
+                string query = "UPDATE Clientes SET activo = 0 WHERE nombre = '" + cliente.Nombre + "' AND telefono = " + cliente.Telefono + "";
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Cliente dado de baja con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show("El cliente ya esta dado de baja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void CambiarNombre(Clientes cliente, string newNombre)
+        {
+            try
+            {
+                string nomb = cliente.Nombre;
+                cliente.Nombre = newNombre;
+                string query = "UPDATE Clientes SET nombre = '" + newNombre + "' WHERE nombre = '" + nomb + "' AND telefono = " + cliente.Telefono + "";
+                DBHelper.ConsultarSQL(query);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarApellido(Clientes cliente, string newApellido)
+        {
+            try
+            {
+                string ape = cliente.Apellido;
+                cliente.Apellido = newApellido;
+                string query = "UPDATE Clientes SET apellido = '" + newApellido + "' WHERE nombre = '" + cliente.Nombre + "' AND apellido = '" + ape + "' AND telefono = " + cliente.Telefono + "";
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Apellido cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarTelefono(Clientes cliente, int newTelefono)
+        {
+            try
+            {
+                int tel = cliente.Telefono;
+                cliente.Telefono = newTelefono;
+                string query = "UPDATE Clientes SET telefono = " + newTelefono + " WHERE nombre = '" + cliente.Nombre + "' AND apellido = '" + cliente.Apellido + "' AND telefono = " + tel + "";
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Telefono cambiado con exito", "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

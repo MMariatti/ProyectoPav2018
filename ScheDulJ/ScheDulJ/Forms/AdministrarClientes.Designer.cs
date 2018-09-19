@@ -119,7 +119,6 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.btnAgregarCliente);
-            this.Controls.Add(this.gridClientes);
             this.Name = "frmAdministrarClientes";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

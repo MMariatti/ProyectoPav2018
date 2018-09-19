@@ -63,6 +63,11 @@ namespace ScheDulJ.Forms
                 txtNombreEquipo.Focus();
             }
         }
+
+        private void FrmAgregarEquipo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
