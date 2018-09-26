@@ -46,106 +46,135 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClassClientes.cs" />
-    <Compile Include="Forms\AdministrarClientes.cs">
+    <Compile Include="Classes\ClassEvento.cs" />
+    <Compile Include="Classes\ClassTiposEventos.cs" />
+    <Compile Include="Forms\Clientes\AdministrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdministrarClientes.Designer.cs">
+    <Compile Include="Forms\Clientes\AdministrarClientes.Designer.cs">
       <DependentUpon>AdministrarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AgregarCliente.cs">
+    <Compile Include="Forms\Clientes\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AgregarCliente.Designer.cs">
+    <Compile Include="Forms\Clientes\AgregarCliente.Designer.cs">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AgregarUsuario.cs">
+    <Compile Include="Forms\Eventos\frmAgregarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AgregarUsuario.Designer.cs">
+    <Compile Include="Forms\Eventos\frmAgregarEvento.Designer.cs">
+      <DependentUpon>frmAgregarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.Designer.cs">
+      <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usuarios\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Usuarios\AgregarUsuario.Designer.cs">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmAdministrarEquipamiento.cs">
+    <Compile Include="Forms\Equipamiento\FrmAdministrarEquipamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmAdministrarEquipamiento.Designer.cs">
+    <Compile Include="Forms\Equipamiento\FrmAdministrarEquipamiento.Designer.cs">
       <DependentUpon>FrmAdministrarEquipamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmAgregarEquipo.cs">
+    <Compile Include="Forms\Equipamiento\FrmAgregarEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmAgregarEquipo.Designer.cs">
+    <Compile Include="Forms\Equipamiento\FrmAgregarEquipo.Designer.cs">
       <DependentUpon>FrmAgregarEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmModificarCliente.cs">
+    <Compile Include="Forms\TiposEvento\frmAgregarTipoEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmModificarCliente.Designer.cs">
+    <Compile Include="Forms\TiposEvento\frmAgregarTipoEvento.Designer.cs">
+      <DependentUpon>frmAgregarTipoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\FrmModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FrmModificarCliente.Designer.cs">
       <DependentUpon>FrmModificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmModificarContraseñaUsuario.cs">
+    <Compile Include="Forms\Usuarios\FrmModificarContraseñaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmModificarContraseñaUsuario.Designer.cs">
+    <Compile Include="Forms\Usuarios\FrmModificarContraseñaUsuario.Designer.cs">
       <DependentUpon>FrmModificarContraseñaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmModificarEquipo.cs">
+    <Compile Include="Forms\Equipamiento\FrmModificarEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmModificarEquipo.Designer.cs">
+    <Compile Include="Forms\Equipamiento\FrmModificarEquipo.Designer.cs">
       <DependentUpon>FrmModificarEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserAdmin.cs">
+    <Compile Include="Forms\Usuarios\UserAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserAdmin.Designer.cs">
+    <Compile Include="Forms\Usuarios\UserAdmin.Designer.cs">
       <DependentUpon>UserAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenu.cs">
+    <Compile Include="Forms\Menu Principal\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu.Designer.cs">
+    <Compile Include="Forms\Menu Principal\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginWindow.cs">
+    <Compile Include="Forms\Menu Principal\LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginWindow.Designer.cs">
+    <Compile Include="Forms\Menu Principal\LoginWindow.Designer.cs">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\DBHelper.cs" />
-    <EmbeddedResource Include="Forms\AdministrarClientes.resx">
+    <EmbeddedResource Include="Forms\Clientes\AdministrarClientes.resx">
       <DependentUpon>AdministrarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AgregarCliente.resx">
+    <EmbeddedResource Include="Forms\Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AgregarUsuario.resx">
+    <EmbeddedResource Include="Forms\Eventos\frmAgregarEvento.resx">
+      <DependentUpon>frmAgregarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TiposEvento\frmAdministrarTipoEventos.resx">
+      <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usuarios\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmAdministrarEquipamiento.resx">
+    <EmbeddedResource Include="Forms\Equipamiento\FrmAdministrarEquipamiento.resx">
       <DependentUpon>FrmAdministrarEquipamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmAgregarEquipo.resx">
+    <EmbeddedResource Include="Forms\Equipamiento\FrmAgregarEquipo.resx">
       <DependentUpon>FrmAgregarEquipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmModificarCliente.resx">
+    <EmbeddedResource Include="Forms\TiposEvento\frmAgregarTipoEvento.resx">
+      <DependentUpon>frmAgregarTipoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FrmModificarCliente.resx">
       <DependentUpon>FrmModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmModificarContraseñaUsuario.resx">
+    <EmbeddedResource Include="Forms\Usuarios\FrmModificarContraseñaUsuario.resx">
       <DependentUpon>FrmModificarContraseñaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmModificarEquipo.resx">
+    <EmbeddedResource Include="Forms\Equipamiento\FrmModificarEquipo.resx">
       <DependentUpon>FrmModificarEquipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu.resx">
+    <EmbeddedResource Include="Forms\Menu Principal\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginWindow.resx">
+    <EmbeddedResource Include="Forms\Menu Principal\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserAdmin.resx">
+    <EmbeddedResource Include="Forms\Usuarios\UserAdmin.resx">
       <DependentUpon>UserAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,5 +206,6 @@
   <ItemGroup>
     <None Include="Resources\Music-Dj-iconresized.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

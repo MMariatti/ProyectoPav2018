@@ -17,8 +17,10 @@ namespace ScheDulJ
         public string Nombre
         {
             get { return this.nombre; }
-            private set{
-                if (!string.IsNullOrWhiteSpace(value)) {
+            private set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
                     this.nombre = value;
                 }
                 else
@@ -81,7 +83,7 @@ namespace ScheDulJ
             get { return this.activo; }
             private set
             {
-                if (value == 1 || value == 0 )
+                if (value == 1 || value == 0)
                 {
                     this.activo = value;
                 }
@@ -131,6 +133,23 @@ namespace ScheDulJ
             }
         }
 
+        public static DataTable GetAllConcatenado()
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT *, CONCAT(nombre,CONCAT(' ', apellido)) AS nombreCompleto FROM Clientes C WHERE C.activo = 1";
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
+
+
+        }
 
         public Clientes GetCliente(string nombreCliente, string apellidoCliente, int telefonoCliente, int activoCliente)
         {
@@ -166,7 +185,7 @@ namespace ScheDulJ
                 string query = "UPDATE Clientes SET nombre = '" + newNombre + "' WHERE nombre = '" + nomb + "' AND telefono = " + cliente.Telefono + "";
                 DBHelper.ConsultarSQL(query);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -205,4 +224,7 @@ namespace ScheDulJ
         }
     }
 }
+
+
+
 
