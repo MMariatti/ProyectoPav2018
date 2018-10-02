@@ -105,13 +105,13 @@ namespace ScheDulJ
         {
             try
             {
-                string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.nombre + "','" + this.apellido + "', '" + this.direccion + "', " + this.telefono + "," + this.activo + ")";
+                string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.Nombre + "','" + this.Apellido + "', '" + this.Direccion + "', " + this.Telefono + "," + this.Activo + ")";
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show(this.Nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
