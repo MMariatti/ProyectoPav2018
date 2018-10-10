@@ -159,14 +159,13 @@ namespace ScheDulJ
             }
         }
 
-        public void CambiarNombre(Clientes cliente, string newNombre)
+        public void CambiarNombre(string newNombre)
         {
             try
             {
-                string nomb = cliente.Nombre;
-                cliente.Nombre = newNombre;
-                string query = "UPDATE Clientes SET nombre = '" + newNombre + "' WHERE nombre = '" + nomb + "' AND telefono = " + cliente.Telefono + "";
+                string query = "UPDATE Clientes SET nombre = '" + newNombre + "' WHERE nombre = '" + this.Nombre + "' AND telefono = " + this.Telefono + "";
                 DBHelper.ConsultarSQL(query);
+                this.Nombre = newNombre;
             }
             catch (Exception ex)
             {
@@ -174,15 +173,14 @@ namespace ScheDulJ
             }
         }
 
-        public void CambiarApellido(Clientes cliente, string newApellido)
+        public void CambiarApellido(string newApellido)
         {
             try
             {
-                string ape = cliente.Apellido;
-                cliente.Apellido = newApellido;
-                string query = "UPDATE Clientes SET apellido = '" + newApellido + "' WHERE nombre = '" + cliente.Nombre + "' AND apellido = '" + ape + "' AND telefono = " + cliente.Telefono + "";
+                string query = "UPDATE Clientes SET apellido = '" + newApellido + "' WHERE nombre = '" + this.Nombre + "' AND apellido = '" + this.Apellido + "' AND telefono = " + this.Telefono + "";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Apellido cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Apellido = newApellido;
             }
             catch (Exception ex)
             {
@@ -190,13 +188,11 @@ namespace ScheDulJ
             }
         }
 
-        public void CambiarTelefono(Clientes cliente, int newTelefono)
+        public void CambiarTelefono(int newTelefono)
         {
             try
             {
-                int tel = cliente.Telefono;
-                cliente.Telefono = newTelefono;
-                string query = "UPDATE Clientes SET telefono = " + newTelefono + " WHERE nombre = '" + cliente.Nombre + "' AND apellido = '" + cliente.Apellido + "' AND telefono = " + tel + "";
+                string query = "UPDATE Clientes SET telefono = " + newTelefono + " WHERE nombre = '" + this.Nombre + "' AND apellido = '" + this.Apellido + "' AND telefono = " + this.Telefono + "";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Telefono cambiado con exito", "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
