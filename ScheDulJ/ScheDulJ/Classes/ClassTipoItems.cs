@@ -85,5 +85,59 @@ namespace ScheDulJ.Classes
                 return tabla;
             }
         }
+
+        public DataTable GetTipoItems(string nombreTipoItem)
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT * FROM TiposItems WHERE nombre = '" + nombreTipoItem + "'";
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                if (tabla.Rows.Count == 1)
+                {
+                    return tabla;
+                }
+                else
+                {
+                    MessageBox.Show("Aparecio mas de un tipo de item!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
+            
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
+            
+        }
+
+        public void CambiarNombre(string nombreNuevo)
+        {
+            string query = "UPDATE TiposItems SET nombre = '"+ nombreNuevo +"' WHERE nombre = '" + this.Nombre + "'";
+            try
+            {
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Tipo de Item: " + this.Nombre + " cambiado a "+ nombreNuevo +".", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarDescripcion(string descripcionNueva)
+        {
+            string query = "UPDATE TiposItems SET descripcion = '" + descripcionNueva + "' WHERE nombre = '" + this.Nombre + "'";
+            try
+            {
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Descripcion: " + this.Descripcion + " cambiado a " + descripcionNueva + ".", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
