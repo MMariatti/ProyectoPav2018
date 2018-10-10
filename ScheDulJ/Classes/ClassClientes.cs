@@ -107,7 +107,7 @@ namespace ScheDulJ
         {
             try
             {
-                string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.nombre + "','" + this.apellido + "', '" + this.direccion + "', " + this.telefono + "," + this.activo + ")";
+                string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.Nombre + "','" + this.Apellido + "', '" + this.Direccion + "', " + this.Telefono + "," + this.Activo + ")";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
@@ -144,12 +144,12 @@ namespace ScheDulJ
             return cliente;
         }
 
-        public void Baja(Clientes cliente)
+        public void Baja()
         {
-            if (cliente.Activo == 1)
+            if (this.Activo == 1)
             {
-                cliente.Activo = 0;
-                string query = "UPDATE Clientes SET activo = 0 WHERE nombre = '" + cliente.Nombre + "' AND telefono = " + cliente.Telefono + "";
+                this.Activo = 0;
+                string query = "UPDATE Clientes SET activo = 0 WHERE nombre = '" + this.Nombre + "' AND telefono = " + this.Telefono + "";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Cliente dado de baja con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
