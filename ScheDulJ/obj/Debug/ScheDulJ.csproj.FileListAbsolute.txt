@@ -150,3 +150,6 @@ E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe
 E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
 =======
 >>>>>>> 72e46d936c083f0e69d09a3da36af2d41ef2bb99
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\ScheDulJ.exe.config
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\ScheDulJ.exe
+E:\Todo\Cosas\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\ScheDulJ.pdb
