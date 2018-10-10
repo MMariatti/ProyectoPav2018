@@ -60,7 +60,7 @@ namespace ScheDulJ.Classes
             }
             set
             {
-                if (value != null && (value.GetType() == Int))
+                if (value>=0)
                 {
                     this.costoAlquiler = value;
                 }
