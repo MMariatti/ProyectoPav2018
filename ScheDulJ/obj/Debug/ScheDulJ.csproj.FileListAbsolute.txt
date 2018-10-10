@@ -104,3 +104,26 @@ C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDu
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarTipoEvento.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmAgregarEvento.resources
 C:\Users\Francisco\Desktop\Ingenieria en Sistemas de Informacion\PAV 2018\ScheDulJ\ProyectoPav2018-master\ScheDulJ\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarTipoEventos.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\bin\Debug\ScheDulJ.exe.config
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\bin\Debug\ScheDulJ.exe
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\bin\Debug\ScheDulJ.pdb
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.csprojAssemblyReference.cache
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarClientes.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarCliente.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmAgregarEvento.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAdministrarTipoEventos.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarUsuario.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAdministrarEquipamiento.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmAgregarEquipo.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmAgregarTipoEvento.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarCliente.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarContraseñaUsuario.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.FrmMainMenu.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.FrmLogin.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmUserAdmin.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.Properties.Resources.resources
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.csproj.GenerateResource.cache
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.exe
+C:\Users\Francisco\Downloads\ProyectoPav2018-master (5)\ProyectoPav2018-master\ScheDulJ\obj\Debug\ScheDulJ.pdb

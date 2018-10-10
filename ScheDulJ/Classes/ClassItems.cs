@@ -14,7 +14,8 @@ namespace ScheDulJ.Classes
         private string descripcion;
         private int costoAlquiler;
 
-        public string Nombre {
+        public string Nombre
+        {
             get
             {
                 return this.nombre;

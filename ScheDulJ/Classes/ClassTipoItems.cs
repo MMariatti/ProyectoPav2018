@@ -64,7 +64,7 @@ namespace ScheDulJ.Classes
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Tipo de Item: " + this.Nombre + " cargado con exito.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -103,24 +103,24 @@ namespace ScheDulJ.Classes
                     return null;
                 }
             }
-            
-            catch(Exception ex)
+
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return tabla;
             }
-            
+
         }
 
         public void CambiarNombre(string nombreNuevo)
         {
-            string query = "UPDATE TiposItems SET nombre = '"+ nombreNuevo +"' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE TiposItems SET nombre = '" + nombreNuevo + "' WHERE nombre = '" + this.Nombre + "'";
             try
             {
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Tipo de Item: " + this.Nombre + " cambiado a "+ nombreNuevo +".", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Tipo de Item: " + this.Nombre + " cambiado a " + nombreNuevo + ".", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
