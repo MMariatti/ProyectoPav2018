@@ -10,6 +10,19 @@ namespace ScheDulJ
 {
     public class Clientes
     {
+        private int idCliente;
+        public int IdCliente
+        {
+            get
+            {
+                return this.idCliente;
+            }
+
+            set
+            {
+                MessageBox.Show("No podes hacer eso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         //Forzamos que los parametros sean privados para que una vez creados solo puedan ser modificados por la misma clase
         private string nombre;
         //Creamos Properties que definen los get y set de cada atributo, manteniendo el set privado para que todo el comportamiento quede dentro de la clase
@@ -184,7 +197,7 @@ namespace ScheDulJ
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -194,11 +207,11 @@ namespace ScheDulJ
             {
                 string query = "UPDATE Clientes SET telefono = " + newTelefono + " WHERE nombre = '" + this.Nombre + "' AND apellido = '" + this.Apellido + "' AND telefono = " + this.Telefono + "";
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Telefono cambiado con exito", "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Telefono cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar apellido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
