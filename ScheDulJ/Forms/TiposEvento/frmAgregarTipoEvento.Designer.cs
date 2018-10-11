@@ -118,6 +118,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Tipo de Evento";
+            this.Load += new System.EventHandler(this.frmAgregarTipoEvento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

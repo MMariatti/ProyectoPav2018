@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes; 
 
 
 namespace ScheDulJ.Forms
@@ -28,11 +29,11 @@ namespace ScheDulJ.Forms
         }
         private void mostrarListaUsuarios()
         {
-           
             DataTable tabla = new DataTable();
-            tabla = DBHelper.ConsultarSQL("SELECT Usuario FROM Usuarios U WHERE U.Activo = 1"); 
+            tabla = Classes.Usuarios.GetAll(); 
             gridUsuarios.DataSource = tabla; 
         }
+
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             frmAgregarUsuario frmAgregarUsuario;
@@ -52,10 +53,10 @@ namespace ScheDulJ.Forms
                 {
                     if (MessageBox.Show("Esta seguro que desea eliminar el usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        string consultaSQL = "UPDATE Usuarios SET Activo = 0 WHERE Usuario ='" + gridUsuarios.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                        DBHelper.ConsultarSQL(consultaSQL);
-                        MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        mostrarListaUsuarios();
+                        Classes.Usuarios usuario = new Classes.Usuarios(gridUsuarios.SelectedRows[0].Cells[1].Value.ToString(), gridUsuarios.SelectedRows[0].Cells[1].Value.ToString());
+                        int id = System.Convert.ToInt32(gridUsuarios.SelectedRows[0].Cells[0].Value.ToString()); 
+                        usuario.Baja(id); 
+                        usuario = null;
                     }
                 }
                 else
@@ -68,6 +69,7 @@ namespace ScheDulJ.Forms
                 MessageBox.Show("Debe seleccionar un usuario para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             mostrarListaUsuarios();
@@ -75,9 +77,9 @@ namespace ScheDulJ.Forms
 
         private void btnModificarPassword_Click(object sender, EventArgs e)
         {
-            FrmModificarContraseñaUsuario frmModificarContraseñaUsuario;
-            frmModificarContraseñaUsuario = new FrmModificarContraseñaUsuario();
-            frmModificarContraseñaUsuario.Show();
+            
+
+
         }
     }   
 }

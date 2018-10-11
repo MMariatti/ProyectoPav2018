@@ -33,6 +33,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.gridTipoEventos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +86,10 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // frmAdministrarTipoEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +117,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnSalir;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes; 
 
 namespace ScheDulJ
 {
     public partial class FrmLogin : Form
     {
+
+        private string usuarioActual;
+        private string contraseñaActual; 
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -29,7 +34,9 @@ namespace ScheDulJ
             }
             else
             {
-                return true; 
+                contraseñaActual = contra;
+                usuarioActual = usuario; 
+                return true;
             }
         }
         //EVENTOS
@@ -89,6 +96,11 @@ namespace ScheDulJ
             txtPasswordInsert.UseSystemPasswordChar = true;
         }
   
+        public Sesion SesionActual()
+        {
+            Sesion sesion = new Sesion(usuarioActual, contraseñaActual);
+            return sesion; 
+        }
     }
 
 
