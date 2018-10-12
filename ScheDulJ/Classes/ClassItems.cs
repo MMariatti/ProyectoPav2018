@@ -99,7 +99,7 @@ namespace ScheDulJ.Classes
             return item;
         }
 
-        public DataTable GetDataAllItems()
+        public static DataTable GetDataAllItems()
         {
             DataTable tabla = new DataTable();
             string query = "SELECT * FROM Items";

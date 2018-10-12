@@ -43,12 +43,10 @@ namespace ScheDulJ.Forms
             }
         }
 
-        private void agregarCliente(string nombre, string apellido, string direccion, string telefono)
+        private void agregarCliente(string nombre, string apellido, string direccion, int telefono)
         {
-
-            string consultaSQL = "INSERT INTO Clientes (nombre,apellido,direccion,telefono,activo)" +
-                " VALUES ('" + nombre + "','" + apellido + "','" + direccion +"','" + telefono + "', 1);";
-            DBHelper.ConsultarSQL(consultaSQL);
+            Clientes cliente = new Clientes(nombre, apellido, direccion, telefono, 1);
+            cliente.Save();
             this.Close();
         }
 
@@ -59,7 +57,7 @@ namespace ScheDulJ.Forms
             if (MessageBox.Show("Esta seguro que desea crear el cliente?", "Confirmar Creacion Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 
-                agregarCliente(txtNombre.Text, txtApellido.Text,txtDireccion.Text, txtTelefono.Text);
+                agregarCliente(txtNombre.Text, txtApellido.Text,txtDireccion.Text, Convert.ToInt32(txtTelefono.Text));
                 MessageBox.Show("Cliente Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiarCampos(); 
             }

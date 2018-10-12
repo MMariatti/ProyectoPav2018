@@ -80,7 +80,7 @@ namespace ScheDulJ
             get { return this.telefono; }
             private set
             {
-                if (value >= 1000000000)
+                if (value >= 1000000)
                 {
                     this.telefono = value;
                 }
@@ -107,7 +107,7 @@ namespace ScheDulJ
             }
         }
 
-        public Clientes(string nombreCliente, string apellidoCliente, string direccionCliente, int telefonoCliente, int activoCliente)
+        public  Clientes(string nombreCliente, string apellidoCliente, string direccionCliente, int telefonoCliente, int activoCliente)
         {
             this.Nombre = nombreCliente;
             this.Apellido = apellidoCliente;
@@ -146,6 +146,15 @@ namespace ScheDulJ
             }
         }
 
+        public Clientes GetClienteXId(int idClienteBuscado)
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT * FROM Clientes WHERE id = '" + idClienteBuscado + "'";
+            DataRowCollection filas = tabla.Rows;
+            DataRow fila = filas[0];
+            Clientes cliente = new Clientes(fila.Field<string>("nombre"), fila.Field<string>("apellido"), fila.Field<string>("direccion"), fila.Field<int>("telefono"), fila.Field<int>("activo"));
+            return cliente;
+        }
 
         public Clientes GetCliente(string nombreCliente, string apellidoCliente, int telefonoCliente, int activoCliente)
         {
@@ -162,7 +171,7 @@ namespace ScheDulJ
             if (this.Activo == 1)
             {
                 this.Activo = 0;
-                string query = "UPDATE Clientes SET activo = 0 WHERE nombre = '" + this.Nombre + "' AND telefono = " + this.Telefono + "";
+                string query = "UPDATE Clientes SET activo = 0 WHERE nombre='"+this.nombre+"' AND telefono ='"+this.telefono+"'";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Cliente dado de baja con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }

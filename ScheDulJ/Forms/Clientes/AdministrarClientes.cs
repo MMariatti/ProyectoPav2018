@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes;
 
 namespace ScheDulJ.Forms
 {
@@ -20,8 +21,9 @@ namespace ScheDulJ.Forms
         private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla = DBHelper.ConsultarSQL("SELECT nombre, apellido, telefono, direccion FROM Clientes WHERE activo = 1");
+            tabla =Clientes.GetAll();
             gridClientes.DataSource = tabla;
+            this.gridClientes.Columns[5].Visible = false;
         }
 
         private void btn_Salir(object sender, EventArgs e)
@@ -30,7 +32,6 @@ namespace ScheDulJ.Forms
         }
         private void administrarClientes_Load(object sender, EventArgs e)
         {
-            //gridClientes.DataSource = Clientes.GetAll();
             mostrarClientes();
         }
 
@@ -38,8 +39,8 @@ namespace ScheDulJ.Forms
         
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            //gridClientes.DataSource = Clientes.GetAll();
-            mostrarClientes();
+            mostrarClientes(); 
+            
         }
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
@@ -50,25 +51,28 @@ namespace ScheDulJ.Forms
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 if (gridClientes.SelectedRows[0].Index != gridClientes.Rows.Count - 1)
                 {
-                    if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE nombre ='" + gridClientes.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                  if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                  {
+                       
+                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE idCliente =" + gridClientes.SelectedRows[0].Cells[0].Value;
                         DBHelper.ConsultarSQL(consultaSQL);
                         MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Clientes.GetAll();
-                    }
+                  }
                 }
                 else
-                {
+                { 
                     MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }catch(Exception)
+            }
+            catch (Exception)
             {
-                MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
