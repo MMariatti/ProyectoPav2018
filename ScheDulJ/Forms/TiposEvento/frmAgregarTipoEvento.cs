@@ -53,12 +53,18 @@ namespace ScheDulJ.Forms
 
                 ClassTiposEventos tEvento = new ClassTiposEventos(txtNombre.Text , txtDescripcion.Text); 
                 tEvento.Save();
-                this.Close(); 
+                this.Close();
+                
             }
             {
                 
 
             }
+        }
+
+        private void frmAgregarTipoEvento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

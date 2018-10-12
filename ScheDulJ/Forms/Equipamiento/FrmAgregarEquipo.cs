@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes; 
 
 namespace ScheDulJ.Forms
 {
@@ -37,10 +38,16 @@ namespace ScheDulJ.Forms
 
         private void AgregarEquipo(string nombre, string descripcion, string costoAlquiler)
         {
-
-            string consultaSQL = "INSERT INTO Items (nombre,descripcion,costoAlquiler,activo)" +
-            " VALUES ('" + nombre + "','" + descripcion + "','" + costoAlquiler + "', 1);";
-            DBHelper.ConsultarSQL(consultaSQL);
+            int costoAlquilerN = System.Convert.ToInt32(costoAlquiler);
+            try
+            {
+                Items item = new Items(nombre, descripcion, costoAlquilerN);
+                item.Save(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
            
         }
 
@@ -59,7 +66,6 @@ namespace ScheDulJ.Forms
                 if (MessageBox.Show("¿Esta seguro que quiere agregar este equipo?","Agregar equipo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
                 {
                     AgregarEquipo(txtNombreEquipo.Text, txtDescripcionEquipo.Text, txtCostoAlquiler.Text);
-                    MessageBox.Show("Equipo agregado correctamente", "AgregarEquipo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }

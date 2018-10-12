@@ -8,18 +8,15 @@ using System.Windows.Forms;
 
 namespace ScheDulJ.Classes
 {
-    class Usuarios
+    public class Usuarios
     {
         private string usuario;
         private string contra;
-        private int activo;
-        private int idUsuario;
 
         public Usuarios(string usuarioN, string contraN)
         {
             usuario = usuarioN;
-            contraN = contraN; 
-
+            contra = contraN; 
         }
 
         public void Save()
@@ -36,7 +33,7 @@ namespace ScheDulJ.Classes
             }
         }
 
-        public DataTable GetAll()
+        public static DataTable GetAll()
         {
             DataTable tabla = new DataTable();
             string query = "SELECT * FROM Usuarios U WHERE U.activo = 1";
@@ -52,19 +49,25 @@ namespace ScheDulJ.Classes
             }
         }
 
-        public void Baja()
+        public void Baja(int id)
         {
-            if (activo == 1)
-            {
-                activo = 0;
-                string query = "UPDATE Usuarios SET activo = 0 WHERE idUsuario = '" + idUsuario;
+
+            try { 
+                string query = "UPDATE Usuarios SET activo = 0 WHERE idUsuario =" + id;
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Usuario dado de baja con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("El usuario ya esta dado de baja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+    
+        public void CambiarContraseña()
+        {
+
+
         }
     }
 }

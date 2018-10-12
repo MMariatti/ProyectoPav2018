@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes; 
 
 namespace ScheDulJ.Forms
 {
@@ -39,17 +40,15 @@ namespace ScheDulJ.Forms
             if (MessageBox.Show("Esta seguro que desea crear el usuario?", "Confirmar Creacion Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 agregarUsuario(txtUsuario.Text, txtPassword.Text);
-                MessageBox.Show("Usuario Creado Correctamente", "Usuario Creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiarUsuarios();
             }           
 
         }       //AGREGAR USUARIO 
         private void agregarUsuario(string nombre , string contra)
         {
-           
-            string consultaSQL = "INSERT INTO Usuarios(usuario,contra,activo)" +
-                " VALUES ('"+nombre+"','"+contra+"', 1);";
-            DBHelper.ConsultarSQL(consultaSQL);
+
+            Classes.Usuarios usuario = new Classes.Usuarios(nombre, contra);
+            usuario.Save(); 
             this.Close(); 
             
         }        //CORROBORAR DATOS

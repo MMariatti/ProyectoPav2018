@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScheDulJ.Classes;
 
 namespace ScheDulJ.Forms
 {
@@ -20,7 +21,7 @@ namespace ScheDulJ.Forms
         private void mostrarEquipamiento()
         {
             DataTable tabla = new DataTable();
-            tabla = DBHelper.ConsultarSQL("SELECT nombre, descripcion, costoAlquiler FROM Items WHERE activo=1");
+            tabla = Items.GetAll(); 
             GridEquipamiento.DataSource = tabla;
         }
        
@@ -59,12 +60,11 @@ namespace ScheDulJ.Forms
             {
                 if (GridEquipamiento.SelectedRows[0].Index != GridEquipamiento.Rows.Count - 1)
                 {
-                    if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Esta seguro que desea eliminar el Equipamiento?", "Eliminar Equipamiento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        string consultaSQL = "UPDATE Items SET activo = 0 WHERE nombre ='" + GridEquipamiento.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                        DBHelper.ConsultarSQL(consultaSQL);
-                        MessageBox.Show("Equipo Eliminado Correctamente", "Equipo Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+                        int id = System.Convert.ToInt32(GridEquipamiento.SelectedRows[0].Cells[0].Value.ToString());
+                        Items.Baja(id);
+                        mostrarEquipamiento();
                     }
                 }
                 else
