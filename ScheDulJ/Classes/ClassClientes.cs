@@ -10,7 +10,7 @@ namespace ScheDulJ
 {
     public class Clientes
     {
-        private int idCliente;
+        private int idCliente = 0;
         public int IdCliente
         {
             get
@@ -18,13 +18,13 @@ namespace ScheDulJ
                 return this.idCliente;
             }
 
-            set
+            private set
             {
-                MessageBox.Show("No podes hacer eso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.idCliente = value;
             }
         }
         //Forzamos que los parametros sean privados para que una vez creados solo puedan ser modificados por la misma clase
-        private string nombre;
+        private string nombre = "";
         //Creamos Properties que definen los get y set de cada atributo, manteniendo el set privado para que todo el comportamiento quede dentro de la clase
         //y no exista posibilidad de manipulacion maliciosa de datos.
         public string Nombre
@@ -42,7 +42,7 @@ namespace ScheDulJ
                 }
             }
         }
-        private string apellido;
+        private string apellido = "";
         public string Apellido
         {
             get { return this.apellido; }
@@ -58,7 +58,7 @@ namespace ScheDulJ
                 }
             }
         }
-        private string direccion;
+        private string direccion = "";
         public string Direccion
         {
             get { return this.direccion; }
@@ -74,7 +74,7 @@ namespace ScheDulJ
                 }
             }
         }
-        private int telefono;
+        private int telefono = 0;
         public int Telefono
         {
             get { return this.telefono; }
@@ -90,7 +90,7 @@ namespace ScheDulJ
                 }
             }
         }
-        private int activo;
+        private int activo = 1;
         public int Activo
         {
             get { return this.activo; }
@@ -107,6 +107,11 @@ namespace ScheDulJ
             }
         }
 
+        public Clientes()
+        {
+
+        }
+
         public Clientes(string nombreCliente, string apellidoCliente, string direccionCliente, int telefonoCliente, int activoCliente)
         {
             this.Nombre = nombreCliente;
@@ -114,6 +119,23 @@ namespace ScheDulJ
             this.Direccion = direccionCliente;
             this.Telefono = telefonoCliente;
             this.Activo = activoCliente;
+        }
+
+        public Clientes(int idCliente)
+        {
+            this.IdCliente = idCliente;
+            getAttr();
+        }
+
+        private void getAttr()
+        {
+            string query = "SELECT * FROM Clientes WHERE idCliente = " + IdCliente;
+            DataTable tabla = DBHelper.ConsultarSQL(query);
+            Nombre = tabla.Rows[0]["nombre"].ToString();
+            Apellido = tabla.Rows[0]["apellido"].ToString();
+            Direccion = tabla.Rows[0]["direccion"].ToString();
+            Telefono = (int)tabla.Rows[0]["telefono"];
+            Activo  = (int)tabla.Rows[0]["activo"];
         }
 
         public void Save()
@@ -147,9 +169,9 @@ namespace ScheDulJ
         }
 
 
-        public Clientes GetCliente(string nombreCliente, string apellidoCliente, int telefonoCliente, int activoCliente)
+        public Clientes GetCliente(int idC)
         {
-            string query = "SELECT * FROM Clientes WHERE nombre = '" + nombreCliente + "' AND apellido = '" + apellidoCliente + "' AND telefono = " + telefonoCliente + " AND activo = " + activoCliente;
+            string query = "SELECT * FROM Clientes WHERE idCliente = " + idC + " AND activo = 1 ";
             DataTable tabla = DBHelper.ConsultarSQL(query);
             DataRowCollection filas = tabla.Rows;
             DataRow fila = filas[0];

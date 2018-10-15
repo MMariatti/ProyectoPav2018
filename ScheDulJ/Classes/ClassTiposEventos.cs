@@ -8,12 +8,59 @@ using System.Data;
 
 namespace ScheDulJ.Classes
 {
-    public class ClassTiposEventos
+    public class TiposEventos
     {
-        private string nombreTEvento;
-        private string descripcionTEvento;
+        private int idTipoEvento = 0;
+        private string nombreTEvento = "";
+        private string descripcionTEvento = "";
 
-        public ClassTiposEventos(string nombre, string descripcion)
+        public int IdTipoEvento
+        {
+            get { return this.idTipoEvento; }
+            private set
+            {
+                this.idTipoEvento = value;
+            }
+        }
+
+        public string NombreTEvento
+        {
+            get { return this.nombreTEvento; }
+            private set
+            {
+                this.nombreTEvento = value;
+            }
+        }
+
+        public string DescripcionTEvento
+        {
+            get { return this.descripcionTEvento; }
+            private set
+            {
+                this.descripcionTEvento = value;
+            }
+        }
+
+        public TiposEventos()
+        {
+
+        }
+
+        public TiposEventos(int idTipoEvento)
+        {
+            this.IdTipoEvento = idTipoEvento;
+            getAttr();
+        }
+
+        public void getAttr()
+        {
+            string query = "SELECT nombre, descripcion FROM Eventos WHERE idTipoEvento = " + IdTipoEvento;
+            DataTable tabla = DBHelper.ConsultarSQL(query);
+            NombreTEvento = tabla.Rows[0]["nombre"].ToString();
+            DescripcionTEvento = tabla.Rows[0]["descripcion"].ToString();
+        }
+
+        public TiposEventos(string nombre, string descripcion)
         {
             nombreTEvento = nombre;
             descripcionTEvento = descripcion;
@@ -42,7 +89,7 @@ namespace ScheDulJ.Classes
 
         public void Eliminar()
         {
-            string consultaSQL = "DELETE FROM TiposEventos WHERE nombre ='" + this.nombreTEvento + "'";
+            string consultaSQL = "DELETE FROM TiposEventos WHERE idTipoEvento = " + this.IdTipoEvento;
             DBHelper.ConsultarSQL(consultaSQL);
             MessageBox.Show("Tipo de Evento Eliminado Correctamente", "Tipo de Evento Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -10,8 +10,40 @@ namespace ScheDulJ.Classes
 {
     public class Usuarios
     {
-        private string usuario;
-        private string contra;
+        private int idUsuario = 0; 
+        private string usuario = "";
+        private string contra = "";
+        private int activo = 1;
+
+        public int IdUsuario
+        {
+            get { return this.idUsuario; }
+            private set
+            {
+                this.idUsuario = 0;
+            }
+        }
+
+        public int Activo
+        {
+            get
+            {
+                return this.activo;
+            }
+
+            private set
+            {
+                if (value == 0 || value == 1)
+                {
+                    this.activo = value;
+                }
+                else
+                {
+                    MessageBox.Show("Malos valores", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+                }
+                                
+            }
+        }
 
         public Usuarios(string usuarioN, string contraN)
         {

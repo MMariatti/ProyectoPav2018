@@ -10,11 +10,26 @@ namespace ScheDulJ.Classes
 {
     class Items
     {
-        private int idItem;
-        private string nombre;
-        private string descripcion;
-        private int costoAlquiler;
+        private int idItem = 0;
+        private string nombre = "";
+        private string descripcion = "";
+        private int costoAlquiler = 0;
+        private TipoItems tipoItem = new TipoItems();
 
+        //Setters y Getters
+        public TipoItems TipoItem
+        {
+            get
+            {
+                return this.tipoItem;
+            }
+
+            private set
+            {
+                this.tipoItem = value;
+            }
+        } 
+    
         public int IdItem
         {
             get { return this.idItem; }
@@ -81,24 +96,39 @@ namespace ScheDulJ.Classes
             }
         }
 
-        public Items(int idItem, string nombreItem, string descripcionItem, int costoAlquilerItem)
+        //Crea una Instancia de item Default. [Constructor]
+        public Items()
         {
-            this.IdItem = 0;
+
+        }
+
+        //Crea una Instancia de item en base a datos pasados como parametros. [Constructor]
+        public Items(string nombreItem, string descripcionItem, int costoAlquilerItem, TipoItems tipoItems)
+        {
             this.Nombre = nombreItem;
             this.Descripcion = descripcionItem;
             this.costoAlquiler = costoAlquilerItem;
+            this.TipoItem = tipoItems;
         }
 
-        public Items GetItemXId(int idItemBuscado)
+        //Crea Instancia de Item en base a un id pasado como parametro. [Constructor]
+        public Items(int idItemBuscado)
         {
-            string query = "SELECT * FROM Items WHERE idItem = '" + idItemBuscado + "'";
-            DataTable tabla = DBHelper.ConsultarSQL(query);
-            DataRowCollection filas = tabla.Rows;
-            DataRow fila = filas[0];
-            Items item = new Items(fila.Field<int>("idItem"), fila.Field<string>("nombre"), fila.Field<string>("descripcion"), fila.Field<int>("costoAlquiler"));
-            return item;
+            this.IdItem = idItemBuscado;
+            getAttr();
         }
 
+        //Rellena una Instancia de Item con datos de la DB
+        private void getAttr()
+        {
+            string query = "SELECT nombre, descripcion, idTipoItem, costoAlquiler FROM Items WHERE idItem = " + IdItem;
+            DataTable tabla = DBHelper.ConsultarSQL(query);
+            Nombre = tabla.Rows[0]["nombre"].ToString();
+            Descripcion = tabla.Rows[0]["descripcion"].ToString();
+            TipoItem = new TipoItems((int)tabla.Rows[0]["idTipoItem"]);
+        }
+
+        //Retorna todos los items en una DataTable
         public DataTable GetDataAllItems()
         {
             DataTable tabla = new DataTable();
@@ -115,11 +145,12 @@ namespace ScheDulJ.Classes
             }
         }
 
+        //Guarda una Instancia de Item en la DB
         public void Save()
         {
             try
             {
-                string query = "INSERT INTO Items(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "', '" + this.CostoAlquiler+ "')";
+                string query = "INSERT INTO Items(nombre, descripcion, idTipoItem, costoAlquiler) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "', " + this.TipoItem.IdTipoItems + ","+ this.CostoAlquiler +" )";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
@@ -129,9 +160,10 @@ namespace ScheDulJ.Classes
             }
         }
 
+        //Actualiza CostoAlquiler de un Item
         public void CambiarCostoAlquiler(int newCostoAlquiler)
         {
-            string query = "UPDATE Items SET costoAlquiler = '" + newCostoAlquiler + "' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE Items SET costoAlquiler = '" + newCostoAlquiler + "' WHERE idItem = " + this.IdItem;
             try
             {
                 DBHelper.ConsultarSQL(query);
@@ -144,9 +176,10 @@ namespace ScheDulJ.Classes
             }
         }
 
+        //Actualiza Nombre de un Item
         public void CambiarNombre(string newNombre)
         {
-            string query = "UPDATE Items SET nombre = '" + newNombre + "' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE Items SET nombre = '" + newNombre + "' WHERE idItem = " + this.IdItem;
             try
             {
                 DBHelper.ConsultarSQL(query);
@@ -159,9 +192,10 @@ namespace ScheDulJ.Classes
             }
         }
 
+        //Actualiza Descripcion de un Item
         public void CambiarDescripcion(string newDescripcion)
         {
-            string query = "UPDATE Items SET costoAlquiler = '" + newDescripcion + "' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE Items SET costoAlquiler = '" + newDescripcion + "' WHERE idItem = " + this.IdItem;
             try
             {
                 DBHelper.ConsultarSQL(query);

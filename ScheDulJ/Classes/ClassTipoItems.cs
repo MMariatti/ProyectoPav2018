@@ -10,8 +10,18 @@ namespace ScheDulJ.Classes
 {
     public class TipoItems
     {
-        private string nombre;
-        private string descripcion;
+        private int idTipoItems = 0;
+        private string nombre = "";
+        private string descripcion = "";
+
+        public int IdTipoItems
+        {
+            get { return this.idTipoItems; }
+            private set
+            {
+                this.idTipoItems = value;
+            } 
+        }
 
         public string Nombre
         {
@@ -50,10 +60,29 @@ namespace ScheDulJ.Classes
             }
         }
 
+        public TipoItems()
+        {
+
+        }
+
         public TipoItems(string nombreTipoItem, string descripcionTipoItem)
         {
             this.Nombre = nombreTipoItem;
             this.Descripcion = descripcionTipoItem;
+        }
+
+        public TipoItems(int idTipoItem)
+        {
+            this.IdTipoItems = idTipoItem;
+            getAttr();
+        }
+
+        private void getAttr()
+        {
+            string query = "SELECT nombre, descripcion FROM TiposItems WHERE idTipoItem = " + IdTipoItems;
+            DataTable tabla = DBHelper.ConsultarSQL(query);
+            nombre = tabla.Rows[0]["nombre"].ToString();
+            descripcion = tabla.Rows[0]["descripcion"].ToString();
         }
 
         public void Save()
@@ -86,35 +115,9 @@ namespace ScheDulJ.Classes
             }
         }
 
-        public DataTable GetTipoItems(string nombreTipoItem)
-        {
-            DataTable tabla = new DataTable();
-            string query = "SELECT * FROM TiposItems WHERE nombre = '" + nombreTipoItem + "'";
-            try
-            {
-                tabla = DBHelper.ConsultarSQL(query);
-                if (tabla.Rows.Count == 1)
-                {
-                    return tabla;
-                }
-                else
-                {
-                    MessageBox.Show("Aparecio mas de un tipo de item!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return null;
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return tabla;
-            }
-
-        }
-
         public void CambiarNombre(string nombreNuevo)
         {
-            string query = "UPDATE TiposItems SET nombre = '" + nombreNuevo + "' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE TiposItems SET nombre = '" + nombreNuevo + "' WHERE idTipoItem = '" + this.IdTipoItems + "'";
             try
             {
                 DBHelper.ConsultarSQL(query);
@@ -128,7 +131,7 @@ namespace ScheDulJ.Classes
 
         public void CambiarDescripcion(string descripcionNueva)
         {
-            string query = "UPDATE TiposItems SET descripcion = '" + descripcionNueva + "' WHERE nombre = '" + this.Nombre + "'";
+            string query = "UPDATE TiposItems SET descripcion = '" + descripcionNueva + "' WHERE idTipoItem = '" + this.IdTipoItems + "'";
             try
             {
                 DBHelper.ConsultarSQL(query);
