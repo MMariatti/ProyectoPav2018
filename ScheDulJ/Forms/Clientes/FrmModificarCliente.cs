@@ -30,11 +30,10 @@ namespace ScheDulJ.Forms
         // Corroborar que el usuario que ingresa no sea vacio 
         private bool CorroborarClientes()
         {
-            if (txtClienteNombre.Text == string.Empty || txtClienteApellido.Text ==string.Empty)
+            if (txt_IdCliente.Text == string.Empty)
             {
-                MessageBox.Show("No ha ingresado el nombre del cliente o su apellido", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtClienteNombre.Focus();
-                txtClienteNombre.Clear();
+                MessageBox.Show("No ha ingresado el numero de cliente ", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_IdCliente.Focus();
                 return false;
 
             }
@@ -73,10 +72,10 @@ namespace ScheDulJ.Forms
         }
 
         //Metodo para buscar el usuario al que le vamos a cambiar los datos
-        private bool BuscarCliente(string nombre, string apellido)
+        private bool BuscarCliente(int id)
         {
             DataTable tabla = new DataTable();
-            string consultaSql = "SELECT nombre, apellido FROM Clientes Where nombre = '" + nombre + "' AND apellido = '"+ apellido +"' AND activo =1";
+            string consultaSql = "SELECT nombre, apellido FROM Clientes Where idCliente = "+id;
             tabla = DBHelper.ConsultarSQL(consultaSql);
             if (tabla.Rows.Count == 0)
             {
@@ -108,20 +107,21 @@ namespace ScheDulJ.Forms
         {
             if (CorroborarClientes() == true)
             {
-                if (BuscarCliente(txtClienteNombre.Text,txtClienteApellido.Text) == true)
+                if (BuscarCliente(Convert.ToInt32(txt_IdCliente.Text)) == true)
                 {
+                    txtNuevoNombre.Enabled = true;
+                    txtNuevoApellido.Enabled = true;
                     txtNuevoTelefono.Enabled = true;
                     txtNuevaDireccion.Enabled = true;
                     BtnModificarDireccion.Enabled = true;
                     btnModificarTelefono.Enabled = true; 
-                    txtNuevoTelefono.Focus();
+                    txtNuevoNombre.Focus();
                 }
                 else
                 {
                     MessageBox.Show("El cliente ingresado no existe", "Busqueda de cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtClienteNombre.Focus();
-                    txtClienteNombre.Clear();
-                    txtClienteApellido.Clear();
+                    txt_IdCliente.Clear();
+                    txt_IdCliente.Focus();
                 }
             }
         }
@@ -132,7 +132,7 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Está seguro que quiere cambiar el telefono?", "Cambiar telefono", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    CambiarTelefono(txtClienteApellido.Text, txtClienteNombre.Text, txtNuevoTelefono.Text);
+                    CambiarTelefono(txtNuevoApellido.Text, txtNuevoNombre.Text, txtNuevoTelefono.Text);
                     MessageBox.Show("Telefono cambiado correctamente", "Cambiar Telefono", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNuevoTelefono.Clear();
                     txtNuevaDireccion.Focus();
@@ -151,11 +151,11 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Está seguro que quiere cambiar la direccion?", "Cambiar direccion", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    CambiarDireccion(txtClienteApellido.Text, txtClienteNombre.Text, txtNuevaDireccion.Text);
+                    CambiarDireccion(txtNuevoApellido.Text, txtNuevoNombre.Text, txtNuevaDireccion.Text);
                     MessageBox.Show("Telefono cambiado correctamente", "Cambiar Telefono", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtClienteNombre.Focus();
-                    txtClienteNombre.Clear();
-                    txtClienteApellido.Clear();
+                    txtNuevoNombre.Focus();
+                    txtNuevoNombre.Clear();
+                    txtNuevoApellido.Clear();
                     txtNuevaDireccion.Clear();
                     
                 }
