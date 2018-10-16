@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClassDetalleEvento.cs" />
     <Compile Include="Classes\ClassSesion.cs" />
     <Compile Include="Classes\ClassTipoItems.cs" />
     <Compile Include="Classes\ClassClientes.cs" />
