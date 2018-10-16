@@ -21,7 +21,7 @@ namespace ScheDulJ.Forms
         private void mostrarEquipamiento()
         {
             DataTable tabla = new DataTable();
-           tabla = Items.GetDataAllItems(); 
+            tabla = Items.GetDataAllItems(); 
             GridEquipamiento.DataSource = tabla;
         }
        

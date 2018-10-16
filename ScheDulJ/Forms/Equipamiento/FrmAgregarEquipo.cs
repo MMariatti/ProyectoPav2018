@@ -16,6 +16,7 @@ namespace ScheDulJ.Forms
         public FrmAgregarEquipo()
         {
             InitializeComponent();
+            CargarTiposItems();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -36,12 +37,13 @@ namespace ScheDulJ.Forms
             }
         }
 
-        private void AgregarEquipo(int id, string nombre, string descripcion, string costoAlquiler)
+        private void AgregarEquipo(string nombre, string descripcion, string costoAlquiler, int idTipoItem)
         {
             int costoAlquilerN = System.Convert.ToInt32(costoAlquiler);
             try
             {
-                Items item = new Items(0,nombre, descripcion, costoAlquilerN);
+                TipoItems tipo = new TipoItems(idTipoItem);
+                Items item = new Items(nombre, descripcion, costoAlquilerN, tipo);
                 item.Save(); 
             }
             catch (Exception ex)
@@ -65,7 +67,7 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Esta seguro que quiere agregar este equipo?","Agregar equipo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
                 {
-                   // AgregarEquipo(txtNombreEquipo.Text, txtDescripcionEquipo.Text, txtCostoAlquiler.Text);
+                    AgregarEquipo(txtNombreEquipo.Text, txtDescripcionEquipo.Text, txtCostoAlquiler.Text, Int32.Parse(cmbTiposItems.SelectedValue.ToString()));
                     this.Close();
                 }
             }
@@ -76,6 +78,25 @@ namespace ScheDulJ.Forms
         }
 
         private void FrmAgregarEquipo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarTiposItems()
+        {
+            DataTable tabla = TipoItems.GetAll();
+            cmbTiposItems.DataSource = tabla;
+            cmbTiposItems.DisplayMember = "nombre";
+            cmbTiposItems.ValueMember = "idTipoItem";
+        }
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

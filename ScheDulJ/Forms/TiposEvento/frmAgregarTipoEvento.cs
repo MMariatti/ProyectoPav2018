@@ -51,7 +51,7 @@ namespace ScheDulJ.Forms
         {
             if (CorroborarDatos()){
 
-                ClassTiposEventos tEvento = new ClassTiposEventos(txtNombre.Text , txtDescripcion.Text); 
+                TiposEventos tEvento = new TiposEventos(txtNombre.Text , txtDescripcion.Text); 
                 tEvento.Save();
                 this.Close();
                 

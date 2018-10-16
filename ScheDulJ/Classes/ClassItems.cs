@@ -129,7 +129,7 @@ namespace ScheDulJ.Classes
         }
 
         //Retorna todos los items en una DataTable
-        public DataTable GetDataAllItems()
+        public static DataTable GetDataAllItems()
         {
             DataTable tabla = new DataTable();
             string query = "SELECT * FROM Items";

@@ -26,7 +26,7 @@ namespace ScheDulJ.Forms
 
         private void Refrescar()
         {
-            gridTipoEventos.DataSource = ClassTiposEventos.GetAll();
+            gridTipoEventos.DataSource = TiposEventos.GetAll();
         }
 
         private void frmAdministrarTipoEventos_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace ScheDulJ.Forms
                 if (MessageBox.Show("Esta seguro que desea eliminar el tipo de evento?", "Eliminar Tipo de Evento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    ClassTiposEventos tipoEvento = new ClassTiposEventos(gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString() , gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString());
+                    TiposEventos tipoEvento = new TiposEventos(gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString() , gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString());
                     tipoEvento.Eliminar();
                     tipoEvento = null;
                     
