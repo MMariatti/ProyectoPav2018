@@ -132,7 +132,7 @@ namespace ScheDulJ.Classes
         public static DataTable GetDataAllItems()
         {
             DataTable tabla = new DataTable();
-            string query = "SELECT * FROM Items";
+            string query = "SELECT * FROM Items WHERE activo = 1";
             try
             {
                 tabla = DBHelper.ConsultarSQL(query);
@@ -150,7 +150,7 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "INSERT INTO Items(nombre, descripcion, idTipoItem, costoAlquiler) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "', " + this.TipoItem.IdTipoItems + ","+ this.CostoAlquiler +" )";
+                string query = "INSERT INTO Items(nombre, descripcion, idTipoItem, costoAlquiler ,activo) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "', " + this.TipoItem.IdTipoItems + ","+ this.CostoAlquiler +"," + 1 +" )";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }

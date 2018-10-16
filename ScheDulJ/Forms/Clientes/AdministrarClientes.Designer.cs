@@ -85,6 +85,7 @@
             this.gridClientes.Name = "gridClientes";
             this.gridClientes.Size = new System.Drawing.Size(358, 127);
             this.gridClientes.TabIndex = 4;
+            this.gridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellContentClick);
             // 
             // btnModificarCliente
             // 

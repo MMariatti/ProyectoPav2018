@@ -84,5 +84,10 @@ namespace ScheDulJ.Forms
             frmModificarCliente.Show();
 
         }
+
+        private void gridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

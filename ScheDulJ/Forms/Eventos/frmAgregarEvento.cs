@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ScheDulJ.Classes; 
 
 namespace ScheDulJ.Forms.Eventos
 {
@@ -36,9 +36,31 @@ namespace ScheDulJ.Forms.Eventos
 
         private void frmAgregarEvento_Load(object sender, EventArgs e)
         {
+            MostrarClientes();
+            MostrarEquipamiento();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void MostrarClientes()
+        {
             cmbClientes.DataSource = Clientes.GetAll();
             cmbClientes.DisplayMember = "Nombre";
-            cmbClientes.ValueMember = "Nombre"; 
+            cmbClientes.ValueMember = "idCliente";
         }
+
+        private void MostrarEquipamiento()
+        {
+            DataTable tabla = new DataTable();
+            tabla = Items.GetDataAllItems();
+            grdEquipamiento.DataSource = tabla;
+            grdEquipamiento.Columns[3].Visible = false ;
+            grdEquipamiento.Columns[4].Visible = false;
+            grdEquipamiento.Columns[5].Visible = false;
+        }
+
     }
 }
