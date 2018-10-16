@@ -44,3 +44,4 @@ C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmAgregarEvento.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Equipamiento.frmEquipoEvento.resources

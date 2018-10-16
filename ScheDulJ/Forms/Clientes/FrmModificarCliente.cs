@@ -74,6 +74,7 @@ namespace ScheDulJ.Forms
         //Metodo para buscar el usuario al que le vamos a cambiar los datos
         private bool BuscarCliente(int id)
         {
+            Clientes cliente = new Clientes(id);
             DataTable tabla = new DataTable();
             string consultaSql = "SELECT nombre, apellido FROM Clientes Where idCliente = "+id;
             tabla = DBHelper.ConsultarSQL(consultaSql);

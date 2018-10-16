@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScheDulJ.Forms;
 using ScheDulJ.Forms.Eventos;
+using ScheDulJ.Classes;
+using ScheDulJ.Forms.Equipamiento;
 
 namespace ScheDulJ
 {
@@ -22,7 +24,8 @@ namespace ScheDulJ
         }
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-           
+            MostrarEventos(); 
+            
         }
         private void btnExitMainMenu_Click(object sender, EventArgs e)
         {
@@ -71,6 +74,27 @@ namespace ScheDulJ
         private void btnTipoItems_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void MostrarEventos()
+        {
+            DataTable tabla = new DataTable();
+            tabla = Evento.GetAll();
+            gridEventos.DataSource = tabla; 
+
+        }
+
+        private void btnRefrescarE_Click(object sender, EventArgs e)
+        {
+            MostrarEventos();
+        }
+
+        private void btnAgregarEquipo_Click(object sender, EventArgs e)
+        {
+            frmEquipoEvento frmEquipoEvento = new frmEquipoEvento();
+            frmEquipoEvento.txtNombreEvento.Text = gridEventos.SelectedRows[0].Cells[1].Value.ToString();
+            frmEquipoEvento.txtIdE.Text = gridEventos.SelectedRows[0].Cells[0].Value.ToString();
+            frmEquipoEvento.Show(); 
         }
     }
 }

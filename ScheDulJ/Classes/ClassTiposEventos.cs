@@ -54,7 +54,7 @@ namespace ScheDulJ.Classes
 
         public void getAttr()
         {
-            string query = "SELECT nombre, descripcion FROM Eventos WHERE idTipoEvento = " + IdTipoEvento;
+            string query = "SELECT nombre, descripcion FROM TiposEventos WHERE idTipoEvento = " + IdTipoEvento;
             DataTable tabla = DBHelper.ConsultarSQL(query);
             NombreTEvento = tabla.Rows[0]["nombre"].ToString();
             DescripcionTEvento = tabla.Rows[0]["descripcion"].ToString();

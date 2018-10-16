@@ -80,7 +80,7 @@ namespace ScheDulJ
             get { return this.telefono; }
             private set
             {
-                if (value >= 1000000000)
+                if (value >= 1000000)
                 {
                     this.telefono = value;
                 }
@@ -135,7 +135,7 @@ namespace ScheDulJ
             Apellido = tabla.Rows[0]["apellido"].ToString();
             Direccion = tabla.Rows[0]["direccion"].ToString();
             Telefono = (int)tabla.Rows[0]["telefono"];
-            Activo  = (int)tabla.Rows[0]["activo"];
+            Activo  = 1;
         }
 
         public void Save()
@@ -144,7 +144,7 @@ namespace ScheDulJ
             {
                 string query = "INSERT INTO Clientes(nombre, apellido, direccion, telefono, activo) " + "VALUES('" + this.Nombre + "','" + this.Apellido + "', '" + this.Direccion + "', " + this.Telefono + "," + this.Activo + ")";
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+               
             }
             catch (Exception ex)
             {
@@ -188,10 +188,9 @@ namespace ScheDulJ
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show("Cliente dado de baja con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
-            else
-            {
-                MessageBox.Show("El cliente ya esta dado de baja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+           
+            
+               
         }
 
         public void CambiarNombre(string newNombre)

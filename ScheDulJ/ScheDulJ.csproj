@@ -64,6 +64,12 @@
     <Compile Include="Forms\Clientes\AgregarCliente.Designer.cs">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Equipamiento\frmEquipoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipamiento\frmEquipoEvento.Designer.cs">
+      <DependentUpon>frmEquipoEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Eventos\frmAgregarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipamiento\frmEquipoEvento.resx">
+      <DependentUpon>frmEquipoEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eventos\frmAgregarEvento.resx">
       <DependentUpon>frmAgregarEvento.cs</DependentUpon>

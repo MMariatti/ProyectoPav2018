@@ -43,6 +43,8 @@
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.btnTipoEvento = new System.Windows.Forms.Button();
+            this.btnRefrescarE = new System.Windows.Forms.Button();
+            this.btnAgregarEquipo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             this.panelEquipamiento.SuspendLayout();
@@ -73,7 +75,7 @@
             this.btnNuevoEvento.BackColor = System.Drawing.SystemColors.Control;
             this.btnNuevoEvento.Location = new System.Drawing.Point(16, 240);
             this.btnNuevoEvento.Name = "btnNuevoEvento";
-            this.btnNuevoEvento.Size = new System.Drawing.Size(110, 38);
+            this.btnNuevoEvento.Size = new System.Drawing.Size(94, 38);
             this.btnNuevoEvento.TabIndex = 1;
             this.btnNuevoEvento.Text = "Nuevo Evento";
             this.btnNuevoEvento.UseVisualStyleBackColor = false;
@@ -81,18 +83,18 @@
             // 
             // btnModificarEvento
             // 
-            this.btnModificarEvento.Location = new System.Drawing.Point(144, 240);
+            this.btnModificarEvento.Location = new System.Drawing.Point(116, 240);
             this.btnModificarEvento.Name = "btnModificarEvento";
-            this.btnModificarEvento.Size = new System.Drawing.Size(110, 38);
+            this.btnModificarEvento.Size = new System.Drawing.Size(95, 38);
             this.btnModificarEvento.TabIndex = 2;
             this.btnModificarEvento.Text = "Modificar Evento";
             this.btnModificarEvento.UseVisualStyleBackColor = true;
             // 
             // btnEliminarEvento
             // 
-            this.btnEliminarEvento.Location = new System.Drawing.Point(276, 240);
+            this.btnEliminarEvento.Location = new System.Drawing.Point(217, 240);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
-            this.btnEliminarEvento.Size = new System.Drawing.Size(110, 38);
+            this.btnEliminarEvento.Size = new System.Drawing.Size(91, 38);
             this.btnEliminarEvento.TabIndex = 3;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = true;
@@ -141,6 +143,7 @@
             // 
             // panelEventos
             // 
+            this.panelEventos.Controls.Add(this.btnRefrescarE);
             this.panelEventos.Controls.Add(this.lblEventos);
             this.panelEventos.Controls.Add(this.btnNuevoEvento);
             this.panelEventos.Controls.Add(this.btnEliminarEvento);
@@ -148,11 +151,12 @@
             this.panelEventos.Controls.Add(this.gridEventos);
             this.panelEventos.Location = new System.Drawing.Point(11, 9);
             this.panelEventos.Name = "panelEventos";
-            this.panelEventos.Size = new System.Drawing.Size(408, 298);
+            this.panelEventos.Size = new System.Drawing.Size(411, 298);
             this.panelEventos.TabIndex = 8;
             // 
             // panelEquipamiento
             // 
+            this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
             this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
             this.panelEquipamiento.Controls.Add(this.gridEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnAdministrarEquipamiento);
@@ -190,6 +194,26 @@
             this.btnTipoEvento.Text = "Administrar TipoEvento";
             this.btnTipoEvento.UseVisualStyleBackColor = true;
             this.btnTipoEvento.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnRefrescarE
+            // 
+            this.btnRefrescarE.Location = new System.Drawing.Point(314, 240);
+            this.btnRefrescarE.Name = "btnRefrescarE";
+            this.btnRefrescarE.Size = new System.Drawing.Size(72, 38);
+            this.btnRefrescarE.TabIndex = 8;
+            this.btnRefrescarE.Text = "Refrescar";
+            this.btnRefrescarE.UseVisualStyleBackColor = true;
+            this.btnRefrescarE.Click += new System.EventHandler(this.btnRefrescarE_Click);
+            // 
+            // btnAgregarEquipo
+            // 
+            this.btnAgregarEquipo.Location = new System.Drawing.Point(19, 238);
+            this.btnAgregarEquipo.Name = "btnAgregarEquipo";
+            this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
+            this.btnAgregarEquipo.TabIndex = 8;
+            this.btnAgregarEquipo.Text = "Agregar Equipamiento";
+            this.btnAgregarEquipo.UseVisualStyleBackColor = true;
+            this.btnAgregarEquipo.Click += new System.EventHandler(this.btnAgregarEquipo_Click);
             // 
             // FrmMainMenu
             // 
@@ -234,5 +258,7 @@
         private System.Windows.Forms.Label lblEquipamiento;
         private System.Windows.Forms.DataGridView gridEquipamiento;
         private System.Windows.Forms.Button btnTipoEvento;
+        private System.Windows.Forms.Button btnRefrescarE;
+        private System.Windows.Forms.Button btnAgregarEquipo;
     }
 }
