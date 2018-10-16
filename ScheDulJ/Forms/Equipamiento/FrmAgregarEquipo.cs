@@ -37,13 +37,13 @@ namespace ScheDulJ.Forms
             }
         }
 
-        private void AgregarEquipo(string nombre, string descripcion, string costoAlquiler, int idTipoItem)
+        private void AgregarEquipo(string nombre, string descripcion, string costoAlquiler)
         {
             int costoAlquilerN = System.Convert.ToInt32(costoAlquiler);
             try
             {
-                TipoItems tipo = new TipoItems(idTipoItem);
-                Items item = new Items(nombre, descripcion, costoAlquilerN, tipo);
+    
+                Items item = new Items(nombre, descripcion, costoAlquilerN);
                 item.Save(); 
             }
             catch (Exception ex)
@@ -67,7 +67,7 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Esta seguro que quiere agregar este equipo?","Agregar equipo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
                 {
-                    AgregarEquipo(txtNombreEquipo.Text, txtDescripcionEquipo.Text, txtCostoAlquiler.Text, Int32.Parse(cmbTiposItems.SelectedValue.ToString()));
+                    AgregarEquipo(txtNombreEquipo.Text, txtDescripcionEquipo.Text, txtCostoAlquiler.Text);
                     this.Close();
                 }
             }

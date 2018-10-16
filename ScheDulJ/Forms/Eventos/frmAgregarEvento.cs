@@ -37,7 +37,7 @@ namespace ScheDulJ.Forms.Eventos
         private void frmAgregarEvento_Load(object sender, EventArgs e)
         {
             MostrarClientes();
-            MostrarEquipamiento();
+            MostrarTiposEvento();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,15 +52,37 @@ namespace ScheDulJ.Forms.Eventos
             cmbClientes.ValueMember = "idCliente";
         }
 
-        private void MostrarEquipamiento()
+      
+        private void btnCrear_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            tabla = Items.GetDataAllItems();
-            grdEquipamiento.DataSource = tabla;
-            grdEquipamiento.Columns[3].Visible = false ;
-            grdEquipamiento.Columns[4].Visible = false;
-            grdEquipamiento.Columns[5].Visible = false;
+            CrearEvento(txtNombre.Text, calendarioEvento.SelectionRange.Start.ToString(), txtHoraI.Text.ToString() , txtHoraF.Text.ToString(), txtDireccion.Text.ToString()); 
         }
 
+        private void CrearEvento(string nombre, string fecha , string horaInicio , string horaFin , string direccion)
+        {
+            try
+            {
+                TiposEventos tipoEvento = new TiposEventos(System.Convert.ToInt32(cmbTipoEvento.SelectedValue.ToString()));
+                Clientes cliente = new Clientes(System.Convert.ToInt32(cmbClientes.SelectedValue.ToString()));
+                Evento evento = new Evento(nombre, tipoEvento, fecha, horaInicio, horaFin, direccion, cliente);
+                evento.Save();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+        }
+
+        private void cmbTipoEvento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MostrarTiposEvento()
+        {
+            cmbTipoEvento.DataSource = TiposEventos.GetAll();
+            cmbTipoEvento.DisplayMember = "nombre";
+            cmbTipoEvento.ValueMember = "idTipoEvento"; 
+        }
     }
 }

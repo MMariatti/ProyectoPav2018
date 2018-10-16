@@ -40,8 +40,8 @@
             this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
             this.panelEquipamiento = new System.Windows.Forms.Panel();
-            this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.lblEquipamiento = new System.Windows.Forms.Label();
+            this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.btnTipoEvento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
@@ -161,15 +161,6 @@
             this.panelEquipamiento.Size = new System.Drawing.Size(316, 296);
             this.panelEquipamiento.TabIndex = 9;
             // 
-            // gridEquipamiento
-            // 
-            this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEquipamiento.Location = new System.Drawing.Point(19, 30);
-            this.gridEquipamiento.Name = "gridEquipamiento";
-            this.gridEquipamiento.Size = new System.Drawing.Size(273, 202);
-            this.gridEquipamiento.TabIndex = 0;
-            // 
             // lblEquipamiento
             // 
             this.lblEquipamiento.AutoSize = true;
@@ -180,6 +171,15 @@
             this.lblEquipamiento.TabIndex = 7;
             this.lblEquipamiento.Text = "Equipamiento Solicitado:";
             this.lblEquipamiento.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // gridEquipamiento
+            // 
+            this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridEquipamiento.Location = new System.Drawing.Point(19, 30);
+            this.gridEquipamiento.Name = "gridEquipamiento";
+            this.gridEquipamiento.Size = new System.Drawing.Size(273, 202);
+            this.gridEquipamiento.TabIndex = 0;
             // 
             // btnTipoEvento
             // 

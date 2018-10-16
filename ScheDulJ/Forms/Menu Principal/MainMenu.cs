@@ -67,6 +67,11 @@ namespace ScheDulJ
             frmAdministrarTipoEventos frmAdministrarTipoEventos = new frmAdministrarTipoEventos();
             frmAdministrarTipoEventos.Show(); 
         }
+
+        private void btnTipoItems_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

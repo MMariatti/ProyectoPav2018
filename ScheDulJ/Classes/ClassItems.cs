@@ -14,22 +14,10 @@ namespace ScheDulJ.Classes
         private string nombre = "";
         private string descripcion = "";
         private int costoAlquiler = 0;
-        private TipoItems tipoItem = new TipoItems();
+        
 
         //Setters y Getters
-        public TipoItems TipoItem
-        {
-            get
-            {
-                return this.tipoItem;
-            }
-
-            private set
-            {
-                this.tipoItem = value;
-            }
-        } 
-    
+        
         public int IdItem
         {
             get { return this.idItem; }
@@ -103,12 +91,12 @@ namespace ScheDulJ.Classes
         }
 
         //Crea una Instancia de item en base a datos pasados como parametros. [Constructor]
-        public Items(string nombreItem, string descripcionItem, int costoAlquilerItem, TipoItems tipoItems)
+        public Items(string nombreItem, string descripcionItem, int costoAlquilerItem)
         {
             this.Nombre = nombreItem;
             this.Descripcion = descripcionItem;
             this.costoAlquiler = costoAlquilerItem;
-            this.TipoItem = tipoItems;
+            
         }
 
         //Crea Instancia de Item en base a un id pasado como parametro. [Constructor]
@@ -121,11 +109,10 @@ namespace ScheDulJ.Classes
         //Rellena una Instancia de Item con datos de la DB
         private void getAttr()
         {
-            string query = "SELECT nombre, descripcion, idTipoItem, costoAlquiler FROM Items WHERE idItem = " + IdItem;
+            string query = "SELECT nombre, descripcion, costoAlquiler FROM Items WHERE idItem = " + IdItem;
             DataTable tabla = DBHelper.ConsultarSQL(query);
             Nombre = tabla.Rows[0]["nombre"].ToString();
             Descripcion = tabla.Rows[0]["descripcion"].ToString();
-            TipoItem = new TipoItems((int)tabla.Rows[0]["idTipoItem"]);
         }
 
         //Retorna todos los items en una DataTable
@@ -150,7 +137,7 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "INSERT INTO Items(nombre, descripcion, idTipoItem, costoAlquiler ,activo) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "', " + this.TipoItem.IdTipoItems + ","+ this.CostoAlquiler +"," + 1 +" )";
+                string query = "INSERT INTO Items(nombre, descripcion, costoAlquiler ,activo) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "',"+ this.CostoAlquiler +"," + 1 +" )";
                 DBHelper.ConsultarSQL(query);
                 MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
             }

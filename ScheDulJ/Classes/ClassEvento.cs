@@ -13,7 +13,7 @@ namespace ScheDulJ.Classes
         private int idEvento = 0;
         private string nombreEvento = "";
         private TiposEventos tipoEvento = new TiposEventos();
-        private DateTime fechaEvento = new DateTime();
+        private string fechaEvento;
         private string horarioEvento = "";
         private string horarioEventoF = "";
         private string direccionEvento = "";
@@ -46,7 +46,7 @@ namespace ScheDulJ.Classes
             }
         }
 
-        public DateTime FechaEvento
+        public string FechaEvento
             {
             get { return this.fechaEvento; }
             private set
@@ -92,7 +92,7 @@ namespace ScheDulJ.Classes
         }
 
         //CONSTRUCTOR 
-        public Evento(string nombre, TiposEventos tipoEvento , DateTime fecha, string horario, string horarioFin, string direccion, Clientes clienteEvento)
+        public Evento(string nombre, TiposEventos tipoEvento , string fecha, string horario, string horarioFin, string direccion, Clientes clienteEvento)
         {
             this.nombreEvento = nombre;
             this.tipoEvento = tipoEvento;
@@ -120,7 +120,7 @@ namespace ScheDulJ.Classes
             DataTable tabla = DBHelper.ConsultarSQL(query);
             NombreEvento = tabla.Rows[0]["nombre"].ToString();
             TipoEvento = new TiposEventos((int)tabla.Rows[0]["idTipoEvento"]);
-            FechaEvento = DateTime.Parse(tabla.Rows[0]["fecha"].ToString());
+            FechaEvento = tabla.Rows[0]["fecha"].ToString();
             HorarioEvento = tabla.Rows[0]["horario"].ToString();
             DireccionEvento = tabla.Rows[0]["direccion"].ToString();
             ClienteEvento = new Clientes((int)tabla.Rows[0]["idCliente"]);
