@@ -21,7 +21,7 @@ namespace ScheDulJ.Forms
         private void mostrarEquipamiento()
         {
             DataTable tabla = new DataTable();
-            tabla = Items.GetDataAllItems(); 
+            tabla = Items.GetAll(); 
             GridEquipamiento.DataSource = tabla;
         }
        
@@ -49,8 +49,7 @@ namespace ScheDulJ.Forms
 
         private void BtnModficarEquipo_Click(object sender, EventArgs e)
         {
-            FrmModificarEquipo frmModificarEquipo;
-            frmModificarEquipo = new FrmModificarEquipo();
+            FrmModificarEquipo frmModificarEquipo = new FrmModificarEquipo();
             frmModificarEquipo.Show();
         }
 

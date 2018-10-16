@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.lblModificarEquipo = new System.Windows.Forms.Label();
-            this.txtNombreEquipo = new System.Windows.Forms.TextBox();
             this.lblNombreEquipo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,17 +37,8 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.txtDescripcionEquipo = new System.Windows.Forms.TextBox();
             this.txtCostoAlquiler = new System.Windows.Forms.TextBox();
+            this.cmbItemsModificar = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Location = new System.Drawing.Point(35, 93);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(358, 28);
-            this.BtnBuscar.TabIndex = 1;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblModificarEquipo
             // 
@@ -61,28 +50,22 @@
             this.lblModificarEquipo.TabIndex = 10;
             this.lblModificarEquipo.Text = "Modificar Equipo";
             // 
-            // txtNombreEquipo
-            // 
-            this.txtNombreEquipo.Location = new System.Drawing.Point(153, 67);
-            this.txtNombreEquipo.Name = "txtNombreEquipo";
-            this.txtNombreEquipo.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreEquipo.TabIndex = 0;
-            // 
             // lblNombreEquipo
             // 
             this.lblNombreEquipo.AutoSize = true;
             this.lblNombreEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblNombreEquipo.Location = new System.Drawing.Point(27, 67);
+            this.lblNombreEquipo.Location = new System.Drawing.Point(29, 66);
             this.lblNombreEquipo.Name = "lblNombreEquipo";
-            this.lblNombreEquipo.Size = new System.Drawing.Size(68, 18);
+            this.lblNombreEquipo.Size = new System.Drawing.Size(60, 18);
             this.lblNombreEquipo.TabIndex = 9;
-            this.lblNombreEquipo.Text = "Nombre*";
+            this.lblNombreEquipo.Text = "Equipo*";
+            this.lblNombreEquipo.Click += new System.EventHandler(this.lblNombreEquipo_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(27, 134);
+            this.label3.Location = new System.Drawing.Point(29, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 8;
@@ -92,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(27, 186);
+            this.label4.Location = new System.Drawing.Point(29, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 18);
             this.label4.TabIndex = 7;
@@ -101,9 +84,9 @@
             // BtnModificarDescripcion
             // 
             this.BtnModificarDescripcion.Enabled = false;
-            this.BtnModificarDescripcion.Location = new System.Drawing.Point(276, 127);
+            this.BtnModificarDescripcion.Location = new System.Drawing.Point(276, 123);
             this.BtnModificarDescripcion.Name = "BtnModificarDescripcion";
-            this.BtnModificarDescripcion.Size = new System.Drawing.Size(117, 28);
+            this.BtnModificarDescripcion.Size = new System.Drawing.Size(87, 43);
             this.BtnModificarDescripcion.TabIndex = 3;
             this.BtnModificarDescripcion.Text = "Moificar Descripcion";
             this.BtnModificarDescripcion.UseVisualStyleBackColor = true;
@@ -112,9 +95,9 @@
             // BtnCostoAlquiler
             // 
             this.BtnCostoAlquiler.Enabled = false;
-            this.BtnCostoAlquiler.Location = new System.Drawing.Point(276, 176);
+            this.BtnCostoAlquiler.Location = new System.Drawing.Point(276, 172);
             this.BtnCostoAlquiler.Name = "BtnCostoAlquiler";
-            this.BtnCostoAlquiler.Size = new System.Drawing.Size(117, 40);
+            this.BtnCostoAlquiler.Size = new System.Drawing.Size(87, 43);
             this.BtnCostoAlquiler.TabIndex = 5;
             this.BtnCostoAlquiler.Text = "Modificar costo de alquiler";
             this.BtnCostoAlquiler.UseVisualStyleBackColor = true;
@@ -146,11 +129,22 @@
             this.txtCostoAlquiler.Size = new System.Drawing.Size(100, 20);
             this.txtCostoAlquiler.TabIndex = 4;
             // 
+            // cmbItemsModificar
+            // 
+            this.cmbItemsModificar.FormattingEnabled = true;
+            this.cmbItemsModificar.Location = new System.Drawing.Point(153, 63);
+            this.cmbItemsModificar.Name = "cmbItemsModificar";
+            this.cmbItemsModificar.Size = new System.Drawing.Size(210, 21);
+            this.cmbItemsModificar.TabIndex = 11;
+            this.cmbItemsModificar.SelectedIndexChanged += new System.EventHandler(this.cmbItemsModificar_SelectedIndexChanged);
+            // 
             // FrmModificarEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 257);
+            this.Controls.Add(this.lblNombreEquipo);
+            this.Controls.Add(this.cmbItemsModificar);
             this.Controls.Add(this.txtCostoAlquiler);
             this.Controls.Add(this.txtDescripcionEquipo);
             this.Controls.Add(this.BtnSalir);
@@ -158,10 +152,7 @@
             this.Controls.Add(this.BtnModificarDescripcion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblNombreEquipo);
-            this.Controls.Add(this.txtNombreEquipo);
             this.Controls.Add(this.lblModificarEquipo);
-            this.Controls.Add(this.BtnBuscar);
             this.Name = "FrmModificarEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar equipo";
@@ -172,10 +163,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label lblModificarEquipo;
-        private System.Windows.Forms.TextBox txtNombreEquipo;
         private System.Windows.Forms.Label lblNombreEquipo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -184,5 +172,6 @@
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.TextBox txtDescripcionEquipo;
         private System.Windows.Forms.TextBox txtCostoAlquiler;
+        private System.Windows.Forms.ComboBox cmbItemsModificar;
     }
 }
