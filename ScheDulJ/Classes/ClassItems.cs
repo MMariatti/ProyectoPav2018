@@ -129,7 +129,7 @@ namespace ScheDulJ.Classes
         }
 
         //Retorna todos los items en una DataTable
-        public static DataTable GetDataAllItems()
+        public static DataTable GetAll()
         {
             DataTable tabla = new DataTable();
             string query = "SELECT * FROM Items WHERE activo = 1";
