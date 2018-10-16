@@ -51,29 +51,30 @@ namespace ScheDulJ.Forms
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
                 if (gridClientes.SelectedRows[0].Index != gridClientes.Rows.Count - 1)
                 {
-                  if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                  {
-                       
-                        string consultaSQL = "UPDATE Clientes SET activo = 0 WHERE idCliente =" + gridClientes.SelectedRows[0].Cells[0].Value;
-                        DBHelper.ConsultarSQL(consultaSQL);
+                    if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Clientes cliente = new Clientes(gridClientes.SelectedRows[0].Cells[1].Value.ToString(), gridClientes.SelectedRows[0].Cells[2].Value.ToString(),
+                            gridClientes.SelectedRows[0].Cells[3].Value.ToString(), Convert.ToInt32(gridClientes.SelectedRows[0].Cells[4].Value), 1);
+                        cliente.Baja();
                         MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Clientes.GetAll();
-                  }
+                    }
                 }
                 else
-                { 
+                {
                     MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-               MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe seleccionar un cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
