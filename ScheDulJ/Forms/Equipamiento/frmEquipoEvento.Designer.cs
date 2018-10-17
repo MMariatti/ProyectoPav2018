@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdEquipamiento = new System.Windows.Forms.DataGridView();
             this.gridSeleccionado = new System.Windows.Forms.DataGridView();
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.lblSeleccionado = new System.Windows.Forms.Label();
@@ -40,32 +39,24 @@
             this.txtNombreEvento = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtIdE = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEquipamiento)).BeginInit();
+            this.cmbEquipamientoEvento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridSeleccionado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdEquipamiento
-            // 
-            this.grdEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEquipamiento.Location = new System.Drawing.Point(24, 78);
-            this.grdEquipamiento.Name = "grdEquipamiento";
-            this.grdEquipamiento.Size = new System.Drawing.Size(294, 288);
-            this.grdEquipamiento.TabIndex = 0;
-            this.grdEquipamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEquipamiento_CellContentClick);
             // 
             // gridSeleccionado
             // 
             this.gridSeleccionado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridSeleccionado.Location = new System.Drawing.Point(417, 78);
+            this.gridSeleccionado.Location = new System.Drawing.Point(24, 134);
             this.gridSeleccionado.Name = "gridSeleccionado";
-            this.gridSeleccionado.Size = new System.Drawing.Size(312, 288);
+            this.gridSeleccionado.Size = new System.Drawing.Size(324, 167);
             this.gridSeleccionado.TabIndex = 1;
+            this.gridSeleccionado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSeleccionado_CellContentClick);
             // 
             // lblEquipamiento
             // 
             this.lblEquipamiento.AutoSize = true;
             this.lblEquipamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquipamiento.Location = new System.Drawing.Point(21, 48);
+            this.lblEquipamiento.Location = new System.Drawing.Point(21, 59);
             this.lblEquipamiento.Name = "lblEquipamiento";
             this.lblEquipamiento.Size = new System.Drawing.Size(108, 18);
             this.lblEquipamiento.TabIndex = 2;
@@ -75,7 +66,7 @@
             // 
             this.lblSeleccionado.AutoSize = true;
             this.lblSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeleccionado.Location = new System.Drawing.Point(414, 48);
+            this.lblSeleccionado.Location = new System.Drawing.Point(21, 113);
             this.lblSeleccionado.Name = "lblSeleccionado";
             this.lblSeleccionado.Size = new System.Drawing.Size(108, 18);
             this.lblSeleccionado.TabIndex = 3;
@@ -84,9 +75,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(324, 100);
+            this.btnAgregar.Location = new System.Drawing.Point(270, 80);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(78, 23);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -95,7 +86,7 @@
             // btnQuitar
             // 
             this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitar.Location = new System.Drawing.Point(324, 164);
+            this.btnQuitar.Location = new System.Drawing.Point(270, 307);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(78, 28);
             this.btnQuitar.TabIndex = 5;
@@ -106,7 +97,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(24, 372);
+            this.btnSalir.Location = new System.Drawing.Point(24, 358);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 26);
             this.btnSalir.TabIndex = 6;
@@ -117,7 +108,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(637, 372);
+            this.btnConfirmar.Location = new System.Drawing.Point(256, 358);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(92, 26);
             this.btnConfirmar.TabIndex = 7;
@@ -161,11 +152,21 @@
             this.txtIdE.Size = new System.Drawing.Size(38, 20);
             this.txtIdE.TabIndex = 11;
             // 
+            // cmbEquipamientoEvento
+            // 
+            this.cmbEquipamientoEvento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEquipamientoEvento.FormattingEnabled = true;
+            this.cmbEquipamientoEvento.Location = new System.Drawing.Point(24, 80);
+            this.cmbEquipamientoEvento.Name = "cmbEquipamientoEvento";
+            this.cmbEquipamientoEvento.Size = new System.Drawing.Size(240, 21);
+            this.cmbEquipamientoEvento.TabIndex = 12;
+            // 
             // frmEquipoEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 410);
+            this.ClientSize = new System.Drawing.Size(372, 393);
+            this.Controls.Add(this.cmbEquipamientoEvento);
             this.Controls.Add(this.txtIdE);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtNombreEvento);
@@ -177,11 +178,9 @@
             this.Controls.Add(this.lblSeleccionado);
             this.Controls.Add(this.lblEquipamiento);
             this.Controls.Add(this.gridSeleccionado);
-            this.Controls.Add(this.grdEquipamiento);
             this.Name = "frmEquipoEvento";
             this.Text = "frmEquipoEvento";
             this.Load += new System.EventHandler(this.frmEquipoEvento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdEquipamiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSeleccionado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,8 +188,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView grdEquipamiento;
         private System.Windows.Forms.DataGridView gridSeleccionado;
         private System.Windows.Forms.Label lblEquipamiento;
         private System.Windows.Forms.Label lblSeleccionado;
@@ -202,5 +199,6 @@
         public System.Windows.Forms.TextBox txtNombreEvento;
         private System.Windows.Forms.Label lblID;
         public System.Windows.Forms.TextBox txtIdE;
+        private System.Windows.Forms.ComboBox cmbEquipamientoEvento;
     }
 }

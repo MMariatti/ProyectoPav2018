@@ -12,7 +12,9 @@ namespace ScheDulJ.Forms.Equipamiento
 {
     public partial class frmEquipoEvento : Form
     {
-  
+
+        private DataTable tablaMain = new DataTable();
+
         public frmEquipoEvento()
         {
             InitializeComponent();
@@ -20,30 +22,14 @@ namespace ScheDulJ.Forms.Equipamiento
 
         private void frmEquipoEvento_Load(object sender, EventArgs e)
         {
-            
-            MostrarEquipamiento();
-            MostrarSeleccionado();
-            
+            CargarEquipamiento();
+            CrearTabla();
         }
 
-        private void MostrarEquipamiento()
-        {
-            DataTable tabla = new DataTable();
-            tabla = Items.GetAll();
-            grdEquipamiento.DataSource = tabla;
-            grdEquipamiento.Columns[2].Visible = false;
-            grdEquipamiento.Columns[3].Visible = false;
-            grdEquipamiento.Columns[5].Visible = false;
-
-        }
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //HAY QUE MODIFICAR PARA QUE NO BORRE TODO SIEMPRE Y GUARDE LOS CAMBIOS CONFIRMADOS ANTERIORMENTE!!!!
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea salir? Los cambios no confirmados seran borrados", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DetalleEvento.DeleteAll(Convert.ToInt32(txtIdE.Text.ToString()));
                 this.Close();
             }
            
@@ -54,46 +40,63 @@ namespace ScheDulJ.Forms.Equipamiento
 
         }
 
-        private void AgregarEquipamiento(int idEvento , int idItem , int costoAlquiler)
-        {
-            DetalleEvento detalle = new DetalleEvento(idEvento, idItem, costoAlquiler);
-            detalle.Save();
-            MostrarSeleccionado();
-        }
+       
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int idItem = Convert.ToInt32(grdEquipamiento.SelectedRows[0].Cells[0].Value.ToString());
-            int costoAlquiler = Convert.ToInt32(grdEquipamiento.SelectedRows[0].Cells[4].Value.ToString());
-            AgregarEquipamiento(Convert.ToInt32(txtIdE.Text.ToString()), idItem, costoAlquiler);
+
+            AgregarEquipo();
         }
-        private void MostrarSeleccionado()
+       
+        private void AgregarEquipo()
         {
-            DataTable tabla = new DataTable();
-            tabla = DetalleEvento.GetSeleccionadoEvento(Convert.ToInt32(txtIdE.Text.ToString()));
-            gridSeleccionado.DataSource = tabla;
+            int idItem = Convert.ToInt32(cmbEquipamientoEvento.SelectedValue.ToString());
+            Items item = new Items(idItem);
+            tablaMain.Rows.Add(item.IdItem, item.Nombre, item.CostoAlquiler);
+
         }
+
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            int idEvento = Convert.ToInt32(txtIdE.Text);
-            int idItem = Convert.ToInt32(gridSeleccionado.SelectedRows[0].Cells[1].Value.ToString());
-            int costoAlquiler = Convert.ToInt32(gridSeleccionado.SelectedRows[0].Cells[2].Value.ToString());
-            DetalleEvento dtEvento = new DetalleEvento(idEvento, idItem, costoAlquiler);
-            dtEvento.Eliminar();
-            MostrarSeleccionado();
+            Quitar();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
+
+
             this.Close();
         }
 
-        private void RollBack()
+
+        private void gridSeleccionado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-
-       
         }
+
+        private void CargarEquipamiento()
+        {
+            cmbEquipamientoEvento.DataSource = Items.GetAll();
+            cmbEquipamientoEvento.DisplayMember = "nombre";
+            cmbEquipamientoEvento.ValueMember = "idItem";
+        }
+
+        private void CrearTabla()
+        {
+            tablaMain.Columns.Add("ID", typeof(int));
+            tablaMain.Columns.Add("Nombre", typeof(string));
+            tablaMain.Columns.Add("Costo Alquiler", typeof(int));
+            gridSeleccionado.DataSource = tablaMain;
+        } 
+
+        private void Quitar()
+        {
+            gridSeleccionado.Rows.RemoveAt(gridSeleccionado.CurrentRow.Index);
+
+        }
+
+
     }
 }

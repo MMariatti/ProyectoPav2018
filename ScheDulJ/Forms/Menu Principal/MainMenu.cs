@@ -81,7 +81,7 @@ namespace ScheDulJ
             DataTable tabla = new DataTable();
             tabla = Evento.GetAll();
             gridEventos.DataSource = tabla; 
-
+           
         }
 
         private void btnRefrescarE_Click(object sender, EventArgs e)
