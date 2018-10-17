@@ -64,6 +64,20 @@ namespace ScheDulJ.Classes
 
 
         }
+        
+        //METODO PARA IMPLEMENTAR EL ROLLBACK EN CASO DE CANCELAR LA OPERACION
+        public static void DeleteAll(int idEvento)
+        {
+            try
+            {
+                string query = "DELETE FROM DetalleEventos WHERE idEvento = " + idEvento;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         public static DataTable GetSeleccionadoEvento(int idEvento)
         {

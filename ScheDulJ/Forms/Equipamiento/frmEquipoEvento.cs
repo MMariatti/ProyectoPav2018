@@ -36,10 +36,17 @@ namespace ScheDulJ.Forms.Equipamiento
             grdEquipamiento.Columns[5].Visible = false;
 
         }
-
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //HAY QUE MODIFICAR PARA QUE NO BORRE TODO SIEMPRE Y GUARDE LOS CAMBIOS CONFIRMADOS ANTERIORMENTE!!!!
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Esta seguro que desea salir? Los cambios no confirmados seran borrados", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DetalleEvento.DeleteAll(Convert.ToInt32(txtIdE.Text.ToString()));
+                this.Close();
+            }
+           
         }
 
         private void grdEquipamiento_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +82,18 @@ namespace ScheDulJ.Forms.Equipamiento
             DetalleEvento dtEvento = new DetalleEvento(idEvento, idItem, costoAlquiler);
             dtEvento.Eliminar();
             MostrarSeleccionado();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RollBack()
+        {
+
+
+       
         }
     }
 }
