@@ -86,16 +86,16 @@ namespace ScheDulJ.Forms
             }
         }
 
-        //Metodo para buscar el usuario al que le vamos a cambiar los datos
+       
        
 
         //metodo para cambiar el telefono del cliente 
 
         private void CambiarTelefono()
         {
-            string nvoTelefono = txtNuevoTelefono.Text;
+            int nvoTelefono = Convert.ToInt32(txtNuevoTelefono.Text);
             Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
-            cliente.CambiarNombre(nvoTelefono);
+            cliente.CambiarTelefono(nvoTelefono);
         }
 
         //metodo para cambiar la direccion del cliente 
@@ -104,7 +104,7 @@ namespace ScheDulJ.Forms
         {
             string nvaDireccion = txtNuevaDireccion.Text;
             Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
-            cliente.CambiarNombre(nvaDireccion);
+            cliente.CambiarDireccion(nvaDireccion);
         }
 
         private void CambiarNombre()

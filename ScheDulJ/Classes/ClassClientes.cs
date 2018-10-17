@@ -235,6 +235,20 @@ namespace ScheDulJ
                 MessageBox.Show(ex.Data.ToString(), "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void CambiarDireccion(string newDireccion)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET telefono = " + newDireccion + " WHERE nombre = '" + this.Nombre + "' AND apellido = '" + this.Apellido + "' AND telefono = " + this.Telefono + "";
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Direccion cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
