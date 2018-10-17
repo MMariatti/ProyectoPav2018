@@ -31,6 +31,7 @@ CREATE TABLE Eventos(
 	idTipoEvento int,
 	fecha datetime,
 	horario time,
+	horarioFin time,
 	direccion varchar(50),
 	idCliente int,
 	CONSTRAINT eventos_pk PRIMARY KEY(idEvento),
@@ -109,4 +110,10 @@ CREATE TABLE DetallePresupuestos(
 	CONSTRAINT dp_item_fk FOREIGN KEY(idItem)
 		REFERENCES Items(idItem)
 		);
-
+		
+CREATE TABLE DetalleEventos(
+	idEvento int,
+	idItem int,
+	costoAlquiler int,
+	CONSTRAINT pk_dtEventos PRIMARY KEY(idEvento,idItem)
+	);

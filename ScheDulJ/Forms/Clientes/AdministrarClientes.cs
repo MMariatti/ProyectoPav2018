@@ -81,6 +81,11 @@ namespace ScheDulJ.Forms
         {
             FrmModificarCliente frmModificarCliente;
             frmModificarCliente = new FrmModificarCliente();
+            frmModificarCliente.txt_IdCliente.Text = gridClientes.SelectedRows[0].Cells[0].Value.ToString();
+            frmModificarCliente.txtNuevoNombre.Text = gridClientes.SelectedRows[0].Cells[1].Value.ToString();
+            frmModificarCliente.txtNuevoApellido.Text = gridClientes.SelectedRows[0].Cells[2].Value.ToString();
+            frmModificarCliente.txtNuevoTelefono.Text = gridClientes.SelectedRows[0].Cells[3].Value.ToString();
+            frmModificarCliente.txtNuevaDireccion.Text = gridClientes.SelectedRows[0].Cells[4].Value.ToString();
             frmModificarCliente.Show();
 
         }

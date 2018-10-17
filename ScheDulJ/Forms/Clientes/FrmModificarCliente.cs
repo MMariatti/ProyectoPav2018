@@ -16,6 +16,7 @@ namespace ScheDulJ.Forms
         {
             InitializeComponent();
         }
+       
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -27,21 +28,7 @@ namespace ScheDulJ.Forms
 
         }
 
-        // Corroborar que el usuario que ingresa no sea vacio 
-        private bool CorroborarClientes()
-        {
-            if (txt_IdCliente.Text == string.Empty)
-            {
-                MessageBox.Show("No ha ingresado el numero de cliente ", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_IdCliente.Focus();
-                return false;
-
-            }
-            else
-            {
-                return true;
-            }
-        }
+    
         //con este metodo nos aseguramos que el usuario no vaya a cargar valores null 
         private bool CorroborarTelefono()
         {
@@ -49,6 +36,34 @@ namespace ScheDulJ.Forms
             {
                 MessageBox.Show("No ha ingresado el nuevo telefono", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNuevoTelefono.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool CorroborarNombre()
+        {
+            if (txtNuevoNombre.Text == string.Empty)
+            {
+                MessageBox.Show("No ha ingresado el nuevo nombre", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNuevoNombre.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool CorroborarApellido()
+        {
+            if (txtNuevoApellido.Text == string.Empty)
+            {
+                MessageBox.Show("No ha ingresado el nuevo Apellido", "Error al cargar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNuevoApellido.Focus();
                 return false;
             }
             else
@@ -72,59 +87,38 @@ namespace ScheDulJ.Forms
         }
 
         //Metodo para buscar el usuario al que le vamos a cambiar los datos
-        private bool BuscarCliente(int id)
-        {
-            Clientes cliente = new Clientes(id);
-            DataTable tabla = new DataTable();
-            string consultaSql = "SELECT nombre, apellido FROM Clientes Where idCliente = "+id;
-            tabla = DBHelper.ConsultarSQL(consultaSql);
-            if (tabla.Rows.Count == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+       
 
         //metodo para cambiar el telefono del cliente 
 
-        private void CambiarTelefono(string apellido, string nombre, string telefono)
+        private void CambiarTelefono()
         {
-            string consultaSql = "UPDATE Clientes SET telefono = '" + telefono + "' WHERE nombre = '" + nombre + "'"+" AND apellido = '"+ apellido +"'";
-            DBHelper.ConsultarSQLVoid(consultaSql);
+            string nvoTelefono = txtNuevoTelefono.Text;
+            Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
+            cliente.CambiarNombre(nvoTelefono);
         }
 
         //metodo para cambiar la direccion del cliente 
 
-        private void CambiarDireccion(string apellido, string nombre, string direccion)
+        private void CambiarDireccion()
         {
-            string consultaSql = "UPDATE Clientes SET direccion = '" + direccion + "' WHERE nombre = '" + nombre + "'" + " AND apellido = '" + apellido + "'";
-            DBHelper.ConsultarSQLVoid(consultaSql);
+            string nvaDireccion = txtNuevaDireccion.Text;
+            Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
+            cliente.CambiarNombre(nvaDireccion);
         }
 
-            private void btnBuscar_Click(object sender, EventArgs e)
+        private void CambiarNombre()
         {
-            if (CorroborarClientes() == true)
-            {
-                if (BuscarCliente(Convert.ToInt32(txt_IdCliente.Text)) == true)
-                {
-                    txtNuevoNombre.Enabled = true;
-                    txtNuevoApellido.Enabled = true;
-                    txtNuevoTelefono.Enabled = true;
-                    txtNuevaDireccion.Enabled = true;
-                    BtnModificarDireccion.Enabled = true;
-                    btnModificarTelefono.Enabled = true; 
-                    txtNuevoNombre.Focus();
-                }
-                else
-                {
-                    MessageBox.Show("El cliente ingresado no existe", "Busqueda de cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_IdCliente.Clear();
-                    txt_IdCliente.Focus();
-                }
-            }
+            string nvoNombre = txtNuevoNombre.Text;
+            Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
+            cliente.CambiarNombre(nvoNombre);
+        }
+
+        private void CambiarApellido()
+        {
+            string nvoApellido = txtNuevoApellido.Text;
+            Clientes cliente = new Clientes(Convert.ToInt32(txt_IdCliente.Text));
+            cliente.CambiarApellido(nvoApellido);
         }
 
         private void btnModificarTelefono_Click(object sender, EventArgs e)
@@ -133,7 +127,7 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Está seguro que quiere cambiar el telefono?", "Cambiar telefono", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    CambiarTelefono(txtNuevoApellido.Text, txtNuevoNombre.Text, txtNuevoTelefono.Text);
+                    CambiarTelefono();
                     MessageBox.Show("Telefono cambiado correctamente", "Cambiar Telefono", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNuevoTelefono.Clear();
                     txtNuevaDireccion.Focus();
@@ -152,11 +146,9 @@ namespace ScheDulJ.Forms
             {
                 if (MessageBox.Show("¿Está seguro que quiere cambiar la direccion?", "Cambiar direccion", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    CambiarDireccion(txtNuevoApellido.Text, txtNuevoNombre.Text, txtNuevaDireccion.Text);
+                    CambiarDireccion();
                     MessageBox.Show("Telefono cambiado correctamente", "Cambiar Telefono", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNuevoNombre.Focus();
-                    txtNuevoNombre.Clear();
-                    txtNuevoApellido.Clear();
                     txtNuevaDireccion.Clear();
                     
                 }
@@ -165,6 +157,72 @@ namespace ScheDulJ.Forms
             {
                 txtNuevaDireccion.Focus();
             }
+        }
+    
+
+        private void BtnModificarNombre_Click(object sender, EventArgs e)
+        {
+            if (CorroborarNombre()==true)
+            {
+                if (MessageBox.Show("¿Está seguro que quiere cambiar el nombre?", "Cambiar nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    CambiarNombre();
+                    MessageBox.Show("Nombre cambiado correctamente", "Cambiar Nombre", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNuevoApellido.Focus();
+                    txtNuevoNombre.Clear();
+                    
+
+
+                }
+                else
+                {
+                    txtNuevoNombre.Focus();
+                }
+            }
+            
+        }
+
+        private void BtnModificarApellido_Click(object sender, EventArgs e)
+        {
+            if (CorroborarApellido() == true)
+            {
+                if (MessageBox.Show("¿Está seguro que quiere cambiar el apellido?", "Cambiar apellido", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    CambiarApellido();
+                    MessageBox.Show("Apellido cambiado correctamente", "Cambiar Apellido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNuevoTelefono.Focus();
+                   
+                    txtNuevoApellido.Clear();
+                    
+
+                }
+                else
+                {
+                    txtNuevoApellido.Focus();
+                }
+               
+            }
+            
+        }
+
+        private void txtNuevoNombre_Click(object sender, EventArgs e)
+        {
+            txtNuevoNombre.Clear();
+        }
+
+        private void txtNuevoApellido_TextChanged(object sender, EventArgs e)
+        {
+            txtNuevoApellido.Clear(); 
+        }
+
+        private void txtNuevoTelefono_Click(object sender, EventArgs e)
+        {
+            txtNuevoTelefono.Clear();
+        }
+
+        private void txtNuevaDireccion_Click(object sender, EventArgs e)
+        {
+            txtNuevaDireccion.Clear();
         }
     }   
 }
