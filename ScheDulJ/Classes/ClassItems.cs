@@ -113,6 +113,7 @@ namespace ScheDulJ.Classes
             DataTable tabla = DBHelper.ConsultarSQL(query);
             Nombre = tabla.Rows[0]["nombre"].ToString();
             Descripcion = tabla.Rows[0]["descripcion"].ToString();
+            CostoAlquiler = Convert.ToInt32(tabla.Rows[0]["costoAlquiler"].ToString());
         }
 
         //Retorna todos los items en una DataTable

@@ -39,12 +39,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
+            this.btnRefrescarE = new System.Windows.Forms.Button();
             this.panelEquipamiento = new System.Windows.Forms.Panel();
+            this.btnAgregarEquipo = new System.Windows.Forms.Button();
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.btnTipoEvento = new System.Windows.Forms.Button();
-            this.btnRefrescarE = new System.Windows.Forms.Button();
-            this.btnAgregarEquipo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             this.panelEquipamiento.SuspendLayout();
@@ -69,6 +69,8 @@
             this.gridEventos.Name = "gridEventos";
             this.gridEventos.Size = new System.Drawing.Size(370, 203);
             this.gridEventos.TabIndex = 0;
+            this.gridEventos.SelectionChanged += new System.EventHandler(this.gridEventos_SelectionChanged);
+            this.gridEventos.Click += new System.EventHandler(this.gridEventos_Click);
             // 
             // btnNuevoEvento
             // 
@@ -154,6 +156,16 @@
             this.panelEventos.Size = new System.Drawing.Size(411, 298);
             this.panelEventos.TabIndex = 8;
             // 
+            // btnRefrescarE
+            // 
+            this.btnRefrescarE.Location = new System.Drawing.Point(314, 240);
+            this.btnRefrescarE.Name = "btnRefrescarE";
+            this.btnRefrescarE.Size = new System.Drawing.Size(72, 38);
+            this.btnRefrescarE.TabIndex = 8;
+            this.btnRefrescarE.Text = "Refrescar";
+            this.btnRefrescarE.UseVisualStyleBackColor = true;
+            this.btnRefrescarE.Click += new System.EventHandler(this.btnRefrescarE_Click);
+            // 
             // panelEquipamiento
             // 
             this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
@@ -164,6 +176,16 @@
             this.panelEquipamiento.Name = "panelEquipamiento";
             this.panelEquipamiento.Size = new System.Drawing.Size(316, 296);
             this.panelEquipamiento.TabIndex = 9;
+            // 
+            // btnAgregarEquipo
+            // 
+            this.btnAgregarEquipo.Location = new System.Drawing.Point(19, 238);
+            this.btnAgregarEquipo.Name = "btnAgregarEquipo";
+            this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
+            this.btnAgregarEquipo.TabIndex = 8;
+            this.btnAgregarEquipo.Text = "Agregar Equipamiento";
+            this.btnAgregarEquipo.UseVisualStyleBackColor = true;
+            this.btnAgregarEquipo.Click += new System.EventHandler(this.btnAgregarEquipo_Click);
             // 
             // lblEquipamiento
             // 
@@ -194,26 +216,6 @@
             this.btnTipoEvento.Text = "Administrar TipoEvento";
             this.btnTipoEvento.UseVisualStyleBackColor = true;
             this.btnTipoEvento.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnRefrescarE
-            // 
-            this.btnRefrescarE.Location = new System.Drawing.Point(314, 240);
-            this.btnRefrescarE.Name = "btnRefrescarE";
-            this.btnRefrescarE.Size = new System.Drawing.Size(72, 38);
-            this.btnRefrescarE.TabIndex = 8;
-            this.btnRefrescarE.Text = "Refrescar";
-            this.btnRefrescarE.UseVisualStyleBackColor = true;
-            this.btnRefrescarE.Click += new System.EventHandler(this.btnRefrescarE_Click);
-            // 
-            // btnAgregarEquipo
-            // 
-            this.btnAgregarEquipo.Location = new System.Drawing.Point(19, 238);
-            this.btnAgregarEquipo.Name = "btnAgregarEquipo";
-            this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
-            this.btnAgregarEquipo.TabIndex = 8;
-            this.btnAgregarEquipo.Text = "Agregar Equipamiento";
-            this.btnAgregarEquipo.UseVisualStyleBackColor = true;
-            this.btnAgregarEquipo.Click += new System.EventHandler(this.btnAgregarEquipo_Click);
             // 
             // FrmMainMenu
             // 

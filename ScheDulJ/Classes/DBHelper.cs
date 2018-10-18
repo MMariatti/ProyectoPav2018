@@ -66,7 +66,7 @@ namespace ScheDulJ
 
         //METODO CONSULTA UPDATE/INSERT/DELETE (TRANSACCION)
 
-        public int EjecutarSQL(string strSql)
+        public static int EjecutarSQL(string strSql)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand cmd = new SqlCommand();

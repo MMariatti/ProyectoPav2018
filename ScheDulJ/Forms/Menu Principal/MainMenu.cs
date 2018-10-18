@@ -24,9 +24,11 @@ namespace ScheDulJ
         }
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            MostrarEventos(); 
-            
+            gridEventos.Focus(); 
+            MostrarEventos();
+            MostrarSeleccionadoAlCargar();
         }
+
         private void btnExitMainMenu_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion?", "Cerrar Aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -95,6 +97,33 @@ namespace ScheDulJ
             frmEquipoEvento.txtNombreEvento.Text = gridEventos.SelectedRows[0].Cells[1].Value.ToString();
             frmEquipoEvento.txtIdE.Text = gridEventos.SelectedRows[0].Cells[0].Value.ToString();
             frmEquipoEvento.Show(); 
+        }
+
+        private void MostrarSeleccionado(int idEvento)
+        {
+            DataTable tabla = new DataTable();
+            tabla = DetalleEvento.GetSeleccionadoEvento(idEvento);
+            gridEquipamiento.DataSource = tabla; 
+        }
+
+        private void MostrarSeleccionadoAlCargar()
+        {
+            MostrarSeleccionado(Convert.ToInt32(gridEventos.Rows[0].Cells[0].Value.ToString()));
+        }
+
+        private void gridEventos_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void gridEventos_Click(object sender, EventArgs e)
+        {
+            if (gridEventos.SelectedRows[0].Index != gridEventos.Rows.Count)
+            {
+
+                DetalleEvento.GetSeleccionadoEvento(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value));
+            }
         }
     }
 }
