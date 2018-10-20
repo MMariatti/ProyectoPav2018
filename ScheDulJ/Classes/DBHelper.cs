@@ -12,8 +12,8 @@ namespace ScheDulJ
     {
         //CONSTRUCTOR DE LA CLASE 
 
-        private static string cadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ2;Integrated Security=True";
-        // private static string cadenaConexion = Data Source=MARKY\PAV1;Initial Catalog=dbNormalizada2; Integrated Security=True"";
+        //private static string cadenaConexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ2;Integrated Security=True";
+         private static string cadenaConexion = @"Data Source=MARKY\PAV1;Initial Catalog=dbNormalizada2; Integrated Security=True";
         private static SqlConnection conexion;
         private static SqlCommand comando; 
         //PROPIEDAD QUE IMPLEMENTA SET Y GET DE CADA ATRIBUTO

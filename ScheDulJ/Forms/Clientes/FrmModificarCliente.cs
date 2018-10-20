@@ -208,21 +208,25 @@ namespace ScheDulJ.Forms
         private void txtNuevoNombre_Click(object sender, EventArgs e)
         {
             txtNuevoNombre.Clear();
+            BtnModificarNombre.Enabled = true;
         }
 
         private void txtNuevoApellido_TextChanged(object sender, EventArgs e)
         {
-            txtNuevoApellido.Clear(); 
+            txtNuevoApellido.Clear();
+            BtnModificarApellido.Enabled = true;
         }
 
         private void txtNuevoTelefono_Click(object sender, EventArgs e)
         {
             txtNuevoTelefono.Clear();
+            btnModificarTelefono.Enabled = true;
         }
 
         private void txtNuevaDireccion_Click(object sender, EventArgs e)
         {
             txtNuevaDireccion.Clear();
+            BtnModificarDireccion.Enabled = true;
         }
     }   
 }
