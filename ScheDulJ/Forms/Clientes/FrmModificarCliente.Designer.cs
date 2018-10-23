@@ -83,6 +83,7 @@
             // 
             // btnModificarTelefono
             // 
+            this.btnModificarTelefono.Enabled = false;
             this.btnModificarTelefono.Location = new System.Drawing.Point(279, 118);
             this.btnModificarTelefono.Name = "btnModificarTelefono";
             this.btnModificarTelefono.Size = new System.Drawing.Size(126, 28);
@@ -139,6 +140,7 @@
             // 
             // BtnModificarDireccion
             // 
+            this.BtnModificarDireccion.Enabled = false;
             this.BtnModificarDireccion.Location = new System.Drawing.Point(279, 157);
             this.BtnModificarDireccion.Name = "BtnModificarDireccion";
             this.BtnModificarDireccion.Size = new System.Drawing.Size(126, 28);
@@ -167,6 +169,7 @@
             // 
             // BtnModificarApellido
             // 
+            this.BtnModificarApellido.Enabled = false;
             this.BtnModificarApellido.Location = new System.Drawing.Point(279, 84);
             this.BtnModificarApellido.Name = "BtnModificarApellido";
             this.BtnModificarApellido.Size = new System.Drawing.Size(126, 28);
@@ -177,6 +180,7 @@
             // 
             // BtnModificarNombre
             // 
+            this.BtnModificarNombre.Enabled = false;
             this.BtnModificarNombre.Location = new System.Drawing.Point(279, 50);
             this.BtnModificarNombre.Name = "BtnModificarNombre";
             this.BtnModificarNombre.Size = new System.Drawing.Size(126, 28);
