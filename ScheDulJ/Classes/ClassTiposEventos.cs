@@ -58,6 +58,7 @@ namespace ScheDulJ.Classes
             DataTable tabla = DBHelper.ConsultarSQL(query);
             NombreTEvento = tabla.Rows[0]["nombre"].ToString();
             DescripcionTEvento = tabla.Rows[0]["descripcion"].ToString();
+
         }
 
         public TiposEventos(string nombre, string descripcion)
@@ -89,9 +90,16 @@ namespace ScheDulJ.Classes
 
         public void Eliminar()
         {
-            string consultaSQL = "DELETE FROM TiposEventos WHERE idTipoEvento = " + this.IdTipoEvento;
-            DBHelper.ConsultarSQL(consultaSQL);
-            MessageBox.Show("Tipo de Evento Eliminado Correctamente", "Tipo de Evento Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            try
+            {
+                string consultaSQL = "DELETE FROM TiposEventos WHERE idTipoEvento = " + this.IdTipoEvento;
+                DBHelper.ConsultarSQL(consultaSQL);
+                MessageBox.Show("Tipo de Evento Eliminado Correctamente", "Tipo de Evento Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
     }
 }

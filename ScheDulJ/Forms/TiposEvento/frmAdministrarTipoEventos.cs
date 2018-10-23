@@ -58,10 +58,8 @@ namespace ScheDulJ.Forms
                 if (MessageBox.Show("Esta seguro que desea eliminar el tipo de evento?", "Eliminar Tipo de Evento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    TiposEventos tipoEvento = new TiposEventos(gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString() , gridTipoEventos.SelectedRows[0].Cells[1].Value.ToString());
-                    tipoEvento.Eliminar();
-                    tipoEvento = null;
-                    
+                    TiposEventos tipoEvento = new TiposEventos(Convert.ToInt32(gridTipoEventos.SelectedRows[0].Cells[0].Value.ToString()));
+                    tipoEvento.Eliminar();    
                 }
             }
             else

@@ -119,11 +119,6 @@ namespace ScheDulJ
 
         private void gridEventos_Click(object sender, EventArgs e)
         {
-            if (gridEventos.SelectedRows[0].Index != gridEventos.Rows.Count)
-            {
-
-                DetalleEvento.GetSeleccionadoEvento(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value));
-            }
         }
     }
 }
