@@ -53,6 +53,7 @@
     <Compile Include="Classes\ClassItems.cs" />
     <Compile Include="Classes\ClassTiposEventos.cs" />
     <Compile Include="Classes\ClassUsuarios.cs" />
+    <Compile Include="Classes\DataManager.cs" />
     <Compile Include="Forms\Clientes\AdministrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
