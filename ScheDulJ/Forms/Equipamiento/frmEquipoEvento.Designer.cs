@@ -40,6 +40,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.txtIdE = new System.Windows.Forms.TextBox();
             this.cmbEquipamientoEvento = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.gridSeleccionado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,5 +201,6 @@
         private System.Windows.Forms.Label lblID;
         public System.Windows.Forms.TextBox txtIdE;
         private System.Windows.Forms.ComboBox cmbEquipamientoEvento;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

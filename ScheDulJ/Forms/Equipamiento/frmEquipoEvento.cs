@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScheDulJ.Classes;
-
+using System.Data;
+using System.Data.SqlClient; 
 
 
 namespace ScheDulJ.Forms.Equipamiento
@@ -116,34 +117,38 @@ namespace ScheDulJ.Forms.Equipamiento
 
         private void ConfirmarEquipo()
         {
+            DataManager dm = new DataManager();
+            string queryI = "DELETE FROM DetalleEventos WHERE idEvento =" + Convert.ToInt32(txtIdE.Text.ToString());
+            DBHelper.ConsultarSQLVoid(queryI); 
+            dm.Open();
+            dm.BeginTransaction();
             try
             {
-                string queryI = "DELETE FROM DetalleEventos WHERE idEvento =" + Convert.ToInt32(txtIdE.Text.ToString());
-                DBHelper.EjecutarSQL(queryI);
                 for (int i = 0; i < gridSeleccionado.Rows.Count - 1; i++)
                 {
                     try
                     {
-                        string query = "INSERT INTO DetalleEventos (idEvento, idItem , costoAlquiler) VALUES (" + Convert.ToInt32((txtIdE.Text.ToString())) + "," + Convert.ToInt32(gridSeleccionado.Rows[i].Cells[0].Value.ToString()) + "," + Convert.ToInt32(gridSeleccionado.Rows[i].Cells[2].Value.ToString()) + ")";
-                        int resultado = DBHelper.EjecutarSQL(query);
-                        if (resultado == 0)
-                        {
-                            MessageBox.Show("Error al confirmar: " + Convert.ToInt32(gridSeleccionado.Rows[i].Cells[1].Value.ToString()), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            break;
-                        }
+                        string query = "INSERT INTO DetalleEventos(idEvento, idItem, costoAlquiler)" + "VALUES(" + Convert.ToInt32((txtIdE.Text.ToString())) + "," + Convert.ToInt32(gridSeleccionado.Rows[i].Cells[0].Value.ToString()) + "," + Convert.ToInt32(gridSeleccionado.Rows[i].Cells[2].Value.ToString()) + ");";
+                        List<SqlParameter> parametrosvacio = new List<SqlParameter>();
+                        dm.EjecutarSQL(query, parametrosvacio);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                dm.Commit();
                 MessageBox.Show("Equipo Cargado Satisfactoriamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
+                dm.Rollback();
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            finally
+            {
+                dm.Close();
+            }
         }
 
         private int CorroborarAgregado(int idItem)

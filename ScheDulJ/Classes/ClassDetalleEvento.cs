@@ -42,6 +42,7 @@ namespace ScheDulJ.Classes
             try
             {
                 string query = "INSERT INTO DetalleEventos(idEvento, idItem , costoAlquiler) values("+ idEvento + "," + idItem + "," + costoAlquiler + ")";
+
                 DBHelper.ConsultarSQL(query);
             }
             catch (Exception ex)
