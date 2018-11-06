@@ -123,6 +123,14 @@ namespace ScheDulJ
         private void gridEventos_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnModificarEvento_Click(object sender, EventArgs e)
+        {
+            frmModificarEvento modificarEvento = new frmModificarEvento();
+            modificarEvento.lblIdCargado.Text = gridEventos.SelectedRows[0].Cells[0].Value.ToString();
+            modificarEvento.lblNombre.Text = gridEventos.SelectedRows[0].Cells[1].Value.ToString();
+            modificarEvento.Show();
+        }
     }
 }
 

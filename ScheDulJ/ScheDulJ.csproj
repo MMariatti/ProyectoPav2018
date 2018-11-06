@@ -54,6 +54,11 @@
     <Compile Include="Classes\ClassTiposEventos.cs" />
     <Compile Include="Classes\ClassUsuarios.cs" />
     <Compile Include="Classes\DataManager.cs" />
+    <Compile Include="dataSetPresupuesto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Clientes\AdministrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +82,18 @@
     </Compile>
     <Compile Include="Forms\Eventos\frmAgregarEvento.Designer.cs">
       <DependentUpon>frmAgregarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Eventos\frmModificarEvento .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Eventos\frmModificarEvento .Designer.cs">
+      <DependentUpon>frmModificarEvento .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPresupuesto.Designer.cs">
+      <DependentUpon>FrmPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.cs">
       <SubType>Form</SubType>
@@ -164,6 +181,9 @@
     <EmbeddedResource Include="Forms\Eventos\frmAgregarEvento.resx">
       <DependentUpon>frmAgregarEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Eventos\frmModificarEvento .resx">
+      <DependentUpon>frmModificarEvento .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TiposEvento\frmAdministrarTipoEventos.resx">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +227,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptPresupuesto.rdlc" />
+    <None Include="dataSetPresupuesto.xsc">
+      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
+    </None>
+    <None Include="dataSetPresupuesto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataSetPresupuesto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dataSetPresupuesto.xss">
+      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

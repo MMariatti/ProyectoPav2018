@@ -69,3 +69,4 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.cspro
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
+C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources

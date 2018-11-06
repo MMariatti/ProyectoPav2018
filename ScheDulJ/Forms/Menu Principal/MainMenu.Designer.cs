@@ -91,6 +91,7 @@
             this.btnModificarEvento.TabIndex = 2;
             this.btnModificarEvento.Text = "Modificar Evento";
             this.btnModificarEvento.UseVisualStyleBackColor = true;
+            this.btnModificarEvento.Click += new System.EventHandler(this.btnModificarEvento_Click);
             // 
             // btnEliminarEvento
             // 
