@@ -27,6 +27,9 @@ namespace ScheDulJ
             gridEventos.Focus(); 
             MostrarEventos();
             MostrarSeleccionadoAlCargar();
+            
+            
+              ;
         }
 
         private void btnExitMainMenu_Click(object sender, EventArgs e)
