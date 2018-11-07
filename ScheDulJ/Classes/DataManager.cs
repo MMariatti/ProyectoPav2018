@@ -14,8 +14,8 @@ namespace ScheDulJ.Classes
         private SqlConnection dbConnection;
         private SqlTransaction dbTransaction;
 
-        //private string string_conexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ2;Integrated Security=True";
-        private static string string_conexion = @"Data Source=MARKY\PAV1;Initial Catalog=ScheDulJ2; Integrated Security=True";
+        private string string_conexion = @"Data Source=FRANNOTEBOOK\TESTSERVER;Initial Catalog=ScheDulJ;Integrated Security=True";
+        //private static string string_conexion = @"Data Source=MARKY\PAV1;Initial Catalog=ScheDulJ2; Integrated Security=True";
 
         public DataManager()
         {

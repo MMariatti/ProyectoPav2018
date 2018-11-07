@@ -62,8 +62,8 @@ namespace ScheDulJ.Forms
                     if (MessageBox.Show("Esta seguro que desea eliminar el Equipamiento?", "Eliminar Equipamiento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         int id = System.Convert.ToInt32(GridEquipamiento.SelectedRows[0].Cells[0].Value.ToString());
-                       // Items.Baja(id);
-                        mostrarEquipamiento();
+                       Items.Baja(id);
+                       mostrarEquipamiento();
                     }
                 }
                 else

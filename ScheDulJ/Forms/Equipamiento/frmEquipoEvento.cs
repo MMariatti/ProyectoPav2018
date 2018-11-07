@@ -139,6 +139,7 @@ namespace ScheDulJ.Forms.Equipamiento
                 }
                 dm.Commit();
                 MessageBox.Show("Equipo Cargado Satisfactoriamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
             catch (Exception ex)
             {

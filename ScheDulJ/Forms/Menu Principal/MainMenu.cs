@@ -26,7 +26,7 @@ namespace ScheDulJ
         {
             gridEventos.Focus(); 
             MostrarEventos();
-            MostrarSeleccionadoAlCargar();
+     
             
             
               ;
@@ -105,14 +105,11 @@ namespace ScheDulJ
         private void MostrarSeleccionado(int idEvento)
         {
             DataTable tabla = new DataTable();
-            tabla = DetalleEvento.GetSeleccionadoEvento(idEvento);
+            tabla = DetalleEvento.GetSeleccionadoEventoXNombre(idEvento);
             gridEquipamiento.DataSource = tabla; 
         }
 
-        private void MostrarSeleccionadoAlCargar()
-        {
-            MostrarSeleccionado(Convert.ToInt32(gridEventos.Rows[0].Cells[0].Value.ToString()));
-        }
+       
 
         private void gridEventos_SelectionChanged(object sender, EventArgs e)
         {
@@ -130,6 +127,30 @@ namespace ScheDulJ
             modificarEvento.lblIdCargado.Text = gridEventos.SelectedRows[0].Cells[0].Value.ToString();
             modificarEvento.lblNombre.Text = gridEventos.SelectedRows[0].Cells[1].Value.ToString();
             modificarEvento.Show();
+        }
+
+        private void btnEliminarEvento_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea eliminar el evento?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarEvento();
+                MostrarEventos();
+            }
+            }
+
+        private void EliminarEvento()
+        {
+            Evento.Baja(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value));
+        }
+
+        private void gridEquipamiento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCargarEquipamiento_Click(object sender, EventArgs e)
+        {
+            MostrarSeleccionado(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value.ToString()));
         }
     }
 }

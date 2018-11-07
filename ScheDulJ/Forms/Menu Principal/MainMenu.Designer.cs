@@ -45,6 +45,7 @@
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.btnTipoEvento = new System.Windows.Forms.Button();
+            this.btnCargarEquipamiento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             this.panelEquipamiento.SuspendLayout();
@@ -101,6 +102,7 @@
             this.btnEliminarEvento.TabIndex = 3;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = true;
+            this.btnEliminarEvento.Click += new System.EventHandler(this.btnEliminarEvento_Click);
             // 
             // btnAdministrarUsuarios
             // 
@@ -136,7 +138,7 @@
             // 
             // btnAdministrarEquipamiento
             // 
-            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(192, 239);
+            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(234, 238);
             this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
             this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
             this.btnAdministrarEquipamiento.TabIndex = 6;
@@ -169,18 +171,19 @@
             // 
             // panelEquipamiento
             // 
+            this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
             this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
             this.panelEquipamiento.Controls.Add(this.gridEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnAdministrarEquipamiento);
-            this.panelEquipamiento.Location = new System.Drawing.Point(455, 10);
+            this.panelEquipamiento.Location = new System.Drawing.Point(428, 10);
             this.panelEquipamiento.Name = "panelEquipamiento";
-            this.panelEquipamiento.Size = new System.Drawing.Size(316, 296);
+            this.panelEquipamiento.Size = new System.Drawing.Size(343, 296);
             this.panelEquipamiento.TabIndex = 9;
             // 
             // btnAgregarEquipo
             // 
-            this.btnAgregarEquipo.Location = new System.Drawing.Point(19, 238);
+            this.btnAgregarEquipo.Location = new System.Drawing.Point(128, 239);
             this.btnAgregarEquipo.Name = "btnAgregarEquipo";
             this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
             this.btnAgregarEquipo.TabIndex = 8;
@@ -203,10 +206,11 @@
             // 
             this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEquipamiento.Location = new System.Drawing.Point(19, 30);
+            this.gridEquipamiento.Location = new System.Drawing.Point(29, 31);
             this.gridEquipamiento.Name = "gridEquipamiento";
-            this.gridEquipamiento.Size = new System.Drawing.Size(273, 202);
+            this.gridEquipamiento.Size = new System.Drawing.Size(305, 202);
             this.gridEquipamiento.TabIndex = 0;
+            this.gridEquipamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEquipamiento_CellContentClick);
             // 
             // btnTipoEvento
             // 
@@ -217,6 +221,16 @@
             this.btnTipoEvento.Text = "Administrar TipoEvento";
             this.btnTipoEvento.UseVisualStyleBackColor = true;
             this.btnTipoEvento.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnCargarEquipamiento
+            // 
+            this.btnCargarEquipamiento.Location = new System.Drawing.Point(29, 238);
+            this.btnCargarEquipamiento.Name = "btnCargarEquipamiento";
+            this.btnCargarEquipamiento.Size = new System.Drawing.Size(93, 38);
+            this.btnCargarEquipamiento.TabIndex = 9;
+            this.btnCargarEquipamiento.Text = "Cargar Equipamiento";
+            this.btnCargarEquipamiento.UseVisualStyleBackColor = true;
+            this.btnCargarEquipamiento.Click += new System.EventHandler(this.btnCargarEquipamiento_Click);
             // 
             // FrmMainMenu
             // 
@@ -263,5 +277,6 @@
         private System.Windows.Forms.Button btnTipoEvento;
         private System.Windows.Forms.Button btnRefrescarE;
         private System.Windows.Forms.Button btnAgregarEquipo;
+        private System.Windows.Forms.Button btnCargarEquipamiento;
     }
 }

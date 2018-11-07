@@ -12,13 +12,13 @@ namespace ScheDulJ.Classes
     {
         private int idEvento;
         private int idItem;
-        private int costoAlquiler; 
+        private int costoAlquiler;
 
-        public DetalleEvento(int idE, int idI,int costoA)
+        public DetalleEvento(int idE, int idI, int costoA)
         {
             idEvento = idE;
             idItem = idI;
-            costoAlquiler = costoA; 
+            costoAlquiler = costoA;
         }
 
         public static DataTable GetAll()
@@ -41,7 +41,7 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "INSERT INTO DetalleEventos(idEvento, idItem , costoAlquiler) values("+ idEvento + "," + idItem + "," + costoAlquiler + ")";
+                string query = "INSERT INTO DetalleEventos(idEvento, idItem , costoAlquiler) values(" + idEvento + "," + idItem + "," + costoAlquiler + ")";
 
                 DBHelper.ConsultarSQL(query);
             }
@@ -55,7 +55,7 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "DELETE FROM DetalleEventos WHERE idEvento = " + idEvento + " AND idItem = " +idItem;
+                string query = "DELETE FROM DetalleEventos WHERE idEvento = " + idEvento + " AND idItem = " + idItem;
                 DBHelper.ConsultarSQL(query);
             }
             catch (Exception ex)
@@ -65,11 +65,26 @@ namespace ScheDulJ.Classes
 
 
         }
-        
+
         public static DataTable GetSeleccionadoEvento(int idEvento)
         {
             DataTable tabla = new DataTable();
             string query = "SELECT * FROM DetalleEventos WHERE idEvento = " + idEvento;
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
+        }
+        public static DataTable GetSeleccionadoEventoXNombre(int idEvento)
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT i.nombre AS Nombre, i.costoAlquiler AS CostoAlquiler FROM DetalleEventos d JOIN Items i ON (i.idItem = d.idItem) WHERE idEvento = " + idEvento;
             try
             {
                 tabla = DBHelper.ConsultarSQL(query);

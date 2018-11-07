@@ -196,6 +196,20 @@ namespace ScheDulJ.Classes
             }
         }
 
+        public static void Baja(int id)
+        {
+            string query = "UPDATE Items SET activo = 0 WHERE idItem = " + id; 
+            try
+            {
+                DBHelper.ConsultarSQL(query);
+                MessageBox.Show("Item eliminado", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            catch
+            {
+                MessageBox.Show("Error al eliminar Item", "Error"  ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+
+        }
     }
 }
