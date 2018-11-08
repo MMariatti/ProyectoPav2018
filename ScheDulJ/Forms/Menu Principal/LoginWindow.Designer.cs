@@ -77,7 +77,7 @@
             // 
             // imgLoginBackBox
             // 
-            this.imgLoginBackBox.BackColor = System.Drawing.Color.Silver;
+            this.imgLoginBackBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.imgLoginBackBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imgLoginBackBox.Location = new System.Drawing.Point(274, 254);
             this.imgLoginBackBox.Name = "imgLoginBackBox";

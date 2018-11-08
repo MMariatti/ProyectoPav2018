@@ -94,6 +94,7 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
             this.btnConfirmar.Location = new System.Drawing.Point(204, 134);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(113, 38);
@@ -103,6 +104,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(12, 134);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(60, 38);
@@ -115,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(329, 180);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
@@ -124,6 +127,7 @@
             this.Controls.Add(this.txtConfirmContra);
             this.Controls.Add(this.txtContraNueva);
             this.Controls.Add(this.txtContraActual);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmModificarContrasena";
             this.Text = "frmModificarContrasena";
             this.Load += new System.EventHandler(this.frmModificarContrasena_Load);

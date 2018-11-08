@@ -58,6 +58,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(12, 46);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 18);
@@ -69,6 +70,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(12, 83);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(79, 18);
@@ -87,6 +89,7 @@
             // 
             this.lblPasswordConfirm.AutoSize = true;
             this.lblPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordConfirm.ForeColor = System.Drawing.Color.White;
             this.lblPasswordConfirm.Location = new System.Drawing.Point(12, 114);
             this.lblPasswordConfirm.Name = "lblPasswordConfirm";
             this.lblPasswordConfirm.Size = new System.Drawing.Size(79, 36);
@@ -97,6 +100,7 @@
             // 
             this.lblNuevoUsuario.AutoSize = true;
             this.lblNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblNuevoUsuario.Location = new System.Drawing.Point(59, 9);
             this.lblNuevoUsuario.Name = "lblNuevoUsuario";
             this.lblNuevoUsuario.Size = new System.Drawing.Size(107, 18);
@@ -128,6 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(232, 220);
             this.Controls.Add(this.btnCrearUsuario);
             this.Controls.Add(this.btnCancel);

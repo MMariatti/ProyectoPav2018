@@ -43,6 +43,7 @@
             // 
             // btnCrear
             // 
+            this.btnCrear.ForeColor = System.Drawing.Color.Black;
             this.btnCrear.Location = new System.Drawing.Point(120, 198);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 38);
@@ -53,6 +54,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(11, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 38);
@@ -143,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(232, 248);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.lblDireccion);
@@ -155,6 +158,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmAgregarCliente";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

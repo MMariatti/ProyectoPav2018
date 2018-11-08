@@ -74,7 +74,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(12, 43);
+            this.lblFecha.Location = new System.Drawing.Point(-3, 36);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(59, 18);
             this.lblFecha.TabIndex = 4;
@@ -139,6 +139,7 @@
             // 
             // btnNuevoCliente
             // 
+            this.btnNuevoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnNuevoCliente.Location = new System.Drawing.Point(208, 294);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(87, 23);
@@ -150,6 +151,7 @@
             // 
             // btnCrear
             // 
+            this.btnCrear.ForeColor = System.Drawing.Color.Black;
             this.btnCrear.Location = new System.Drawing.Point(195, 383);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 28);
@@ -160,6 +162,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Location = new System.Drawing.Point(15, 383);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
@@ -210,6 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(308, 423);
             this.Controls.Add(this.cmbTipoEvento);
             this.Controls.Add(this.lblTipoEvento);
@@ -228,8 +232,10 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.calendarioEvento);
             this.Controls.Add(this.txtNombre);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmAgregarEvento";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Evento";
             this.Load += new System.EventHandler(this.frmAgregarEvento_Load);
             this.ResumeLayout(false);

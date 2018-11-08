@@ -84,6 +84,7 @@
             // BtnModificarDescripcion
             // 
             this.BtnModificarDescripcion.Enabled = false;
+            this.BtnModificarDescripcion.ForeColor = System.Drawing.Color.Black;
             this.BtnModificarDescripcion.Location = new System.Drawing.Point(304, 96);
             this.BtnModificarDescripcion.Name = "BtnModificarDescripcion";
             this.BtnModificarDescripcion.Size = new System.Drawing.Size(87, 43);
@@ -95,6 +96,7 @@
             // BtnCostoAlquiler
             // 
             this.BtnCostoAlquiler.Enabled = false;
+            this.BtnCostoAlquiler.ForeColor = System.Drawing.Color.Black;
             this.BtnCostoAlquiler.Location = new System.Drawing.Point(304, 160);
             this.BtnCostoAlquiler.Name = "BtnCostoAlquiler";
             this.BtnCostoAlquiler.Size = new System.Drawing.Size(87, 43);
@@ -105,6 +107,7 @@
             // 
             // BtnSalir
             // 
+            this.BtnSalir.ForeColor = System.Drawing.Color.Black;
             this.BtnSalir.Location = new System.Drawing.Point(166, 210);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 28);
@@ -143,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(403, 257);
             this.Controls.Add(this.lblNombreEquipo);
             this.Controls.Add(this.cmbItemsModificar);
@@ -154,6 +158,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblModificarEquipo);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmModificarEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar equipo";

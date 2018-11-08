@@ -94,6 +94,7 @@
             // 
             // BtnSalir
             // 
+            this.BtnSalir.ForeColor = System.Drawing.Color.Black;
             this.BtnSalir.Location = new System.Drawing.Point(232, 207);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 28);
@@ -104,6 +105,7 @@
             // 
             // BtnCrear
             // 
+            this.BtnCrear.ForeColor = System.Drawing.Color.Black;
             this.BtnCrear.Location = new System.Drawing.Point(34, 207);
             this.BtnCrear.Name = "BtnCrear";
             this.BtnCrear.Size = new System.Drawing.Size(75, 28);
@@ -147,6 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(352, 247);
             this.Controls.Add(this.cmbTiposItems);
             this.Controls.Add(this.lblTipoItem);
@@ -159,6 +162,7 @@
             this.Controls.Add(this.lblDespcripcion);
             this.Controls.Add(this.txtNombreEquipo);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmAgregarEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar equipo";

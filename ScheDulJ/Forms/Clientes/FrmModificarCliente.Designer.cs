@@ -84,6 +84,7 @@
             // btnModificarTelefono
             // 
             this.btnModificarTelefono.Enabled = false;
+            this.btnModificarTelefono.ForeColor = System.Drawing.Color.Black;
             this.btnModificarTelefono.Location = new System.Drawing.Point(279, 118);
             this.btnModificarTelefono.Name = "btnModificarTelefono";
             this.btnModificarTelefono.Size = new System.Drawing.Size(126, 28);
@@ -94,6 +95,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Location = new System.Drawing.Point(152, 225);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
@@ -141,6 +143,7 @@
             // BtnModificarDireccion
             // 
             this.BtnModificarDireccion.Enabled = false;
+            this.BtnModificarDireccion.ForeColor = System.Drawing.Color.Black;
             this.BtnModificarDireccion.Location = new System.Drawing.Point(279, 157);
             this.BtnModificarDireccion.Name = "BtnModificarDireccion";
             this.BtnModificarDireccion.Size = new System.Drawing.Size(126, 28);
@@ -170,6 +173,7 @@
             // BtnModificarApellido
             // 
             this.BtnModificarApellido.Enabled = false;
+            this.BtnModificarApellido.ForeColor = System.Drawing.Color.Black;
             this.BtnModificarApellido.Location = new System.Drawing.Point(279, 84);
             this.BtnModificarApellido.Name = "BtnModificarApellido";
             this.BtnModificarApellido.Size = new System.Drawing.Size(126, 28);
@@ -181,6 +185,7 @@
             // BtnModificarNombre
             // 
             this.BtnModificarNombre.Enabled = false;
+            this.BtnModificarNombre.ForeColor = System.Drawing.Color.Black;
             this.BtnModificarNombre.Location = new System.Drawing.Point(279, 50);
             this.BtnModificarNombre.Name = "BtnModificarNombre";
             this.BtnModificarNombre.Size = new System.Drawing.Size(126, 28);
@@ -193,6 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(421, 263);
             this.Controls.Add(this.BtnModificarNombre);
             this.Controls.Add(this.BtnModificarApellido);
@@ -209,6 +215,7 @@
             this.Controls.Add(this.lblNuevoTelefono);
             this.Controls.Add(this.txtNuevoNombre);
             this.Controls.Add(this.lblCliente);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmModificarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Cliente";

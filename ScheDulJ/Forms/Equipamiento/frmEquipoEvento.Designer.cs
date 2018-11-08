@@ -58,6 +58,7 @@
             // 
             this.lblEquipamiento.AutoSize = true;
             this.lblEquipamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipamiento.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblEquipamiento.Location = new System.Drawing.Point(21, 59);
             this.lblEquipamiento.Name = "lblEquipamiento";
             this.lblEquipamiento.Size = new System.Drawing.Size(108, 18);
@@ -68,6 +69,7 @@
             // 
             this.lblSeleccionado.AutoSize = true;
             this.lblSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccionado.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblSeleccionado.Location = new System.Drawing.Point(21, 113);
             this.lblSeleccionado.Name = "lblSeleccionado";
             this.lblSeleccionado.Size = new System.Drawing.Size(108, 18);
@@ -122,6 +124,7 @@
             // 
             this.lblNombreE.AutoSize = true;
             this.lblNombreE.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreE.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNombreE.Location = new System.Drawing.Point(21, 19);
             this.lblNombreE.Name = "lblNombreE";
             this.lblNombreE.Size = new System.Drawing.Size(58, 18);
@@ -140,6 +143,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblID.Location = new System.Drawing.Point(278, 20);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(26, 18);
@@ -167,6 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(372, 393);
             this.Controls.Add(this.cmbEquipamientoEvento);
             this.Controls.Add(this.txtIdE);

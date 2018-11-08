@@ -55,6 +55,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(12, 37);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(72, 18);
@@ -66,6 +67,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(8, 80);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(97, 18);
@@ -96,6 +98,7 @@
             // 
             this.lblTipoEvento.AutoSize = true;
             this.lblTipoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoEvento.ForeColor = System.Drawing.Color.White;
             this.lblTipoEvento.Location = new System.Drawing.Point(39, 9);
             this.lblTipoEvento.Name = "lblTipoEvento";
             this.lblTipoEvento.Size = new System.Drawing.Size(174, 18);
@@ -106,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(252, 167);
             this.Controls.Add(this.lblTipoEvento);
             this.Controls.Add(this.btnCrear);
