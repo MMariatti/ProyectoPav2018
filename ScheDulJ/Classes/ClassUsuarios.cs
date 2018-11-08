@@ -95,11 +95,25 @@ namespace ScheDulJ.Classes
             }
         }
 
-    
-        public void CambiarContraseña()
+        public static DataTable GetAllMostrar()
         {
-
-
+            DataTable tabla = new DataTable();
+            string query = "SELECT usuario AS Usuario FROM Usuarios U WHERE U.activo = 1";
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
         }
+
+
     }
-}
+    
+        
+    }
+

@@ -30,7 +30,7 @@ namespace ScheDulJ.Forms
         private void mostrarListaUsuarios()
         {
             DataTable tabla = new DataTable();
-            tabla = Classes.Usuarios.GetAll(); 
+            tabla = Classes.Usuarios.GetAllMostrar(); 
             gridUsuarios.DataSource = tabla; 
         }
 
@@ -42,7 +42,8 @@ namespace ScheDulJ.Forms
         }
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            EliminarUsuario(); 
+            EliminarUsuario();
+            mostrarListaUsuarios();
         }
         private void EliminarUsuario()
         {

@@ -37,19 +37,29 @@
             this.btnAdministrarUsuarios = new System.Windows.Forms.Button();
             this.lblEventos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
             this.btnRefrescarE = new System.Windows.Forms.Button();
-            this.panelEquipamiento = new System.Windows.Forms.Panel();
-            this.btnAgregarEquipo = new System.Windows.Forms.Button();
-            this.lblEquipamiento = new System.Windows.Forms.Label();
-            this.gridEquipamiento = new System.Windows.Forms.DataGridView();
             this.btnTipoEvento = new System.Windows.Forms.Button();
+            this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
+            this.gridEquipamiento = new System.Windows.Forms.DataGridView();
+            this.lblEquipamiento = new System.Windows.Forms.Label();
+            this.btnAgregarEquipo = new System.Windows.Forms.Button();
             this.btnCargarEquipamiento = new System.Windows.Forms.Button();
+            this.panelEquipamiento = new System.Windows.Forms.Panel();
+            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDTipoEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoAlquilerEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
-            this.panelEquipamiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
+            this.panelEquipamiento.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExitMainMenu
@@ -66,10 +76,21 @@
             // 
             this.gridEventos.BackgroundColor = System.Drawing.Color.White;
             this.gridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEventos.Location = new System.Drawing.Point(16, 31);
+            this.gridEventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnaID,
+            this.Nombre,
+            this.Fecha,
+            this.IDTipoEvento,
+            this.HoraInicio,
+            this.HoraFin,
+            this.Direccion,
+            this.IDCliente});
+            this.gridEventos.Location = new System.Drawing.Point(47, 31);
             this.gridEventos.Name = "gridEventos";
-            this.gridEventos.Size = new System.Drawing.Size(370, 203);
+            this.gridEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridEventos.Size = new System.Drawing.Size(692, 203);
             this.gridEventos.TabIndex = 0;
+            this.gridEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEventos_CellContentClick);
             this.gridEventos.SelectionChanged += new System.EventHandler(this.gridEventos_SelectionChanged);
             this.gridEventos.Click += new System.EventHandler(this.gridEventos_Click);
             // 
@@ -136,16 +157,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.administrarClientes_Click);
             // 
-            // btnAdministrarEquipamiento
-            // 
-            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(234, 238);
-            this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
-            this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
-            this.btnAdministrarEquipamiento.TabIndex = 6;
-            this.btnAdministrarEquipamiento.Text = "Administrar Equipamiento";
-            this.btnAdministrarEquipamiento.UseVisualStyleBackColor = true;
-            this.btnAdministrarEquipamiento.Click += new System.EventHandler(this.btnAdministrarEquipamiento_Click);
-            // 
             // panelEventos
             // 
             this.panelEventos.Controls.Add(this.btnRefrescarE);
@@ -156,7 +167,7 @@
             this.panelEventos.Controls.Add(this.gridEventos);
             this.panelEventos.Location = new System.Drawing.Point(11, 9);
             this.panelEventos.Name = "panelEventos";
-            this.panelEventos.Size = new System.Drawing.Size(411, 298);
+            this.panelEventos.Size = new System.Drawing.Size(760, 285);
             this.panelEventos.TabIndex = 8;
             // 
             // btnRefrescarE
@@ -169,27 +180,39 @@
             this.btnRefrescarE.UseVisualStyleBackColor = true;
             this.btnRefrescarE.Click += new System.EventHandler(this.btnRefrescarE_Click);
             // 
-            // panelEquipamiento
+            // btnTipoEvento
             // 
-            this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
-            this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
-            this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
-            this.panelEquipamiento.Controls.Add(this.gridEquipamiento);
-            this.panelEquipamiento.Controls.Add(this.btnAdministrarEquipamiento);
-            this.panelEquipamiento.Location = new System.Drawing.Point(428, 10);
-            this.panelEquipamiento.Name = "panelEquipamiento";
-            this.panelEquipamiento.Size = new System.Drawing.Size(343, 296);
-            this.panelEquipamiento.TabIndex = 9;
+            this.btnTipoEvento.Location = new System.Drawing.Point(672, 443);
+            this.btnTipoEvento.Name = "btnTipoEvento";
+            this.btnTipoEvento.Size = new System.Drawing.Size(99, 45);
+            this.btnTipoEvento.TabIndex = 10;
+            this.btnTipoEvento.Text = "Administrar TipoEvento";
+            this.btnTipoEvento.UseVisualStyleBackColor = true;
+            this.btnTipoEvento.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnAgregarEquipo
+            // btnAdministrarEquipamiento
             // 
-            this.btnAgregarEquipo.Location = new System.Drawing.Point(128, 239);
-            this.btnAgregarEquipo.Name = "btnAgregarEquipo";
-            this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
-            this.btnAgregarEquipo.TabIndex = 8;
-            this.btnAgregarEquipo.Text = "Agregar Equipamiento";
-            this.btnAgregarEquipo.UseVisualStyleBackColor = true;
-            this.btnAgregarEquipo.Click += new System.EventHandler(this.btnAgregarEquipo_Click);
+            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(234, 195);
+            this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
+            this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
+            this.btnAdministrarEquipamiento.TabIndex = 6;
+            this.btnAdministrarEquipamiento.Text = "Administrar Equipamiento";
+            this.btnAdministrarEquipamiento.UseVisualStyleBackColor = true;
+            this.btnAdministrarEquipamiento.Click += new System.EventHandler(this.btnAdministrarEquipamiento_Click);
+            // 
+            // gridEquipamiento
+            // 
+            this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridEquipamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NombreEquipo,
+            this.CostoAlquilerEquipo});
+            this.gridEquipamiento.Location = new System.Drawing.Point(29, 31);
+            this.gridEquipamiento.Name = "gridEquipamiento";
+            this.gridEquipamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridEquipamiento.Size = new System.Drawing.Size(305, 157);
+            this.gridEquipamiento.TabIndex = 0;
+            this.gridEquipamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEquipamiento_CellContentClick);
             // 
             // lblEquipamiento
             // 
@@ -202,29 +225,19 @@
             this.lblEquipamiento.Text = "Equipamiento Solicitado:";
             this.lblEquipamiento.Click += new System.EventHandler(this.label1_Click);
             // 
-            // gridEquipamiento
+            // btnAgregarEquipo
             // 
-            this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEquipamiento.Location = new System.Drawing.Point(29, 31);
-            this.gridEquipamiento.Name = "gridEquipamiento";
-            this.gridEquipamiento.Size = new System.Drawing.Size(305, 202);
-            this.gridEquipamiento.TabIndex = 0;
-            this.gridEquipamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEquipamiento_CellContentClick);
-            // 
-            // btnTipoEvento
-            // 
-            this.btnTipoEvento.Location = new System.Drawing.Point(672, 443);
-            this.btnTipoEvento.Name = "btnTipoEvento";
-            this.btnTipoEvento.Size = new System.Drawing.Size(99, 45);
-            this.btnTipoEvento.TabIndex = 10;
-            this.btnTipoEvento.Text = "Administrar TipoEvento";
-            this.btnTipoEvento.UseVisualStyleBackColor = true;
-            this.btnTipoEvento.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregarEquipo.Location = new System.Drawing.Point(131, 195);
+            this.btnAgregarEquipo.Name = "btnAgregarEquipo";
+            this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
+            this.btnAgregarEquipo.TabIndex = 8;
+            this.btnAgregarEquipo.Text = "Agregar Equipamiento";
+            this.btnAgregarEquipo.UseVisualStyleBackColor = true;
+            this.btnAgregarEquipo.Click += new System.EventHandler(this.btnAgregarEquipo_Click);
             // 
             // btnCargarEquipamiento
             // 
-            this.btnCargarEquipamiento.Location = new System.Drawing.Point(29, 238);
+            this.btnCargarEquipamiento.Location = new System.Drawing.Point(32, 195);
             this.btnCargarEquipamiento.Name = "btnCargarEquipamiento";
             this.btnCargarEquipamiento.Size = new System.Drawing.Size(93, 38);
             this.btnCargarEquipamiento.TabIndex = 9;
@@ -232,14 +245,95 @@
             this.btnCargarEquipamiento.UseVisualStyleBackColor = true;
             this.btnCargarEquipamiento.Click += new System.EventHandler(this.btnCargarEquipamiento_Click);
             // 
+            // panelEquipamiento
+            // 
+            this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
+            this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
+            this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
+            this.panelEquipamiento.Controls.Add(this.gridEquipamiento);
+            this.panelEquipamiento.Controls.Add(this.btnAdministrarEquipamiento);
+            this.panelEquipamiento.Location = new System.Drawing.Point(12, 300);
+            this.panelEquipamiento.Name = "panelEquipamiento";
+            this.panelEquipamiento.Size = new System.Drawing.Size(360, 249);
+            this.panelEquipamiento.TabIndex = 9;
+            // 
+            // columnaID
+            // 
+            this.columnaID.DataPropertyName = "ID";
+            this.columnaID.HeaderText = "ID";
+            this.columnaID.Name = "columnaID";
+            this.columnaID.ReadOnly = true;
+            this.columnaID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.columnaID.Width = 30;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 120;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // IDTipoEvento
+            // 
+            this.IDTipoEvento.DataPropertyName = "idTipoEvento";
+            this.IDTipoEvento.HeaderText = "Tipo Evento";
+            this.IDTipoEvento.Name = "IDTipoEvento";
+            this.IDTipoEvento.Width = 60;
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.DataPropertyName = "horario";
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.Width = 60;
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.DataPropertyName = "horarioFin";
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.Name = "HoraFin";
+            this.HoraFin.Width = 60;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Width = 140;
+            // 
+            // IDCliente
+            // 
+            this.IDCliente.DataPropertyName = "idCliente";
+            this.IDCliente.HeaderText = "IDCliente";
+            this.IDCliente.Name = "IDCliente";
+            this.IDCliente.Width = 80;
+            // 
+            // NombreEquipo
+            // 
+            this.NombreEquipo.DataPropertyName = "Nombre";
+            this.NombreEquipo.HeaderText = "Nombre";
+            this.NombreEquipo.Name = "NombreEquipo";
+            // 
+            // CostoAlquilerEquipo
+            // 
+            this.CostoAlquilerEquipo.DataPropertyName = "CostoAlquiler";
+            this.CostoAlquilerEquipo.HeaderText = "Costo de Alquiler";
+            this.CostoAlquilerEquipo.Name = "CostoAlquilerEquipo";
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btnTipoEvento);
             this.Controls.Add(this.panelEquipamiento);
+            this.Controls.Add(this.btnTipoEvento);
             this.Controls.Add(this.panelEventos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAdministrarUsuarios);
@@ -252,9 +346,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).EndInit();
             this.panelEventos.ResumeLayout(false);
             this.panelEventos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).EndInit();
             this.panelEquipamiento.ResumeLayout(false);
             this.panelEquipamiento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,14 +363,24 @@
         private System.Windows.Forms.Button btnAdministrarUsuarios;
         private System.Windows.Forms.Label lblEventos;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAdministrarEquipamiento;
         private System.Windows.Forms.Panel panelEventos;
-        private System.Windows.Forms.Panel panelEquipamiento;
-        private System.Windows.Forms.Label lblEquipamiento;
-        private System.Windows.Forms.DataGridView gridEquipamiento;
         private System.Windows.Forms.Button btnTipoEvento;
         private System.Windows.Forms.Button btnRefrescarE;
+        private System.Windows.Forms.Button btnAdministrarEquipamiento;
+        private System.Windows.Forms.DataGridView gridEquipamiento;
+        private System.Windows.Forms.Label lblEquipamiento;
         private System.Windows.Forms.Button btnAgregarEquipo;
         private System.Windows.Forms.Button btnCargarEquipamiento;
+        private System.Windows.Forms.Panel panelEquipamiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDTipoEvento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEquipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoAlquilerEquipo;
     }
 }

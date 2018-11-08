@@ -147,9 +147,9 @@ namespace ScheDulJ.Classes
         public static DataTable GetAll()
         {
             DataTable tabla = new DataTable();
-            string query = "SELECT idEvento AS ID, nombre as Nombre, idTipoEvento as TipoEvento, fecha AS Fecha , horario " +
-                " AS HorarioInicio, horarioFin AS HorarioFin , direccion as Direccion " +
-                " , idCliente AS Cliente  FROM Eventos WHERE activo = 1";
+            string query = "SELECT idEvento AS ID, nombre , idTipoEvento , fecha , horario " +
+                ", horarioFin, direccion" +
+                " , idCliente  FROM Eventos WHERE activo = 1";
             tabla = DBHelper.ConsultarSQL(query);
             return tabla;
         }

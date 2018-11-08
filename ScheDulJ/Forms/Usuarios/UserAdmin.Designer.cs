@@ -45,6 +45,7 @@
             this.gridUsuarios.MultiSelect = false;
             this.gridUsuarios.Name = "gridUsuarios";
             this.gridUsuarios.ReadOnly = true;
+            this.gridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridUsuarios.Size = new System.Drawing.Size(140, 128);
             this.gridUsuarios.TabIndex = 0;
             // 

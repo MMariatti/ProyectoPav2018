@@ -65,7 +65,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(29, 137);
+            this.label3.Location = new System.Drawing.Point(29, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 8;
@@ -75,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(29, 186);
+            this.label4.Location = new System.Drawing.Point(27, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 18);
             this.label4.TabIndex = 7;
@@ -84,18 +84,18 @@
             // BtnModificarDescripcion
             // 
             this.BtnModificarDescripcion.Enabled = false;
-            this.BtnModificarDescripcion.Location = new System.Drawing.Point(276, 123);
+            this.BtnModificarDescripcion.Location = new System.Drawing.Point(304, 96);
             this.BtnModificarDescripcion.Name = "BtnModificarDescripcion";
             this.BtnModificarDescripcion.Size = new System.Drawing.Size(87, 43);
             this.BtnModificarDescripcion.TabIndex = 3;
-            this.BtnModificarDescripcion.Text = "Moificar Descripcion";
+            this.BtnModificarDescripcion.Text = "Modificar Descripcion";
             this.BtnModificarDescripcion.UseVisualStyleBackColor = true;
             this.BtnModificarDescripcion.Click += new System.EventHandler(this.BtnModificarDescripcion_Click);
             // 
             // BtnCostoAlquiler
             // 
             this.BtnCostoAlquiler.Enabled = false;
-            this.BtnCostoAlquiler.Location = new System.Drawing.Point(276, 172);
+            this.BtnCostoAlquiler.Location = new System.Drawing.Point(304, 160);
             this.BtnCostoAlquiler.Name = "BtnCostoAlquiler";
             this.BtnCostoAlquiler.Size = new System.Drawing.Size(87, 43);
             this.BtnCostoAlquiler.TabIndex = 5;
@@ -116,15 +116,16 @@
             // txtDescripcionEquipo
             // 
             this.txtDescripcionEquipo.Enabled = false;
-            this.txtDescripcionEquipo.Location = new System.Drawing.Point(153, 135);
+            this.txtDescripcionEquipo.Location = new System.Drawing.Point(153, 105);
             this.txtDescripcionEquipo.Name = "txtDescripcionEquipo";
-            this.txtDescripcionEquipo.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcionEquipo.Size = new System.Drawing.Size(116, 20);
             this.txtDescripcionEquipo.TabIndex = 2;
+            this.txtDescripcionEquipo.TextChanged += new System.EventHandler(this.txtDescripcionEquipo_TextChanged);
             // 
             // txtCostoAlquiler
             // 
             this.txtCostoAlquiler.Enabled = false;
-            this.txtCostoAlquiler.Location = new System.Drawing.Point(153, 184);
+            this.txtCostoAlquiler.Location = new System.Drawing.Point(153, 172);
             this.txtCostoAlquiler.Name = "txtCostoAlquiler";
             this.txtCostoAlquiler.Size = new System.Drawing.Size(100, 20);
             this.txtCostoAlquiler.TabIndex = 4;

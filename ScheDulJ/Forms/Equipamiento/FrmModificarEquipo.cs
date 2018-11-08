@@ -65,5 +65,10 @@ namespace ScheDulJ.Forms
         {
 
         }
+
+        private void txtDescripcionEquipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

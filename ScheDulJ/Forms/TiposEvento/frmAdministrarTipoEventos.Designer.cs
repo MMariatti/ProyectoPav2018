@@ -42,6 +42,7 @@
             this.gridTipoEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTipoEventos.Location = new System.Drawing.Point(22, 12);
             this.gridTipoEventos.Name = "gridTipoEventos";
+            this.gridTipoEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTipoEventos.Size = new System.Drawing.Size(325, 139);
             this.gridTipoEventos.TabIndex = 0;
             this.gridTipoEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTipoEventos_CellContentClick);

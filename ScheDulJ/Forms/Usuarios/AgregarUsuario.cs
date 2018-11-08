@@ -68,7 +68,7 @@ namespace ScheDulJ.Forms
         }
         private void frmAgregarUsuario_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
