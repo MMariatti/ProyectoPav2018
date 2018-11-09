@@ -49,6 +49,7 @@
             this.gridSeleccionado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSeleccionado.Location = new System.Drawing.Point(24, 134);
             this.gridSeleccionado.Name = "gridSeleccionado";
+            this.gridSeleccionado.ReadOnly = true;
             this.gridSeleccionado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSeleccionado.Size = new System.Drawing.Size(324, 167);
             this.gridSeleccionado.TabIndex = 1;

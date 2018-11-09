@@ -26,10 +26,8 @@ namespace ScheDulJ
         {
             gridEventos.Focus(); 
             MostrarEventos();
-     
-            
-            
-              ;
+            MostrarSeleccionado(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value.ToString()));
+            ;
         }
 
         private void btnExitMainMenu_Click(object sender, EventArgs e)
@@ -155,7 +153,7 @@ namespace ScheDulJ
 
         private void gridEventos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            MostrarSeleccionado(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value.ToString()));
         }
     }
 }

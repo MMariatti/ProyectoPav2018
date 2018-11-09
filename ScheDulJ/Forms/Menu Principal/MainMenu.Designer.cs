@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.btnExitMainMenu = new System.Windows.Forms.Button();
             this.gridEventos = new System.Windows.Forms.DataGridView();
+            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDTipoEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevoEvento = new System.Windows.Forms.Button();
             this.btnModificarEvento = new System.Windows.Forms.Button();
             this.btnEliminarEvento = new System.Windows.Forms.Button();
@@ -42,20 +50,12 @@
             this.btnTipoEvento = new System.Windows.Forms.Button();
             this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
             this.gridEquipamiento = new System.Windows.Forms.DataGridView();
+            this.NombreEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoAlquilerEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.btnAgregarEquipo = new System.Windows.Forms.Button();
             this.btnCargarEquipamiento = new System.Windows.Forms.Button();
             this.panelEquipamiento = new System.Windows.Forms.Panel();
-            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDTipoEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CostoAlquilerEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdministracion = new System.Windows.Forms.Panel();
             this.lblAdministracion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
@@ -77,7 +77,7 @@
             // 
             // gridEventos
             // 
-            this.gridEventos.BackgroundColor = System.Drawing.Color.White;
+            this.gridEventos.BackgroundColor = System.Drawing.Color.LightGray;
             this.gridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridEventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnaID,
@@ -90,12 +90,77 @@
             this.IDCliente});
             this.gridEventos.Location = new System.Drawing.Point(30, 31);
             this.gridEventos.Name = "gridEventos";
+            this.gridEventos.ReadOnly = true;
             this.gridEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridEventos.Size = new System.Drawing.Size(692, 203);
             this.gridEventos.TabIndex = 0;
             this.gridEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEventos_CellContentClick);
             this.gridEventos.SelectionChanged += new System.EventHandler(this.gridEventos_SelectionChanged);
             this.gridEventos.Click += new System.EventHandler(this.gridEventos_Click);
+            // 
+            // columnaID
+            // 
+            this.columnaID.DataPropertyName = "ID";
+            this.columnaID.HeaderText = "ID";
+            this.columnaID.Name = "columnaID";
+            this.columnaID.ReadOnly = true;
+            this.columnaID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.columnaID.Width = 30;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // IDTipoEvento
+            // 
+            this.IDTipoEvento.DataPropertyName = "idTipoEvento";
+            this.IDTipoEvento.HeaderText = "Tipo Evento";
+            this.IDTipoEvento.Name = "IDTipoEvento";
+            this.IDTipoEvento.ReadOnly = true;
+            this.IDTipoEvento.Width = 60;
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.DataPropertyName = "horario";
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.ReadOnly = true;
+            this.HoraInicio.Width = 60;
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.DataPropertyName = "horarioFin";
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.Name = "HoraFin";
+            this.HoraFin.ReadOnly = true;
+            this.HoraFin.Width = 60;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 140;
+            // 
+            // IDCliente
+            // 
+            this.IDCliente.DataPropertyName = "idCliente";
+            this.IDCliente.HeaderText = "IDCliente";
+            this.IDCliente.Name = "IDCliente";
+            this.IDCliente.ReadOnly = true;
+            this.IDCliente.Width = 80;
             // 
             // btnNuevoEvento
             // 
@@ -206,17 +271,34 @@
             // 
             // gridEquipamiento
             // 
-            this.gridEquipamiento.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gridEquipamiento.BackgroundColor = System.Drawing.Color.LightGray;
             this.gridEquipamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridEquipamiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreEquipo,
             this.CostoAlquilerEquipo});
             this.gridEquipamiento.Location = new System.Drawing.Point(29, 31);
             this.gridEquipamiento.Name = "gridEquipamiento";
+            this.gridEquipamiento.ReadOnly = true;
             this.gridEquipamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridEquipamiento.Size = new System.Drawing.Size(305, 157);
             this.gridEquipamiento.TabIndex = 0;
             this.gridEquipamiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEquipamiento_CellContentClick);
+            // 
+            // NombreEquipo
+            // 
+            this.NombreEquipo.DataPropertyName = "Nombre";
+            this.NombreEquipo.HeaderText = "Nombre";
+            this.NombreEquipo.Name = "NombreEquipo";
+            this.NombreEquipo.ReadOnly = true;
+            this.NombreEquipo.Width = 150;
+            // 
+            // CostoAlquilerEquipo
+            // 
+            this.CostoAlquilerEquipo.DataPropertyName = "CostoAlquiler";
+            this.CostoAlquilerEquipo.HeaderText = "Costo de Alquiler";
+            this.CostoAlquilerEquipo.Name = "CostoAlquilerEquipo";
+            this.CostoAlquilerEquipo.ReadOnly = true;
+            this.CostoAlquilerEquipo.Width = 115;
             // 
             // lblEquipamiento
             // 
@@ -246,7 +328,7 @@
             this.btnCargarEquipamiento.Name = "btnCargarEquipamiento";
             this.btnCargarEquipamiento.Size = new System.Drawing.Size(93, 38);
             this.btnCargarEquipamiento.TabIndex = 9;
-            this.btnCargarEquipamiento.Text = "Cargar Equipamiento";
+            this.btnCargarEquipamiento.Text = "Refrescar";
             this.btnCargarEquipamiento.UseVisualStyleBackColor = true;
             this.btnCargarEquipamiento.Click += new System.EventHandler(this.btnCargarEquipamiento_Click);
             // 
@@ -262,77 +344,6 @@
             this.panelEquipamiento.Name = "panelEquipamiento";
             this.panelEquipamiento.Size = new System.Drawing.Size(360, 249);
             this.panelEquipamiento.TabIndex = 9;
-            // 
-            // columnaID
-            // 
-            this.columnaID.DataPropertyName = "ID";
-            this.columnaID.HeaderText = "ID";
-            this.columnaID.Name = "columnaID";
-            this.columnaID.ReadOnly = true;
-            this.columnaID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.columnaID.Width = 30;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 120;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // IDTipoEvento
-            // 
-            this.IDTipoEvento.DataPropertyName = "idTipoEvento";
-            this.IDTipoEvento.HeaderText = "Tipo Evento";
-            this.IDTipoEvento.Name = "IDTipoEvento";
-            this.IDTipoEvento.Width = 60;
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.DataPropertyName = "horario";
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.Width = 60;
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.DataPropertyName = "horarioFin";
-            this.HoraFin.HeaderText = "Hora Fin";
-            this.HoraFin.Name = "HoraFin";
-            this.HoraFin.Width = 60;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 140;
-            // 
-            // IDCliente
-            // 
-            this.IDCliente.DataPropertyName = "idCliente";
-            this.IDCliente.HeaderText = "IDCliente";
-            this.IDCliente.Name = "IDCliente";
-            this.IDCliente.Width = 80;
-            // 
-            // NombreEquipo
-            // 
-            this.NombreEquipo.DataPropertyName = "Nombre";
-            this.NombreEquipo.HeaderText = "Nombre";
-            this.NombreEquipo.Name = "NombreEquipo";
-            this.NombreEquipo.Width = 150;
-            // 
-            // CostoAlquilerEquipo
-            // 
-            this.CostoAlquilerEquipo.DataPropertyName = "CostoAlquiler";
-            this.CostoAlquilerEquipo.HeaderText = "Costo de Alquiler";
-            this.CostoAlquilerEquipo.Name = "CostoAlquilerEquipo";
-            this.CostoAlquilerEquipo.Width = 115;
             // 
             // panelAdministracion
             // 
@@ -370,7 +381,7 @@
             this.Name = "FrmMainMenu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SheDulJ - Menu Principal ";
+            this.Text = "ShceDulJ - Menu Principal ";
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).EndInit();
             this.panelEventos.ResumeLayout(false);
