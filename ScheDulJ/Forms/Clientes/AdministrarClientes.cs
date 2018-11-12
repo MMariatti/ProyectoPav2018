@@ -21,9 +21,9 @@ namespace ScheDulJ.Forms
         private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla =Clientes.GetAll();
+            tabla =Clientes.GetAllEspecifico();
             gridClientes.DataSource = tabla;
-            this.gridClientes.Columns[5].Visible = false;
+
         }
 
         private void btn_Salir(object sender, EventArgs e)

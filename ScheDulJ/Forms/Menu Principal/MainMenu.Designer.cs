@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.btnExitMainMenu = new System.Windows.Forms.Button();
             this.gridEventos = new System.Windows.Forms.DataGridView();
@@ -58,18 +62,20 @@
             this.panelEquipamiento = new System.Windows.Forms.Panel();
             this.panelAdministracion = new System.Windows.Forms.Panel();
             this.lblAdministracion = new System.Windows.Forms.Label();
+            this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
             this.panelEquipamiento.SuspendLayout();
             this.panelAdministracion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExitMainMenu
             // 
-            this.btnExitMainMenu.Location = new System.Drawing.Point(668, 511);
+            this.btnExitMainMenu.Location = new System.Drawing.Point(8, 208);
             this.btnExitMainMenu.Name = "btnExitMainMenu";
-            this.btnExitMainMenu.Size = new System.Drawing.Size(104, 38);
+            this.btnExitMainMenu.Size = new System.Drawing.Size(100, 38);
             this.btnExitMainMenu.TabIndex = 7;
             this.btnExitMainMenu.Text = "Salir";
             this.btnExitMainMenu.UseVisualStyleBackColor = true;
@@ -195,7 +201,7 @@
             // 
             // btnAdministrarUsuarios
             // 
-            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(265, 32);
+            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(7, 31);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
             this.btnAdministrarUsuarios.Size = new System.Drawing.Size(100, 38);
             this.btnAdministrarUsuarios.TabIndex = 5;
@@ -217,7 +223,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 32);
+            this.button1.Location = new System.Drawing.Point(8, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 38);
             this.button1.TabIndex = 4;
@@ -241,9 +247,9 @@
             // 
             // btnRefrescarE
             // 
-            this.btnRefrescarE.Location = new System.Drawing.Point(369, 240);
+            this.btnRefrescarE.Location = new System.Drawing.Point(650, 240);
             this.btnRefrescarE.Name = "btnRefrescarE";
-            this.btnRefrescarE.Size = new System.Drawing.Size(72, 38);
+            this.btnRefrescarE.Size = new System.Drawing.Size(72, 25);
             this.btnRefrescarE.TabIndex = 8;
             this.btnRefrescarE.Text = "Refrescar";
             this.btnRefrescarE.UseVisualStyleBackColor = true;
@@ -251,7 +257,7 @@
             // 
             // btnTipoEvento
             // 
-            this.btnTipoEvento.Location = new System.Drawing.Point(148, 32);
+            this.btnTipoEvento.Location = new System.Drawing.Point(8, 75);
             this.btnTipoEvento.Name = "btnTipoEvento";
             this.btnTipoEvento.Size = new System.Drawing.Size(99, 38);
             this.btnTipoEvento.TabIndex = 10;
@@ -261,7 +267,7 @@
             // 
             // btnAdministrarEquipamiento
             // 
-            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(237, 195);
+            this.btnAdministrarEquipamiento.Location = new System.Drawing.Point(8, 163);
             this.btnAdministrarEquipamiento.Name = "btnAdministrarEquipamiento";
             this.btnAdministrarEquipamiento.Size = new System.Drawing.Size(100, 38);
             this.btnAdministrarEquipamiento.TabIndex = 6;
@@ -314,7 +320,7 @@
             // 
             // btnAgregarEquipo
             // 
-            this.btnAgregarEquipo.Location = new System.Drawing.Point(131, 195);
+            this.btnAgregarEquipo.Location = new System.Drawing.Point(29, 194);
             this.btnAgregarEquipo.Name = "btnAgregarEquipo";
             this.btnAgregarEquipo.Size = new System.Drawing.Size(100, 38);
             this.btnAgregarEquipo.TabIndex = 8;
@@ -324,9 +330,9 @@
             // 
             // btnCargarEquipamiento
             // 
-            this.btnCargarEquipamiento.Location = new System.Drawing.Point(32, 195);
+            this.btnCargarEquipamiento.Location = new System.Drawing.Point(262, 194);
             this.btnCargarEquipamiento.Name = "btnCargarEquipamiento";
-            this.btnCargarEquipamiento.Size = new System.Drawing.Size(93, 38);
+            this.btnCargarEquipamiento.Size = new System.Drawing.Size(72, 25);
             this.btnCargarEquipamiento.TabIndex = 9;
             this.btnCargarEquipamiento.Text = "Refrescar";
             this.btnCargarEquipamiento.UseVisualStyleBackColor = true;
@@ -338,7 +344,6 @@
             this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
-            this.panelEquipamiento.Controls.Add(this.btnAdministrarEquipamiento);
             this.panelEquipamiento.Controls.Add(this.gridEquipamiento);
             this.panelEquipamiento.Location = new System.Drawing.Point(12, 300);
             this.panelEquipamiento.Name = "panelEquipamiento";
@@ -350,23 +355,44 @@
             this.panelAdministracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelAdministracion.Controls.Add(this.lblAdministracion);
             this.panelAdministracion.Controls.Add(this.button1);
+            this.panelAdministracion.Controls.Add(this.btnExitMainMenu);
+            this.panelAdministracion.Controls.Add(this.btnAdministrarEquipamiento);
             this.panelAdministracion.Controls.Add(this.btnTipoEvento);
             this.panelAdministracion.Controls.Add(this.btnAdministrarUsuarios);
-            this.panelAdministracion.Location = new System.Drawing.Point(380, 300);
+            this.panelAdministracion.Location = new System.Drawing.Point(655, 300);
             this.panelAdministracion.Name = "panelAdministracion";
-            this.panelAdministracion.Size = new System.Drawing.Size(391, 87);
+            this.panelAdministracion.Size = new System.Drawing.Size(116, 249);
             this.panelAdministracion.TabIndex = 11;
             // 
             // lblAdministracion
             // 
             this.lblAdministracion.AutoSize = true;
-            this.lblAdministracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministracion.ForeColor = System.Drawing.Color.White;
-            this.lblAdministracion.Location = new System.Drawing.Point(112, 9);
+            this.lblAdministracion.Location = new System.Drawing.Point(29, 8);
             this.lblAdministracion.Name = "lblAdministracion";
-            this.lblAdministracion.Size = new System.Drawing.Size(157, 20);
+            this.lblAdministracion.Size = new System.Drawing.Size(49, 20);
             this.lblAdministracion.TabIndex = 11;
-            this.lblAdministracion.Text = "Menu Administracion";
+            this.lblAdministracion.Text = "Menu";
+            // 
+            // chartEventos
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartEventos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartEventos.Legends.Add(legend1);
+            this.chartEventos.Location = new System.Drawing.Point(380, 300);
+            this.chartEventos.Name = "chartEventos";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartEventos.Series.Add(series1);
+            this.chartEventos.Size = new System.Drawing.Size(269, 249);
+            this.chartEventos.TabIndex = 12;
+            this.chartEventos.Text = "Eventos Anuales";
+            title1.Name = "Eventos";
+            title1.Text = "Eventos";
+            this.chartEventos.Titles.Add(title1);
             // 
             // FrmMainMenu
             // 
@@ -374,9 +400,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.chartEventos);
             this.Controls.Add(this.panelEquipamiento);
             this.Controls.Add(this.panelEventos);
-            this.Controls.Add(this.btnExitMainMenu);
             this.Controls.Add(this.panelAdministracion);
             this.Name = "FrmMainMenu";
             this.ShowIcon = false;
@@ -391,6 +417,7 @@
             this.panelEquipamiento.PerformLayout();
             this.panelAdministracion.ResumeLayout(false);
             this.panelAdministracion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEventos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +453,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CostoAlquilerEquipo;
         private System.Windows.Forms.Panel panelAdministracion;
         private System.Windows.Forms.Label lblAdministracion;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartEventos;
     }
 }
