@@ -77,3 +77,5 @@ C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Prsupuesto.Presupuesto.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.csproj.CopyComplete
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe.config
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Clientes.resources

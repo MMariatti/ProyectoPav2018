@@ -21,7 +21,7 @@ namespace ScheDulJ.Forms
         private void mostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla =Clientes.GetAllEspecifico();
+            tabla = Clientes.GetAllEspecifico();
             gridClientes.DataSource = tabla;
 
         }
@@ -89,6 +89,11 @@ namespace ScheDulJ.Forms
         }
 
         private void gridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnReporteClientes_Click(object sender, EventArgs e)
         {
 
         }

@@ -35,6 +35,7 @@
             this.gridClientes = new System.Windows.Forms.DataGridView();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.lblClientes = new System.Windows.Forms.Label();
+            this.btnReporteClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +110,23 @@
             this.lblClientes.TabIndex = 6;
             this.lblClientes.Text = "Clientes:";
             // 
+            // btnReporteClientes
+            // 
+            this.btnReporteClientes.Location = new System.Drawing.Point(270, 164);
+            this.btnReporteClientes.Name = "btnReporteClientes";
+            this.btnReporteClientes.Size = new System.Drawing.Size(100, 23);
+            this.btnReporteClientes.TabIndex = 7;
+            this.btnReporteClientes.Text = "Reporte Clientes";
+            this.btnReporteClientes.UseVisualStyleBackColor = true;
+            this.btnReporteClientes.Click += new System.EventHandler(this.btnReporteClientes_Click);
+            // 
             // frmAdministrarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(482, 202);
+            this.Controls.Add(this.btnReporteClientes);
             this.Controls.Add(this.lblClientes);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.gridClientes);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.DataGridView gridClientes;
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Label lblClientes;
+        private System.Windows.Forms.Button btnReporteClientes;
     }
 }

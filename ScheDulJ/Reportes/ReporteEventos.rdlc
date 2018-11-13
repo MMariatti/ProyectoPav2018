@@ -211,7 +211,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.78646in</Height>
+              <Height>0.28646in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -420,7 +420,7 @@
         <DataSetName>Eventos</DataSetName>
         <Top>0.05556in</Top>
         <Left>0.19667in</Left>
-        <Height>1.01042in</Height>
+        <Height>0.51042in</Height>
         <Width>6.71875in</Width>
         <Style>
           <Border>
