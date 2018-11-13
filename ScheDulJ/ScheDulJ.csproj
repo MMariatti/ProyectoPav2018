@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Winforms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Microsoft.ReportViewer.Winforms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -55,11 +58,6 @@
     <Compile Include="Classes\ClassTiposEventos.cs" />
     <Compile Include="Classes\ClassUsuarios.cs" />
     <Compile Include="Classes\DataManager.cs" />
-    <Compile Include="dataSetPresupuesto.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Clientes\AdministrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,18 +220,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="rptPresupuesto.rdlc" />
-    <None Include="dataSetPresupuesto.xsc">
-      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
-    </None>
-    <None Include="dataSetPresupuesto.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dataSetPresupuesto.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="dataSetPresupuesto.xss">
-      <DependentUpon>dataSetPresupuesto.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Reportes\Clientes.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEventos.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
