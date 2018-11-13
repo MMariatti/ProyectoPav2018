@@ -63,6 +63,7 @@
             this.panelAdministracion = new System.Windows.Forms.Panel();
             this.lblAdministracion = new System.Windows.Forms.Label();
             this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblTipoEvento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
@@ -388,18 +389,34 @@
             this.chartEventos.Location = new System.Drawing.Point(380, 300);
             this.chartEventos.Name = "chartEventos";
             series1.ChartArea = "Eventos";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Color = System.Drawing.Color.Red;
+            series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
             series1.Name = "Eventos";
+            series1.XValueMember = "TipoEvento";
+            series1.YValueMembers = "Cantidad";
             this.chartEventos.Series.Add(series1);
             this.chartEventos.Size = new System.Drawing.Size(269, 249);
             this.chartEventos.TabIndex = 12;
             this.chartEventos.Text = "Eventos Anuales";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.ForeColor = System.Drawing.Color.White;
-            title1.Name = "Eventos Por Mes";
-            title1.Text = "Eventos por Mes";
+            title1.Name = "TipoEventoAnuales";
+            title1.Text = "Tipos de Evento Anuales";
             this.chartEventos.Titles.Add(title1);
+            // 
+            // lblTipoEvento
+            // 
+            this.lblTipoEvento.AutoSize = true;
+            this.lblTipoEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTipoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoEvento.ForeColor = System.Drawing.Color.White;
+            this.lblTipoEvento.Location = new System.Drawing.Point(519, 331);
+            this.lblTipoEvento.Name = "lblTipoEvento";
+            this.lblTipoEvento.Size = new System.Drawing.Size(62, 13);
+            this.lblTipoEvento.TabIndex = 10;
+            this.lblTipoEvento.Text = "TipoEvento";
             // 
             // FrmMainMenu
             // 
@@ -407,6 +424,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.lblTipoEvento);
             this.Controls.Add(this.chartEventos);
             this.Controls.Add(this.panelEquipamiento);
             this.Controls.Add(this.panelEventos);
@@ -426,6 +444,7 @@
             this.panelAdministracion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartEventos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -461,5 +480,6 @@
         private System.Windows.Forms.Panel panelAdministracion;
         private System.Windows.Forms.Label lblAdministracion;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartEventos;
+        private System.Windows.Forms.Label lblTipoEvento;
     }
 }

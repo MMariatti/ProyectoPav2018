@@ -66,7 +66,7 @@ namespace ScheDulJ.Forms.Eventos
                 Clientes cliente = new Clientes(System.Convert.ToInt32(cmbClientes.SelectedValue.ToString()));
                 Evento evento = new Evento(nombre, tipoEvento, fecha, horaInicio, horaFin, direccion, cliente);
                 evento.Save();
-     
+                Close(); 
             }
             catch (Exception ex)
             {
