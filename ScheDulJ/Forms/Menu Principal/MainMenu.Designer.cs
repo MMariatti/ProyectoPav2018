@@ -64,6 +64,7 @@
             this.lblAdministracion = new System.Windows.Forms.Label();
             this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTipoEvento = new System.Windows.Forms.Label();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
@@ -418,12 +419,23 @@
             this.lblTipoEvento.TabIndex = 10;
             this.lblTipoEvento.Text = "TipoEvento";
             // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.Location = new System.Drawing.Point(532, 516);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(106, 23);
+            this.btnEstadisticas.TabIndex = 9;
+            this.btnEstadisticas.Text = "Mas Estadisticas";
+            this.btnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnEstadisticas);
             this.Controls.Add(this.lblTipoEvento);
             this.Controls.Add(this.chartEventos);
             this.Controls.Add(this.panelEquipamiento);
@@ -481,5 +493,6 @@
         private System.Windows.Forms.Label lblAdministracion;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartEventos;
         private System.Windows.Forms.Label lblTipoEvento;
+        private System.Windows.Forms.Button btnEstadisticas;
     }
 }
