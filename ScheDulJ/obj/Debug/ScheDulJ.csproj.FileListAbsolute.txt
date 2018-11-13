@@ -36,7 +36,6 @@ C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FrmModificarEquipo.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.FrmMainMenu.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.FrmLogin.resources
-C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Usuarios.frmModificarContrasena.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmUserAdmin.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Properties.Resources.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.csproj.GenerateResource.cache
@@ -71,3 +70,4 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Estadisticas.frmEstadisticas.resources

@@ -34,7 +34,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.lblUsuarios = new System.Windows.Forms.Label();
-            this.btnModificarPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +60,7 @@
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(158, 114);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(158, 71);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(100, 38);
             this.btnEliminarUsuario.TabIndex = 3;
@@ -94,21 +93,12 @@
             // 
             this.lblUsuarios.AutoSize = true;
             this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.ForeColor = System.Drawing.Color.White;
             this.lblUsuarios.Location = new System.Drawing.Point(12, 6);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(68, 18);
             this.lblUsuarios.TabIndex = 6;
             this.lblUsuarios.Text = "Usuarios";
-            // 
-            // btnModificarPassword
-            // 
-            this.btnModificarPassword.Location = new System.Drawing.Point(158, 70);
-            this.btnModificarPassword.Name = "btnModificarPassword";
-            this.btnModificarPassword.Size = new System.Drawing.Size(100, 38);
-            this.btnModificarPassword.TabIndex = 2;
-            this.btnModificarPassword.Text = "Modificar Contraseña";
-            this.btnModificarPassword.UseVisualStyleBackColor = true;
-            this.btnModificarPassword.Click += new System.EventHandler(this.btnModificarPassword_Click);
             // 
             // frmUserAdmin
             // 
@@ -116,7 +106,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(267, 194);
-            this.Controls.Add(this.btnModificarPassword);
             this.Controls.Add(this.lblUsuarios);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnSalir);
@@ -142,6 +131,5 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label lblUsuarios;
-        private System.Windows.Forms.Button btnModificarPassword;
     }
 }

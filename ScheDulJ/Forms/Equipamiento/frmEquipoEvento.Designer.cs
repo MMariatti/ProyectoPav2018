@@ -187,6 +187,7 @@
             this.Controls.Add(this.lblEquipamiento);
             this.Controls.Add(this.gridSeleccionado);
             this.Name = "frmEquipoEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEquipoEvento";
             this.Load += new System.EventHandler(this.frmEquipoEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridSeleccionado)).EndInit();

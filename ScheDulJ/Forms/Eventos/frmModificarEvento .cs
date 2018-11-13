@@ -17,7 +17,9 @@ namespace ScheDulJ.Forms.Eventos
         {
             InitializeComponent();
         }
-      
+
+            
+
         private void MostrarTiposEvento()
         {
             cmbTipoEvento.DataSource = TiposEventos.GetAll();
@@ -34,6 +36,11 @@ namespace ScheDulJ.Forms.Eventos
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

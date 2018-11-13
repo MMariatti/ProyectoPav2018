@@ -211,6 +211,11 @@ namespace ScheDulJ.Forms
             BtnModificarNombre.Enabled = true;
         }
 
+        private void txtNuevoApellido_Click(object sender, EventArgs e)
+        {
+            txtNuevoApellido.Clear();
+            BtnModificarApellido.Enabled = true;
+        }
         private void txtNuevoApellido_TextChanged(object sender, EventArgs e)
         {
             txtNuevoApellido.Clear();

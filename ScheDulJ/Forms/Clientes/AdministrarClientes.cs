@@ -58,11 +58,8 @@ namespace ScheDulJ.Forms
                 {
                     if (MessageBox.Show("Esta seguro que desea eliminar el cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        Clientes cliente = new Clientes(gridClientes.SelectedRows[0].Cells[1].Value.ToString(), gridClientes.SelectedRows[0].Cells[2].Value.ToString(),
-                            gridClientes.SelectedRows[0].Cells[3].Value.ToString(), Convert.ToInt32(gridClientes.SelectedRows[0].Cells[4].Value), 1);
+                        Clientes cliente = new Clientes(Convert.ToInt32(gridClientes.SelectedRows[0].Cells[0].Value.ToString()));
                         cliente.Baja();
-                        MessageBox.Show("Cliente Eliminado Correctamente", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Clientes.GetAll();
                     }
                 }
                 else
@@ -81,11 +78,12 @@ namespace ScheDulJ.Forms
         {
             FrmModificarCliente frmModificarCliente;
             frmModificarCliente = new FrmModificarCliente();
+            Clientes cliente = new Clientes(Convert.ToInt32(gridClientes.SelectedRows[0].Cells[0].Value.ToString()));
             frmModificarCliente.txt_IdCliente.Text = gridClientes.SelectedRows[0].Cells[0].Value.ToString();
-            frmModificarCliente.txtNuevoNombre.Text = gridClientes.SelectedRows[0].Cells[1].Value.ToString();
-            frmModificarCliente.txtNuevoApellido.Text = gridClientes.SelectedRows[0].Cells[2].Value.ToString();
-            frmModificarCliente.txtNuevoTelefono.Text = gridClientes.SelectedRows[0].Cells[3].Value.ToString();
-            frmModificarCliente.txtNuevaDireccion.Text = gridClientes.SelectedRows[0].Cells[4].Value.ToString();
+            frmModificarCliente.txtNuevoNombre.Text = cliente.Nombre;
+            frmModificarCliente.txtNuevoApellido.Text = cliente.Apellido ;
+            frmModificarCliente.txtNuevoTelefono.Text = Convert.ToString(cliente.Telefono);
+            frmModificarCliente.txtNuevaDireccion.Text = cliente.Direccion;
             frmModificarCliente.Show();
 
         }

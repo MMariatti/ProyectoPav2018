@@ -78,6 +78,12 @@
     <Compile Include="Forms\Equipamiento\frmEquipoEvento.Designer.cs">
       <DependentUpon>frmEquipoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Estadisticas\Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estadisticas\Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Eventos\frmAgregarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,12 +95,6 @@
     </Compile>
     <Compile Include="Forms\Eventos\frmModificarEvento .Designer.cs">
       <DependentUpon>frmModificarEvento .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmPresupuesto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmPresupuesto.Designer.cs">
-      <DependentUpon>FrmPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.cs">
       <SubType>Form</SubType>
@@ -138,12 +138,6 @@
     <Compile Include="Forms\Equipamiento\FrmModificarEquipo.Designer.cs">
       <DependentUpon>FrmModificarEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Usuarios\frmModificarContrasena.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Usuarios\frmModificarContrasena.Designer.cs">
-      <DependentUpon>frmModificarContrasena.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Usuarios\UserAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +173,9 @@
     <EmbeddedResource Include="Forms\Equipamiento\frmEquipoEvento.resx">
       <DependentUpon>frmEquipoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estadisticas\Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eventos\frmAgregarEvento.resx">
       <DependentUpon>frmAgregarEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu Principal\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Usuarios\frmModificarContrasena.resx">
-      <DependentUpon>frmModificarContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usuarios\UserAdmin.resx">
       <DependentUpon>UserAdmin.cs</DependentUpon>
