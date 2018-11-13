@@ -463,7 +463,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnExitMainMenu;
-        private System.Windows.Forms.DataGridView gridEventos;
         private System.Windows.Forms.Button btnNuevoEvento;
         private System.Windows.Forms.Button btnModificarEvento;
         private System.Windows.Forms.Button btnEliminarEvento;
@@ -494,5 +493,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartEventos;
         private System.Windows.Forms.Label lblTipoEvento;
         private System.Windows.Forms.Button btnEstadisticas;
+        public System.Windows.Forms.DataGridView gridEventos;
     }
 }
