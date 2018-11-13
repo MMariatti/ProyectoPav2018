@@ -26,7 +26,7 @@ namespace ScheDulJ.Forms
 
         private void Refrescar()
         {
-            gridTipoEventos.DataSource = TiposEventos.GetAll();
+            gridTipoEventos.DataSource = TiposEventos.GetAllEspecifico();
         }
 
         private void frmAdministrarTipoEventos_Load(object sender, EventArgs e)

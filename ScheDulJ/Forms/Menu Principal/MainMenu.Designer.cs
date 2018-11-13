@@ -213,9 +213,9 @@
             // 
             this.lblEventos.AutoSize = true;
             this.lblEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventos.ForeColor = System.Drawing.Color.White;
-            this.lblEventos.Location = new System.Drawing.Point(55, 8);
+            this.lblEventos.Location = new System.Drawing.Point(27, 8);
             this.lblEventos.Name = "lblEventos";
             this.lblEventos.Size = new System.Drawing.Size(71, 20);
             this.lblEventos.TabIndex = 7;
@@ -309,7 +309,7 @@
             // lblEquipamiento
             // 
             this.lblEquipamiento.AutoSize = true;
-            this.lblEquipamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipamiento.ForeColor = System.Drawing.Color.White;
             this.lblEquipamiento.Location = new System.Drawing.Point(26, 9);
             this.lblEquipamiento.Name = "lblEquipamiento";
@@ -377,21 +377,28 @@
             // 
             // chartEventos
             // 
-            chartArea1.Name = "ChartArea1";
+            this.chartEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "Eventos";
+            chartArea1.ShadowColor = System.Drawing.Color.DimGray;
             this.chartEventos.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartEventos.Legends.Add(legend1);
             this.chartEventos.Location = new System.Drawing.Point(380, 300);
             this.chartEventos.Name = "chartEventos";
-            series1.ChartArea = "ChartArea1";
+            series1.ChartArea = "Eventos";
+            series1.Color = System.Drawing.Color.Red;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Eventos";
             this.chartEventos.Series.Add(series1);
             this.chartEventos.Size = new System.Drawing.Size(269, 249);
             this.chartEventos.TabIndex = 12;
             this.chartEventos.Text = "Eventos Anuales";
-            title1.Name = "Eventos";
-            title1.Text = "Eventos";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "Eventos Por Mes";
+            title1.Text = "Eventos por Mes";
             this.chartEventos.Titles.Add(title1);
             // 
             // FrmMainMenu
