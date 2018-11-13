@@ -421,7 +421,7 @@
             // 
             // btnEstadisticas
             // 
-            this.btnEstadisticas.Location = new System.Drawing.Point(532, 516);
+            this.btnEstadisticas.Location = new System.Drawing.Point(531, 516);
             this.btnEstadisticas.Name = "btnEstadisticas";
             this.btnEstadisticas.Size = new System.Drawing.Size(106, 23);
             this.btnEstadisticas.TabIndex = 9;
