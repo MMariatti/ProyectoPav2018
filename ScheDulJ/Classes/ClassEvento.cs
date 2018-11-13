@@ -140,8 +140,6 @@ namespace ScheDulJ.Classes
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         public static DataTable GetAll()
@@ -167,9 +165,103 @@ namespace ScheDulJ.Classes
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        public void CambiarNombre(string newNombre) {
+            try
+            {
+                string query = "UPDATE Clientes SET nombre = '" + newNombre + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.NombreEvento = newNombre;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public void CambiarFecha(string fechaNueva)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET fecha = '" + fechaNueva + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.FechaEvento = fechaNueva;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public void CambiarHorarioInicio(string horarioInicioNuevo)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET horario = '" + horarioInicioNuevo + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.HorarioEvento = horarioInicioNuevo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarHorarioFin(string horarioFinNuevo)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET horarioF = '" + horarioFinNuevo + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.HorarioEventoF = horarioFinNuevo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarDireccion(string newDire)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET direccion = '" + newDire + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.DireccionEvento = newDire;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarTipoEvento(TiposEventos newTipoEvento)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET idTipoEvento = '" + newTipoEvento.IdTipoEvento + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.TipoEvento = newTipoEvento;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CambiarCliente(Clientes clienteNuevo)
+        {
+            try
+            {
+                string query = "UPDATE Clientes SET idCliente = '" + clienteNuevo.IdCliente + "' WHERE idEvento = '" + this.IdEvento;
+                DBHelper.ConsultarSQL(query);
+                this.ClienteEvento = clienteNuevo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
