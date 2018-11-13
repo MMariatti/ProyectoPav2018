@@ -71,3 +71,9 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Estadisticas.frmEstadisticas.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.Winforms.dll
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Prsupuesto.Presupuesto.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.csproj.CopyComplete
