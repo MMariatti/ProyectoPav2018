@@ -184,13 +184,13 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET fecha = '" + fechaNueva + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Eventos SET fecha = '" + fechaNueva + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.FechaEvento = fechaNueva;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar la fecha", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -198,13 +198,13 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET horario = '" + horarioInicioNuevo + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Eventos SET horario = '" + horarioInicioNuevo + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.HorarioEvento = horarioInicioNuevo;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar el horario de inicio", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -212,13 +212,13 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET horarioF = '" + horarioFinNuevo + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Eventos SET horarioFin = '" + horarioFinNuevo + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.HorarioEventoF = horarioFinNuevo;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar El horario de finalizacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -226,13 +226,13 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET direccion = '" + newDire + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Eventos SET direccion = '" + newDire + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.DireccionEvento = newDire;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar la direccion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -240,13 +240,13 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET idTipoEvento = '" + newTipoEvento.IdTipoEvento + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Evento SET idTipoEvento = '" + newTipoEvento.IdTipoEvento + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.TipoEvento = newTipoEvento;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Data.ToString(), "Error al cambiar nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Data.ToString(), "Error al cambiar el tipo de evento", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -254,7 +254,7 @@ namespace ScheDulJ.Classes
         {
             try
             {
-                string query = "UPDATE Clientes SET idCliente = '" + clienteNuevo.IdCliente + "' WHERE idEvento = '" + this.IdEvento;
+                string query = "UPDATE Eventos SET idCliente = '" + clienteNuevo.IdCliente + "' WHERE idEvento = '" + this.IdEvento;
                 DBHelper.ConsultarSQL(query);
                 this.ClienteEvento = clienteNuevo;
             }
