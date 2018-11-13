@@ -133,6 +133,25 @@ namespace ScheDulJ.Classes
             }
         }
 
+        //Retorna todos los items en una DataTable
+        public static DataTable GetAllEspecifico()
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT idItem AS ID, nombre AS Nombre, descripcion AS Descripcion , costoAlquiler AS CostoAlquiler FROM Items WHERE activo = 1";
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                return tabla;
+            }
+            catch
+            {
+                MessageBox.Show("Error en la consulta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
+        }
+
+
+
         //Guarda una Instancia de Item en la DB
         public void Save()
         {

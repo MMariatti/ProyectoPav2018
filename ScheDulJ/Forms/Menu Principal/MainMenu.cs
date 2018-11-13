@@ -26,6 +26,7 @@ namespace ScheDulJ
         {
             gridEventos.Focus(); 
             MostrarEventos();
+            CargarTiposEventoAnuales();
             MostrarSeleccionado(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value.ToString()));
             ;
         }
@@ -155,6 +156,18 @@ namespace ScheDulJ
         {
             MostrarSeleccionado(Convert.ToInt32(gridEventos.SelectedRows[0].Cells[0].Value.ToString()));
         }
+
+        private void CargarTiposEventoAnuales()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = DBHelper.ConsultarSQL("SELECT idTipoEvento AS TipoEvento, COUNT (idTipoEvento) AS Cantidad" +
+                        " FROM Eventos WHERE YEAR(fecha) = YEAR(getDate()) GROUP BY idTipoEvento");
+            chartEventos.DataSource = tabla; 
+            
+        }
+
+
     }
 }
 

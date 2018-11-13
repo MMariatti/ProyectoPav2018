@@ -168,6 +168,22 @@ namespace ScheDulJ
             }
         }
 
+        public static DataTable GetAllEspecifico()
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT idCliente AS ID,nombre AS Nombre, apellido AS Apellido FROM Clientes C WHERE C.activo = 1";
+            try
+            {
+                tabla = DBHelper.ConsultarSQL(query);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Data.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return tabla;
+            }
+        }
+
 
         public Clientes GetCliente(int idC)
         {

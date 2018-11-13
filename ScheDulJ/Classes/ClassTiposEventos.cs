@@ -88,6 +88,14 @@ namespace ScheDulJ.Classes
             return tabla;
         }
 
+        public static DataTable GetAllEspecifico()
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT idTipoEvento AS ID, nombre AS Nombre,descripcion AS Descripcion FROM TiposEventos";
+            tabla = DBHelper.ConsultarSQL(query);
+            return tabla;
+        }
+
         public void Eliminar()
         {
             try

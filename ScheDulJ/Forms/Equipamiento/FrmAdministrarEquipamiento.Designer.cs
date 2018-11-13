@@ -44,12 +44,12 @@
             this.GridEquipamiento.Name = "GridEquipamiento";
             this.GridEquipamiento.ReadOnly = true;
             this.GridEquipamiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridEquipamiento.Size = new System.Drawing.Size(490, 195);
+            this.GridEquipamiento.Size = new System.Drawing.Size(450, 195);
             this.GridEquipamiento.TabIndex = 0;
             // 
             // BtnAgregarEquipo
             // 
-            this.BtnAgregarEquipo.Location = new System.Drawing.Point(508, 12);
+            this.BtnAgregarEquipo.Location = new System.Drawing.Point(468, 12);
             this.BtnAgregarEquipo.Name = "BtnAgregarEquipo";
             this.BtnAgregarEquipo.Size = new System.Drawing.Size(100, 28);
             this.BtnAgregarEquipo.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // BtnModficarEquipo
             // 
-            this.BtnModficarEquipo.Location = new System.Drawing.Point(508, 46);
+            this.BtnModficarEquipo.Location = new System.Drawing.Point(468, 46);
             this.BtnModficarEquipo.Name = "BtnModficarEquipo";
             this.BtnModficarEquipo.Size = new System.Drawing.Size(100, 28);
             this.BtnModficarEquipo.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // BtnEliminarEquipo
             // 
-            this.BtnEliminarEquipo.Location = new System.Drawing.Point(508, 80);
+            this.BtnEliminarEquipo.Location = new System.Drawing.Point(468, 80);
             this.BtnEliminarEquipo.Name = "BtnEliminarEquipo";
             this.BtnEliminarEquipo.Size = new System.Drawing.Size(100, 28);
             this.BtnEliminarEquipo.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.Location = new System.Drawing.Point(508, 213);
+            this.BtnSalir.Location = new System.Drawing.Point(468, 213);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(100, 28);
             this.BtnSalir.TabIndex = 5;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(616, 251);
+            this.ClientSize = new System.Drawing.Size(577, 251);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnRefrescar);
             this.Controls.Add(this.BtnEliminarEquipo);
