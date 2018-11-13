@@ -1,6 +1,6 @@
-﻿namespace ScheDulJ.Forms
+﻿namespace ScheDulJ.Forms.Presupuesto
 {
-    partial class FrmPresupuesto
+    partial class Presupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmPresupuesto";
+            this.Text = "Presupuesto";
         }
 
         #endregion

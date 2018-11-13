@@ -60,7 +60,7 @@
             this.txtNuevoNombre.Location = new System.Drawing.Point(148, 55);
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(125, 20);
-            this.txtNuevoNombre.TabIndex = 0;
+            this.txtNuevoNombre.TabIndex = 2;
             this.txtNuevoNombre.Click += new System.EventHandler(this.txtNuevoNombre_Click);
             // 
             // lblNuevoTelefono
@@ -109,8 +109,8 @@
             this.txtNuevoApellido.Location = new System.Drawing.Point(148, 89);
             this.txtNuevoApellido.Name = "txtNuevoApellido";
             this.txtNuevoApellido.Size = new System.Drawing.Size(125, 20);
-            this.txtNuevoApellido.TabIndex = 1;
-            this.txtNuevoApellido.TextChanged += new System.EventHandler(this.txtNuevoApellido_TextChanged);
+            this.txtNuevoApellido.TabIndex = 3;
+            this.txtNuevoApellido.Click += new System.EventHandler(this.txtNuevoApellido_Click);
             // 
             // lblApellido
             // 
@@ -168,7 +168,7 @@
             this.txt_IdCliente.Name = "txt_IdCliente";
             this.txt_IdCliente.ReadOnly = true;
             this.txt_IdCliente.Size = new System.Drawing.Size(125, 20);
-            this.txt_IdCliente.TabIndex = 9;
+            this.txt_IdCliente.TabIndex = 0;
             // 
             // BtnModificarApellido
             // 
