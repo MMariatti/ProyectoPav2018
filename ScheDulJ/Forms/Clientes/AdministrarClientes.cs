@@ -95,7 +95,8 @@ namespace ScheDulJ.Forms
 
         private void btnReporteClientes_Click(object sender, EventArgs e)
         {
-
+            ReporteClientes reporte = new ReporteClientes();
+            reporte.Show();
         }
     }
 }
