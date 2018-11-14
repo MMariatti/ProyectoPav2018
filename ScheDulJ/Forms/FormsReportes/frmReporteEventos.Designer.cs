@@ -30,15 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
-            this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.eventosTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EventosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
             this.SuspendLayout();
+            // 
+            // eventosBindingSource
+            // 
+            this.eventosBindingSource.DataMember = "Eventos";
+            this.eventosBindingSource.DataSource = this.dataSetScheDulJBindingSource;
+            // 
+            // dataSetScheDulJBindingSource
+            // 
+            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
+            this.dataSetScheDulJBindingSource.Position = 0;
+            // 
+            // dataSetScheDulJ
+            // 
+            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
+            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,23 +65,8 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(784, 561);
+            this.reportViewer1.Size = new System.Drawing.Size(634, 561);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dataSetScheDulJ
-            // 
-            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
-            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSetScheDulJBindingSource
-            // 
-            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
-            this.dataSetScheDulJBindingSource.Position = 0;
-            // 
-            // eventosBindingSource
-            // 
-            this.eventosBindingSource.DataMember = "Eventos";
-            this.eventosBindingSource.DataSource = this.dataSetScheDulJBindingSource;
             // 
             // eventosTableAdapter
             // 
@@ -76,16 +76,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(634, 561);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporteEventos";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Eventos";
             this.Load += new System.EventHandler(this.frmReporteEventos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
             this.ResumeLayout(false);
 
         }

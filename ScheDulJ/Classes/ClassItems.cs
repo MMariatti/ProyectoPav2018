@@ -159,7 +159,7 @@ namespace ScheDulJ.Classes
             {
                 string query = "INSERT INTO Items(nombre, descripcion, costoAlquiler ,activo) " + "VALUES('" + this.Nombre + "','" + this.Descripcion + "',"+ this.CostoAlquiler +"," + 1 +" )";
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show(this.nombre + " cargado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -174,7 +174,7 @@ namespace ScheDulJ.Classes
             try
             {
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Costo de Alquiler cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Costo de Alquiler cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.CostoAlquiler = newCostoAlquiler;
             }
             catch
@@ -190,7 +190,7 @@ namespace ScheDulJ.Classes
             try
             {
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Nombre de Item cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nombre de Item cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Nombre = newNombre;
             }
             catch
@@ -206,7 +206,7 @@ namespace ScheDulJ.Classes
             try
             {
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Costo de Alquiler cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Costo de Alquiler cambiado con exito", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Descripcion = newDescripcion;
             }
             catch
@@ -221,7 +221,7 @@ namespace ScheDulJ.Classes
             try
             {
                 DBHelper.ConsultarSQL(query);
-                MessageBox.Show("Item eliminado", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Item eliminado", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {

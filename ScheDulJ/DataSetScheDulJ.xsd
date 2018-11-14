@@ -264,6 +264,25 @@ SELECT idItem, nombre, descripcion, idTipoItem, costoAlquiler, activo FROM Items
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EquipamientoMasUtilizadoTableAdapter" GeneratorDataComponentClassName="EquipamientoMasUtilizadoTableAdapter" Name="EquipamientoMasUtilizado" UserDataComponentName="EquipamientoMasUtilizadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScheDulJConnectionString (Settings)" DbObjectName="ScheDulJ.dbo.Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP 5 I.idItem , I.nombre AS Nombre , COUNT(I.idItem) AS Cantidad
+ FROM DetalleEventos DE JOIN Items I ON(DE.idItem = I.idItem) GROUP BY  I.idItem, I.nombre ORDER BY Cantidad DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idItem" DataSetColumn="idItem" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -353,6 +372,21 @@ SELECT idItem, nombre, descripcion, idTipoItem, costoAlquiler, activo FROM Items
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="EquipamientoMasUtilizado" msprop:Generator_TableClassName="EquipamientoMasUtilizadoDataTable" msprop:Generator_TableVarName="tableEquipamientoMasUtilizado" msprop:Generator_TablePropName="EquipamientoMasUtilizado" msprop:Generator_RowDeletingName="EquipamientoMasUtilizadoRowDeleting" msprop:Generator_RowChangingName="EquipamientoMasUtilizadoRowChanging" msprop:Generator_RowEvHandlerName="EquipamientoMasUtilizadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EquipamientoMasUtilizadoRowDeleted" msprop:Generator_UserTableName="EquipamientoMasUtilizado" msprop:Generator_RowChangedName="EquipamientoMasUtilizadoRowChanged" msprop:Generator_RowEvArgName="EquipamientoMasUtilizadoRowChangeEvent" msprop:Generator_RowClassName="EquipamientoMasUtilizadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idItem" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidItem" msprop:Generator_ColumnPropNameInRow="idItem" msprop:Generator_ColumnPropNameInTable="idItemColumn" msprop:Generator_UserColumnName="idItem" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantidad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -365,6 +399,10 @@ SELECT idItem, nombre, descripcion, idTipoItem, costoAlquiler, activo FROM Items
     </xs:unique>
     <xs:unique name="Items_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Items" />
+      <xs:field xpath="mstns:idItem" />
+    </xs:unique>
+    <xs:unique name="EquipamientoMasUtilizado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EquipamientoMasUtilizado" />
       <xs:field xpath="mstns:idItem" />
     </xs:unique>
   </xs:element>
