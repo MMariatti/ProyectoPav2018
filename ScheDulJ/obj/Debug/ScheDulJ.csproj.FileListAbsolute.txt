@@ -157,3 +157,5 @@ C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\ru\Micros
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.ReporteClientes.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FormsReportes.frmReporteEventos.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FormsReportes.frmReporteEquipamiento.resources

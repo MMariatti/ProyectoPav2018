@@ -87,7 +87,7 @@ SELECT idCliente, nombre, apellido, direccion, telefono, activo FROM Clientes WH
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EventosTableAdapter" GeneratorDataComponentClassName="EventosTableAdapter" Name="Eventos" UserDataComponentName="EventosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheDulJConnectionString (Settings)" DbObjectName="ScheDulJ.dbo.Eventos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheDulJConnectionString (Settings)" DbObjectName="ScheDulJ.dbo.Eventos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Eventos] WHERE (([idEvento] = @Original_idEvento) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_idTipoEvento = 1 AND [idTipoEvento] IS NULL) OR ([idTipoEvento] = @Original_idTipoEvento)) AND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)) AND ((@IsNull_horario = 1 AND [horario] IS NULL) OR ([horario] = @Original_horario)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_idCliente = 1 AND [idCliente] IS NULL) OR ([idCliente] = @Original_idCliente)) AND ((@IsNull_horarioFin = 1 AND [horarioFin] IS NULL) OR ([horarioFin] = @Original_horarioFin)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)))</CommandText>
@@ -131,7 +131,8 @@ SELECT idEvento, nombre, idTipoEvento, fecha, horario, direccion, idCliente, hor
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Eventos.*
-FROM            Eventos</CommandText>
+FROM            Eventos
+WHERE YEAR(fecha) = YEAR(getDate())</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -186,7 +187,7 @@ SELECT idEvento, nombre, idTipoEvento, fecha, horario, direccion, idCliente, hor
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemsTableAdapter" GeneratorDataComponentClassName="ItemsTableAdapter" Name="Items" UserDataComponentName="ItemsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ScheDulJConnectionString (Settings)" DbObjectName="ScheDulJ.dbo.Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ScheDulJConnectionString (Settings)" DbObjectName="ScheDulJ.dbo.Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Items] WHERE (([idItem] = @Original_idItem) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ((@IsNull_idTipoItem = 1 AND [idTipoItem] IS NULL) OR ([idTipoItem] = @Original_idTipoItem)) AND ((@IsNull_costoAlquiler = 1 AND [costoAlquiler] IS NULL) OR ([costoAlquiler] = @Original_costoAlquiler)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)))</CommandText>
@@ -221,7 +222,8 @@ SELECT idItem, nombre, descripcion, idTipoItem, costoAlquiler, activo FROM Items
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Items.*
-FROM            Items</CommandText>
+FROM            Items
+WHERE activo = 1</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

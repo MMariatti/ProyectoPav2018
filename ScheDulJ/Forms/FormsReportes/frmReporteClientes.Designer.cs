@@ -30,20 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosfkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EventosTableAdapter();
-            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.ClientesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
+            // 
+            // dataSetScheDulJBindingSource
+            // 
+            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
+            this.dataSetScheDulJBindingSource.Position = 0;
+            // 
+            // dataSetScheDulJ
+            // 
+            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
+            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -57,16 +72,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(784, 561);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dataSetScheDulJ
-            // 
-            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
-            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSetScheDulJBindingSource
-            // 
-            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
-            this.dataSetScheDulJBindingSource.Position = 0;
             // 
             // ClientesBindingSource
             // 
@@ -82,11 +87,6 @@
             // 
             this.eventosTableAdapter.ClearBeforeFill = true;
             // 
-            // clientesBindingSource1
-            // 
-            this.clientesBindingSource1.DataMember = "Clientes";
-            this.clientesBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
-            // 
             // clientesTableAdapter
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
@@ -99,13 +99,14 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReporteClientes";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

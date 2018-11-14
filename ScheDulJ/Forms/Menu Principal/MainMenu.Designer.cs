@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.btnExitMainMenu = new System.Windows.Forms.Button();
             this.gridEventos = new System.Windows.Forms.DataGridView();
@@ -50,6 +50,7 @@
             this.lblEventos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
+            this.btnReporteEventos = new System.Windows.Forms.Button();
             this.btnRefrescarE = new System.Windows.Forms.Button();
             this.btnTipoEvento = new System.Windows.Forms.Button();
             this.btnAdministrarEquipamiento = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.btnAgregarEquipo = new System.Windows.Forms.Button();
             this.btnCargarEquipamiento = new System.Windows.Forms.Button();
             this.panelEquipamiento = new System.Windows.Forms.Panel();
+            this.btnReporteEquipamiento = new System.Windows.Forms.Button();
             this.panelAdministracion = new System.Windows.Forms.Panel();
             this.lblAdministracion = new System.Windows.Forms.Label();
             this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -236,6 +238,7 @@
             // panelEventos
             // 
             this.panelEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelEventos.Controls.Add(this.btnReporteEventos);
             this.panelEventos.Controls.Add(this.btnRefrescarE);
             this.panelEventos.Controls.Add(this.lblEventos);
             this.panelEventos.Controls.Add(this.btnNuevoEvento);
@@ -246,6 +249,16 @@
             this.panelEventos.Name = "panelEventos";
             this.panelEventos.Size = new System.Drawing.Size(760, 285);
             this.panelEventos.TabIndex = 8;
+            // 
+            // btnReporteEventos
+            // 
+            this.btnReporteEventos.Location = new System.Drawing.Point(606, 5);
+            this.btnReporteEventos.Name = "btnReporteEventos";
+            this.btnReporteEventos.Size = new System.Drawing.Size(116, 23);
+            this.btnReporteEventos.TabIndex = 9;
+            this.btnReporteEventos.Text = "Reporte Eventos";
+            this.btnReporteEventos.UseVisualStyleBackColor = true;
+            this.btnReporteEventos.Click += new System.EventHandler(this.btnReporteEventos_Click);
             // 
             // btnRefrescarE
             // 
@@ -343,6 +356,7 @@
             // panelEquipamiento
             // 
             this.panelEquipamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelEquipamiento.Controls.Add(this.btnReporteEquipamiento);
             this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnAgregarEquipo);
@@ -351,6 +365,16 @@
             this.panelEquipamiento.Name = "panelEquipamiento";
             this.panelEquipamiento.Size = new System.Drawing.Size(360, 249);
             this.panelEquipamiento.TabIndex = 9;
+            // 
+            // btnReporteEquipamiento
+            // 
+            this.btnReporteEquipamiento.Location = new System.Drawing.Point(237, 5);
+            this.btnReporteEquipamiento.Name = "btnReporteEquipamiento";
+            this.btnReporteEquipamiento.Size = new System.Drawing.Size(97, 23);
+            this.btnReporteEquipamiento.TabIndex = 10;
+            this.btnReporteEquipamiento.Text = "Reporte Equipo";
+            this.btnReporteEquipamiento.UseVisualStyleBackColor = true;
+            this.btnReporteEquipamiento.Click += new System.EventHandler(this.btnReporteEquipamiento_Click);
             // 
             // panelAdministracion
             // 
@@ -380,32 +404,32 @@
             // chartEventos
             // 
             this.chartEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            chartArea2.BorderColor = System.Drawing.Color.White;
-            chartArea2.Name = "Eventos";
-            chartArea2.ShadowColor = System.Drawing.Color.DimGray;
-            this.chartEventos.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartEventos.Legends.Add(legend2);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "Eventos";
+            chartArea1.ShadowColor = System.Drawing.Color.DimGray;
+            this.chartEventos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartEventos.Legends.Add(legend1);
             this.chartEventos.Location = new System.Drawing.Point(380, 300);
             this.chartEventos.Name = "chartEventos";
-            series2.ChartArea = "Eventos";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Color = System.Drawing.Color.Red;
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Eventos";
-            series2.XValueMember = "TipoEvento";
-            series2.YValueMembers = "Cantidad";
-            this.chartEventos.Series.Add(series2);
+            series1.ChartArea = "Eventos";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Color = System.Drawing.Color.Red;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Eventos";
+            series1.XValueMember = "TipoEvento";
+            series1.YValueMembers = "Cantidad";
+            this.chartEventos.Series.Add(series1);
             this.chartEventos.Size = new System.Drawing.Size(269, 249);
             this.chartEventos.TabIndex = 12;
             this.chartEventos.Text = "Eventos Anuales";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.ForeColor = System.Drawing.Color.White;
-            title2.Name = "TipoEventoAnuales";
-            title2.Text = "Tipos de Evento Anuales";
-            this.chartEventos.Titles.Add(title2);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "TipoEventoAnuales";
+            title1.Text = "Tipos de Evento Anuales";
+            this.chartEventos.Titles.Add(title1);
             // 
             // lblTipoEvento
             // 
@@ -494,5 +518,7 @@
         private System.Windows.Forms.Label lblTipoEvento;
         private System.Windows.Forms.Button btnEstadisticas;
         public System.Windows.Forms.DataGridView gridEventos;
+        private System.Windows.Forms.Button btnReporteEventos;
+        private System.Windows.Forms.Button btnReporteEquipamiento;
     }
 }

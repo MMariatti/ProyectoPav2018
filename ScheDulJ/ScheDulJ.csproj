@@ -78,11 +78,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetScheDulJ.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormsReportes\ReporteClientes.cs">
+    <Compile Include="Forms\FormsReportes\frmReporteEquipamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormsReportes\ReporteClientes.Designer.cs">
-      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    <Compile Include="Forms\FormsReportes\frmReporteEquipamiento.Designer.cs">
+      <DependentUpon>frmReporteEquipamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteEventos.Designer.cs">
+      <DependentUpon>frmReporteEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteClientes.Designer.cs">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Clientes\AdministrarClientes.cs">
       <SubType>Form</SubType>
@@ -184,8 +196,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\DBHelper.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Forms\FormsReportes\ReporteClientes.resx">
-      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormsReportes\frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\AdministrarClientes.resx">
       <DependentUpon>AdministrarClientes.cs</DependentUpon>
@@ -204,6 +216,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eventos\frmModificarEvento .resx">
       <DependentUpon>frmModificarEvento .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsReportes\frmReporteEquipamiento.resx">
+      <DependentUpon>frmReporteEquipamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsReportes\frmReporteEventos.resx">
+      <DependentUpon>frmReporteEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TiposEvento\frmAdministrarTipoEventos.resx">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
@@ -246,6 +264,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\RClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\REquipamiento.rdlc" />
+    <EmbeddedResource Include="Reportes\REventos.rdlc" />
     <None Include="DataSetScheDulJ.xsc">
       <DependentUpon>DataSetScheDulJ.xsd</DependentUpon>
     </None>
