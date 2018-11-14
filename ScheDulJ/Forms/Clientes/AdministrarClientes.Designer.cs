@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrarClientes));
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -134,8 +135,8 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.btnAgregarCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministrarClientes";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Clientes";
             this.Load += new System.EventHandler(this.administrarClientes_Load);

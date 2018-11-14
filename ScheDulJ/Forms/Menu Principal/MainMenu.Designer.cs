@@ -465,8 +465,8 @@
             this.Controls.Add(this.panelEquipamiento);
             this.Controls.Add(this.panelEventos);
             this.Controls.Add(this.panelAdministracion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMainMenu";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShceDulJ - Menu Principal ";
             this.Load += new System.EventHandler(this.frmMainMenu_Load);

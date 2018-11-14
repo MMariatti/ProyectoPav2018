@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrarTipoEventos));
             this.gridTipoEventos = new System.Windows.Forms.DataGridView();
             this.btnNuevoTEvento = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -103,8 +104,8 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevoTEvento);
             this.Controls.Add(this.gridTipoEventos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministrarTipoEventos";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Tipos de Evento";
             this.Load += new System.EventHandler(this.frmAdministrarTipoEventos_Load);

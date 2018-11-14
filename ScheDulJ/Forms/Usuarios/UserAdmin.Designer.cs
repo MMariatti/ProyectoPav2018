@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserAdmin));
             this.gridUsuarios = new System.Windows.Forms.DataGridView();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
@@ -112,8 +113,8 @@
             this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Controls.Add(this.gridUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserAdmin";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Usuarios";
             this.Load += new System.EventHandler(this.frmUserAdmin_Load);

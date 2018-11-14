@@ -432,10 +432,10 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.7175in</Width>
+  <Width>7.07167in</Width>
   <Page>
     <PageHeader>
-      <Height>1in</Height>
+      <Height>1.11333in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -500,6 +500,21 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>djplayingrecords</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.47792in</Top>
+          <Left>0.16541in</Left>
+          <Height>0.5in</Height>
+          <Width>0.5in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -507,6 +522,47 @@
         </Border>
       </Style>
     </PageHeader>
+    <PageFooter>
+      <Height>1in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0.25in</Top>
+          <Left>5.93625in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
     <TopMargin>1in</TopMargin>
@@ -577,6 +633,13 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="djplayingrecords">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiCw0UEwRvT3fCAAAC1UlEQVRIx53Ub2jVVRzH8dfNuw1bOXOu0msmRQkLNTLHJoFiFKHULCSDsgwyisEe9EQDichgEFlZJCb0f/SgLKlIDaz2oJUNy0eb2iYRVzYjs6251ja304P783ev63fvqu/3ye98z3l/zvf8vud8pyltV9tjpSE/C/6XrRUEQZ+X1P0XcJHD3teo3Cpv+yOS6bFN7b8TWBchZ+y2UqV7fR9Fgu8smQq/wXTL7XQ6QrKeszsWCEY8aVoyuthqG0wY1Gq1i63xnqECNO/fum4yXGWHc3apk40WnbbLCpe6X0eCxJAmqTx+o1OCYNAlLrLCa36LD/C81sQsgu3n8QX6otBWt+jypttNt0arwSJozk/l8GrHo8A+1Zqi71+8okGl9Q4XFWjLCeyLhi1SMua61Rv6o9hPWnxUVOBRqIsGe6TM0+1L5ahwjw8MlzzAiFnwiSDoN8M83XaqMN+DPrXdMjM85HPnigh8nKv8hCB4AQe9ikcK9u2xzWxXaHYkQWA9bI4GS9WaMMcio1HkV6PGPa7Gw/Y6m1DCFGkLo0J2W+ekPpuUodsDOlS51ixZFQXXLejU7hvtTpAXGDbuZlXW2ogxjY5iwA9ejPAhHdq1O6TMciGHI34wxwqS6yjY8XLParZUmVqbvOVHQfDh+el0nN7CC9LM25gTMp7R4DIDxswGE/kFxxPre308/7Ig2OspwR0aoxU78gJfJVa4y2LUeMKYIFii3qgKj0Xzm/MCTxe9Z9m4oMekNTmC16NIfeEzDlP4STep1KMZXYKgt7AP0FkCPuA+M5V7
+R5uUjZO7QM7uKoqPa3Clu3XqcJWM3wXBgJrJzaythERwxlZp1fHv3vLPVpqJ+9GF3m+Da8Cd8Yr9yf243p8JAofMd5stPosjR81UxJbpnbIeX6hWwjL2l4D/0iJtSlvl66jBFPqwdy1IBlIJsYxGDeaaY0SvrIMOOFtsx78B1BEchnTW4eIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTEtMTNUMjA6MTk6MDQrMDE6MDBP186xAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTExLTEzVDIwOjE5OjA0KzAxOjAwPop2DQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>145cea98-93b8-49df-90cd-30ccb80f9ec1</rd:ReportID>
 </Report>

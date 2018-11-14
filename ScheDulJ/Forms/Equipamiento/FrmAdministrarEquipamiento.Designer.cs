@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdministrarEquipamiento));
             this.GridEquipamiento = new System.Windows.Forms.DataGridView();
             this.BtnAgregarEquipo = new System.Windows.Forms.Button();
             this.BtnModficarEquipo = new System.Windows.Forms.Button();
@@ -109,6 +110,7 @@
             this.Controls.Add(this.BtnModficarEquipo);
             this.Controls.Add(this.BtnAgregarEquipo);
             this.Controls.Add(this.GridEquipamiento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAdministrarEquipamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdministrarEquipamiento";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarEvento));
             this.lblId = new System.Windows.Forms.Label();
             this.lblNE = new System.Windows.Forms.Label();
             this.lblIdCargado = new System.Windows.Forms.Label();
@@ -197,6 +198,7 @@
             this.Controls.Add(this.lblIdCargado);
             this.Controls.Add(this.lblNE);
             this.Controls.Add(this.lblId);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Evento ";

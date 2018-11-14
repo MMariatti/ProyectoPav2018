@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarEvento));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.calendarioEvento = new System.Windows.Forms.MonthCalendar();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -233,8 +234,8 @@
             this.Controls.Add(this.calendarioEvento);
             this.Controls.Add(this.txtNombre);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarEvento";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Evento";
             this.Load += new System.EventHandler(this.frmAgregarEvento_Load);

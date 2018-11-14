@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEquipoEvento));
             this.gridSeleccionado = new System.Windows.Forms.DataGridView();
             this.lblEquipamiento = new System.Windows.Forms.Label();
             this.lblSeleccionado = new System.Windows.Forms.Label();
@@ -186,6 +187,7 @@
             this.Controls.Add(this.lblSeleccionado);
             this.Controls.Add(this.lblEquipamiento);
             this.Controls.Add(this.gridSeleccionado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEquipoEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEquipoEvento";
