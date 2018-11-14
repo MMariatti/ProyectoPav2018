@@ -186,6 +186,19 @@ namespace ScheDulJ
             frmReporteEquipamiento reporte = new frmReporteEquipamiento();
             reporte.Show(); 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmEventosXMes eventosXMes = new FrmEventosXMes();
+            eventosXMes.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmItemsMasSolicitados itemsMasSolicitados = new FrmItemsMasSolicitados();
+            itemsMasSolicitados.Show();
+        }
     }
 }
 

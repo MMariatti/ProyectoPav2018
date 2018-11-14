@@ -67,6 +67,8 @@
             this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTipoEvento = new System.Windows.Forms.Label();
             this.btnEstadisticas = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
@@ -187,7 +189,7 @@
             // 
             this.btnModificarEvento.Location = new System.Drawing.Point(137, 240);
             this.btnModificarEvento.Name = "btnModificarEvento";
-            this.btnModificarEvento.Size = new System.Drawing.Size(95, 38);
+            this.btnModificarEvento.Size = new System.Drawing.Size(94, 38);
             this.btnModificarEvento.TabIndex = 2;
             this.btnModificarEvento.Text = "Modificar Evento";
             this.btnModificarEvento.UseVisualStyleBackColor = true;
@@ -197,7 +199,7 @@
             // 
             this.btnEliminarEvento.Location = new System.Drawing.Point(244, 240);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
-            this.btnEliminarEvento.Size = new System.Drawing.Size(91, 38);
+            this.btnEliminarEvento.Size = new System.Drawing.Size(94, 38);
             this.btnEliminarEvento.TabIndex = 3;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = true;
@@ -238,6 +240,7 @@
             // panelEventos
             // 
             this.panelEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelEventos.Controls.Add(this.button2);
             this.panelEventos.Controls.Add(this.btnReporteEventos);
             this.panelEventos.Controls.Add(this.btnRefrescarE);
             this.panelEventos.Controls.Add(this.lblEventos);
@@ -345,7 +348,7 @@
             // 
             // btnCargarEquipamiento
             // 
-            this.btnCargarEquipamiento.Location = new System.Drawing.Point(262, 194);
+            this.btnCargarEquipamiento.Location = new System.Drawing.Point(262, 3);
             this.btnCargarEquipamiento.Name = "btnCargarEquipamiento";
             this.btnCargarEquipamiento.Size = new System.Drawing.Size(72, 25);
             this.btnCargarEquipamiento.TabIndex = 9;
@@ -356,6 +359,7 @@
             // panelEquipamiento
             // 
             this.panelEquipamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelEquipamiento.Controls.Add(this.button3);
             this.panelEquipamiento.Controls.Add(this.btnReporteEquipamiento);
             this.panelEquipamiento.Controls.Add(this.lblEquipamiento);
             this.panelEquipamiento.Controls.Add(this.btnCargarEquipamiento);
@@ -368,7 +372,7 @@
             // 
             // btnReporteEquipamiento
             // 
-            this.btnReporteEquipamiento.Location = new System.Drawing.Point(237, 5);
+            this.btnReporteEquipamiento.Location = new System.Drawing.Point(136, 194);
             this.btnReporteEquipamiento.Name = "btnReporteEquipamiento";
             this.btnReporteEquipamiento.Size = new System.Drawing.Size(97, 23);
             this.btnReporteEquipamiento.TabIndex = 10;
@@ -453,6 +457,26 @@
             this.btnEstadisticas.UseVisualStyleBackColor = true;
             this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(369, 240);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 38);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Reporte de Eventos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(243, 194);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 38);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Equipo más solicitado";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,5 +544,7 @@
         public System.Windows.Forms.DataGridView gridEventos;
         private System.Windows.Forms.Button btnReporteEventos;
         private System.Windows.Forms.Button btnReporteEquipamiento;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

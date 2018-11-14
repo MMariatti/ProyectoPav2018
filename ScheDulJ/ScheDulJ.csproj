@@ -78,6 +78,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetScheDulJ.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormsReportes\FrmEventosXMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\FrmEventosXMes.Designer.cs">
+      <DependentUpon>FrmEventosXMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\FrmItemsMasSolicitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\FrmItemsMasSolicitados.Designer.cs">
+      <DependentUpon>FrmItemsMasSolicitados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsReportes\frmReporteEquipamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\DBHelper.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\FormsReportes\FrmEventosXMes.resx">
+      <DependentUpon>FrmEventosXMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsReportes\FrmItemsMasSolicitados.resx">
+      <DependentUpon>FrmItemsMasSolicitados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsReportes\frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +282,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\RClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportEventoXmes.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportIemsMasPedido.rdlc" />
     <EmbeddedResource Include="Reportes\REquipamiento.rdlc" />
     <EmbeddedResource Include="Reportes\REventos.rdlc" />
     <None Include="DataSetScheDulJ.xsc">
