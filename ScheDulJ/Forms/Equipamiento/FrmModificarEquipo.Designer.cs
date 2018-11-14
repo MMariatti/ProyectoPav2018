@@ -83,9 +83,8 @@
             // 
             // BtnModificarDescripcion
             // 
-            this.BtnModificarDescripcion.Enabled = false;
             this.BtnModificarDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.BtnModificarDescripcion.Location = new System.Drawing.Point(304, 96);
+            this.BtnModificarDescripcion.Location = new System.Drawing.Point(276, 96);
             this.BtnModificarDescripcion.Name = "BtnModificarDescripcion";
             this.BtnModificarDescripcion.Size = new System.Drawing.Size(87, 43);
             this.BtnModificarDescripcion.TabIndex = 3;
@@ -95,9 +94,8 @@
             // 
             // BtnCostoAlquiler
             // 
-            this.BtnCostoAlquiler.Enabled = false;
             this.BtnCostoAlquiler.ForeColor = System.Drawing.Color.Black;
-            this.BtnCostoAlquiler.Location = new System.Drawing.Point(304, 160);
+            this.BtnCostoAlquiler.Location = new System.Drawing.Point(276, 160);
             this.BtnCostoAlquiler.Name = "BtnCostoAlquiler";
             this.BtnCostoAlquiler.Size = new System.Drawing.Size(87, 43);
             this.BtnCostoAlquiler.TabIndex = 5;
@@ -118,7 +116,6 @@
             // 
             // txtDescripcionEquipo
             // 
-            this.txtDescripcionEquipo.Enabled = false;
             this.txtDescripcionEquipo.Location = new System.Drawing.Point(153, 105);
             this.txtDescripcionEquipo.Name = "txtDescripcionEquipo";
             this.txtDescripcionEquipo.Size = new System.Drawing.Size(116, 20);
@@ -127,10 +124,9 @@
             // 
             // txtCostoAlquiler
             // 
-            this.txtCostoAlquiler.Enabled = false;
             this.txtCostoAlquiler.Location = new System.Drawing.Point(153, 172);
             this.txtCostoAlquiler.Name = "txtCostoAlquiler";
-            this.txtCostoAlquiler.Size = new System.Drawing.Size(100, 20);
+            this.txtCostoAlquiler.Size = new System.Drawing.Size(116, 20);
             this.txtCostoAlquiler.TabIndex = 4;
             // 
             // cmbItemsModificar
@@ -147,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(403, 257);
+            this.ClientSize = new System.Drawing.Size(390, 257);
             this.Controls.Add(this.lblNombreEquipo);
             this.Controls.Add(this.cmbItemsModificar);
             this.Controls.Add(this.txtCostoAlquiler);
