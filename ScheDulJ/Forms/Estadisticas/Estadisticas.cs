@@ -20,7 +20,8 @@ namespace ScheDulJ.Forms.Estadisticas
         private void Estadisticas_Load(object sender, EventArgs e)
         {
             CargarChartEquipamiento();
-            CargarChartEventos(); 
+            CargarChartEventos();
+           
         }
         private void CargarChartEquipamiento()
         {

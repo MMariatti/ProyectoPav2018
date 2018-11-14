@@ -16,21 +16,16 @@ namespace ScheDulJ.Forms.Eventos
         public frmModificarEvento()
         {
             InitializeComponent();
-        }
+
+          
 
             
-
-        private void MostrarTiposEvento()
-        {
-            cmbTipoEvento.DataSource = TiposEventos.GetAll();
-            cmbTipoEvento.DisplayMember = "nombre";
-            cmbTipoEvento.ValueMember = "idTipoEvento";
-            cmbTipoEvento.SelectedIndex = -1;
         }
 
+           
         private void frmModificarEvento_Load(object sender, EventArgs e)
         {
-            MostrarTiposEvento();
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +35,22 @@ namespace ScheDulJ.Forms.Eventos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
+            Evento evento = new Evento(Convert.ToInt32(lblNombre.Text));
+            evento.CambiarFecha(calendarioNuevaFecha.SelectionRange.Start.ToString());
         }
+
+        private void btnModifcarHI_Click(object sender, EventArgs e)
+        {
+            Evento evento = new Evento(Convert.ToInt32(lblNombre.Text));
+            evento.CambiarHorarioInicio(txtHoraI.Text.ToString());
+        }
+
+        private void btnModificarHF_Click(object sender, EventArgs e)
+        {
+            Evento evento = new Evento(Convert.ToInt32(lblNombre.Text));
+            evento.CambiarFecha(txtHoraF.Text.ToString());
+        }
+
+   
     }
 }

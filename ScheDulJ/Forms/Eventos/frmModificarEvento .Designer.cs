@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.lblTipoEvento = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.cmbTipoEvento = new System.Windows.Forms.ComboBox();
+            this.calendarioNuevaFecha = new System.Windows.Forms.MonthCalendar();
+            this.txtHoraI = new System.Windows.Forms.MaskedTextBox();
+            this.txtHoraF = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnModificarFecha = new System.Windows.Forms.Button();
+            this.btnModifcarHI = new System.Windows.Forms.Button();
+            this.btnModificarHF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblId
@@ -114,52 +114,33 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nueva fecha:";
             // 
-            // monthCalendar1
+            // calendarioNuevaFecha
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(123, 59);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 8;
+            this.calendarioNuevaFecha.Location = new System.Drawing.Point(123, 59);
+            this.calendarioNuevaFecha.Name = "calendarioNuevaFecha";
+            this.calendarioNuevaFecha.TabIndex = 8;
             // 
-            // lblTipoEvento
+            // txtHoraI
             // 
-            this.lblTipoEvento.AutoSize = true;
-            this.lblTipoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoEvento.Location = new System.Drawing.Point(16, 339);
-            this.lblTipoEvento.Name = "lblTipoEvento";
-            this.lblTipoEvento.Size = new System.Drawing.Size(91, 18);
-            this.lblTipoEvento.TabIndex = 9;
-            this.lblTipoEvento.Text = "Tipo Evento:";
+            this.txtHoraI.Location = new System.Drawing.Point(187, 238);
+            this.txtHoraI.Mask = "00:00";
+            this.txtHoraI.Name = "txtHoraI";
+            this.txtHoraI.Size = new System.Drawing.Size(37, 20);
+            this.txtHoraI.TabIndex = 10;
+            this.txtHoraI.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // txtHoraF
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(187, 238);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(37, 20);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(187, 290);
-            this.maskedTextBox2.Mask = "00:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(37, 20);
-            this.maskedTextBox2.TabIndex = 11;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
-            // cmbTipoEvento
-            // 
-            this.cmbTipoEvento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoEvento.FormattingEnabled = true;
-            this.cmbTipoEvento.Location = new System.Drawing.Point(187, 335);
-            this.cmbTipoEvento.Name = "cmbTipoEvento";
-            this.cmbTipoEvento.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoEvento.TabIndex = 12;
+            this.txtHoraF.Location = new System.Drawing.Point(187, 290);
+            this.txtHoraF.Mask = "00:00";
+            this.txtHoraF.Name = "txtHoraF";
+            this.txtHoraF.Size = new System.Drawing.Size(37, 20);
+            this.txtHoraF.TabIndex = 11;
+            this.txtHoraF.ValidatingType = typeof(System.DateTime);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(260, 393);
+            this.btnCancelar.Location = new System.Drawing.Point(358, 316);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 14;
@@ -167,28 +148,48 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnModificar
+            // btnModificarFecha
             // 
-            this.btnModificar.Location = new System.Drawing.Point(19, 393);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificarFecha.Location = new System.Drawing.Point(358, 59);
+            this.btnModificarFecha.Name = "btnModificarFecha";
+            this.btnModificarFecha.Size = new System.Drawing.Size(75, 34);
+            this.btnModificarFecha.TabIndex = 13;
+            this.btnModificarFecha.Text = "Modificar Fecha";
+            this.btnModificarFecha.UseVisualStyleBackColor = true;
+            this.btnModificarFecha.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnModifcarHI
+            // 
+            this.btnModifcarHI.Location = new System.Drawing.Point(358, 235);
+            this.btnModifcarHI.Name = "btnModifcarHI";
+            this.btnModifcarHI.Size = new System.Drawing.Size(75, 35);
+            this.btnModifcarHI.TabIndex = 16;
+            this.btnModifcarHI.Text = "Modificar Hora Inicio";
+            this.btnModifcarHI.UseVisualStyleBackColor = true;
+            this.btnModifcarHI.Click += new System.EventHandler(this.btnModifcarHI_Click);
+            // 
+            // btnModificarHF
+            // 
+            this.btnModificarHF.Location = new System.Drawing.Point(358, 276);
+            this.btnModificarHF.Name = "btnModificarHF";
+            this.btnModificarHF.Size = new System.Drawing.Size(75, 34);
+            this.btnModificarHF.TabIndex = 17;
+            this.btnModificarHF.Text = "Modificar Hora Fin";
+            this.btnModificarHF.UseVisualStyleBackColor = true;
+            this.btnModificarHF.Click += new System.EventHandler(this.btnModificarHF_Click);
             // 
             // frmModificarEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 450);
+            this.ClientSize = new System.Drawing.Size(454, 351);
+            this.Controls.Add(this.btnModificarHF);
+            this.Controls.Add(this.btnModifcarHI);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.cmbTipoEvento);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.lblTipoEvento);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.btnModificarFecha);
+            this.Controls.Add(this.txtHoraF);
+            this.Controls.Add(this.txtHoraI);
+            this.Controls.Add(this.calendarioNuevaFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,12 +215,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label lblTipoEvento;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.ComboBox cmbTipoEvento;
+        private System.Windows.Forms.MonthCalendar calendarioNuevaFecha;
+        private System.Windows.Forms.MaskedTextBox txtHoraI;
+        private System.Windows.Forms.MaskedTextBox txtHoraF;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnModificarFecha;
+        private System.Windows.Forms.Button btnModifcarHI;
+        private System.Windows.Forms.Button btnModificarHF;
     }
 }

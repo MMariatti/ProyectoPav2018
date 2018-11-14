@@ -56,7 +56,7 @@
             // 
             // calendarioEvento
             // 
-            this.calendarioEvento.Location = new System.Drawing.Point(68, 36);
+            this.calendarioEvento.Location = new System.Drawing.Point(99, 36);
             this.calendarioEvento.Name = "calendarioEvento";
             this.calendarioEvento.TabIndex = 2;
             // 
@@ -74,7 +74,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(-3, 36);
+            this.lblFecha.Location = new System.Drawing.Point(12, 36);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(59, 18);
             this.lblFecha.TabIndex = 4;
@@ -193,7 +193,7 @@
             // 
             this.lblTipoEvento.AutoSize = true;
             this.lblTipoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoEvento.Location = new System.Drawing.Point(24, 326);
+            this.lblTipoEvento.Location = new System.Drawing.Point(12, 325);
             this.lblTipoEvento.Name = "lblTipoEvento";
             this.lblTipoEvento.Size = new System.Drawing.Size(47, 18);
             this.lblTipoEvento.TabIndex = 18;
@@ -214,7 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(308, 423);
+            this.ClientSize = new System.Drawing.Size(321, 423);
             this.Controls.Add(this.cmbTipoEvento);
             this.Controls.Add(this.lblTipoEvento);
             this.Controls.Add(this.txtHoraF);
