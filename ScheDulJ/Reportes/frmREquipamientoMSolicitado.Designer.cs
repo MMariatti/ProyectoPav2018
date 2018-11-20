@@ -1,6 +1,6 @@
-﻿namespace ScheDulJ.Forms.FormsReportes
+﻿namespace ScheDulJ.Forms
 {
-    partial class FrmItemsMasSolicitados
+    partial class frmREquipamientoMSolicitado
     {
         /// <summary>
         /// Required designer variable.
@@ -40,16 +40,17 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // FrmItemsMasSolicitados
+            // frmREquipamientoMSolicitado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmItemsMasSolicitados";
-            this.Text = "FrmItemsMasSolicitados";
-            this.Load += new System.EventHandler(this.FrmItemsMasSolicitados_Load);
+            this.Name = "frmREquipamientoMSolicitado";
+            this.Text = "frmREquipamientoMSolicitado";
+            this.Load += new System.EventHandler(this.frmREquipamientoMSolicitado_Load);
             this.ResumeLayout(false);
 
         }

@@ -3456,9 +3456,10 @@ SELECT idItem, nombre, descripcion, idTipoItem, costoAlquiler, activo FROM Items
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TOP 5 I.idItem , I.nombre AS Nombre , COUNT(I.idItem) AS Cantidad\r\n FROM D" +
-                "etalleEventos DE JOIN Items I ON(DE.idItem = I.idItem) GROUP BY  I.idItem, I.nom" +
-                "bre ORDER BY Cantidad DESC";
+            this._commandCollection[0].CommandText = "SELECT        TOP (5) I.idItem, I.nombre AS Nombre, COUNT(I.idItem) AS Cantidad\r\n" +
+                "FROM            DetalleEventos AS DE INNER JOIN\r\n                         Items " +
+                "AS I ON DE.idItem = I.idItem\r\nGROUP BY I.idItem, I.nombre\r\nORDER BY Cantidad DES" +
+                "C";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -36,9 +36,16 @@
             this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.eventosTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EventosTableAdapter();
+            this.eventosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.equipamientoMasUtilizadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipamientoMasUtilizadoTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EquipamientoMasUtilizadoTableAdapter();
+            this.eventosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipamientoMasUtilizadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // eventosBindingSource
@@ -60,7 +67,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ReporteEventos";
-            reportDataSource1.Value = this.eventosBindingSource;
+            reportDataSource1.Value = this.eventosBindingSource2;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ScheDulJ.Reportes.REventos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -72,6 +79,25 @@
             // eventosTableAdapter
             // 
             this.eventosTableAdapter.ClearBeforeFill = true;
+            // 
+            // eventosBindingSource1
+            // 
+            this.eventosBindingSource1.DataMember = "Eventos";
+            this.eventosBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
+            // 
+            // equipamientoMasUtilizadoBindingSource
+            // 
+            this.equipamientoMasUtilizadoBindingSource.DataMember = "EquipamientoMasUtilizado";
+            this.equipamientoMasUtilizadoBindingSource.DataSource = this.dataSetScheDulJBindingSource;
+            // 
+            // equipamientoMasUtilizadoTableAdapter
+            // 
+            this.equipamientoMasUtilizadoTableAdapter.ClearBeforeFill = true;
+            // 
+            // eventosBindingSource2
+            // 
+            this.eventosBindingSource2.DataMember = "Eventos";
+            this.eventosBindingSource2.DataSource = this.dataSetScheDulJBindingSource;
             // 
             // frmReporteEventos
             // 
@@ -87,6 +113,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipamientoMasUtilizadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,5 +127,9 @@
         private System.Windows.Forms.BindingSource dataSetScheDulJBindingSource;
         private System.Windows.Forms.BindingSource eventosBindingSource;
         private DataSetScheDulJTableAdapters.EventosTableAdapter eventosTableAdapter;
+        private System.Windows.Forms.BindingSource eventosBindingSource1;
+        private System.Windows.Forms.BindingSource equipamientoMasUtilizadoBindingSource;
+        private DataSetScheDulJTableAdapters.EquipamientoMasUtilizadoTableAdapter equipamientoMasUtilizadoTableAdapter;
+        private System.Windows.Forms.BindingSource eventosBindingSource2;
     }
 }

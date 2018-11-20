@@ -36,9 +36,11 @@
             this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.itemsTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.ItemsTableAdapter();
+            this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // itemsBindingSource
@@ -60,7 +62,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ReporteEquipamiento";
-            reportDataSource1.Value = this.itemsBindingSource;
+            reportDataSource1.Value = this.itemsBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ScheDulJ.Reportes.REquipamiento.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -73,6 +75,11 @@
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemsBindingSource1
+            // 
+            this.itemsBindingSource1.DataMember = "Items";
+            this.itemsBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
             // 
             // frmReporteEquipamiento
             // 
@@ -88,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,5 +107,6 @@
         private System.Windows.Forms.BindingSource dataSetScheDulJBindingSource;
         private System.Windows.Forms.BindingSource itemsBindingSource;
         private DataSetScheDulJTableAdapters.ItemsTableAdapter itemsTableAdapter;
+        private System.Windows.Forms.BindingSource itemsBindingSource1;
     }
 }

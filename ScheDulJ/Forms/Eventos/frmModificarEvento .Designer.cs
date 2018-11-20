@@ -141,6 +141,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(358, 316);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -151,6 +152,7 @@
             // 
             // btnModificarFecha
             // 
+            this.btnModificarFecha.ForeColor = System.Drawing.Color.Black;
             this.btnModificarFecha.Location = new System.Drawing.Point(358, 59);
             this.btnModificarFecha.Name = "btnModificarFecha";
             this.btnModificarFecha.Size = new System.Drawing.Size(75, 34);
@@ -161,6 +163,7 @@
             // 
             // btnModifcarHI
             // 
+            this.btnModifcarHI.ForeColor = System.Drawing.Color.Black;
             this.btnModifcarHI.Location = new System.Drawing.Point(358, 235);
             this.btnModifcarHI.Name = "btnModifcarHI";
             this.btnModifcarHI.Size = new System.Drawing.Size(75, 35);
@@ -171,6 +174,7 @@
             // 
             // btnModificarHF
             // 
+            this.btnModificarHF.ForeColor = System.Drawing.Color.Black;
             this.btnModificarHF.Location = new System.Drawing.Point(358, 276);
             this.btnModificarHF.Name = "btnModificarHF";
             this.btnModificarHF.Size = new System.Drawing.Size(75, 34);
@@ -183,6 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(454, 351);
             this.Controls.Add(this.btnModificarHF);
             this.Controls.Add(this.btnModifcarHI);
@@ -198,6 +203,7 @@
             this.Controls.Add(this.lblIdCargado);
             this.Controls.Add(this.lblNE);
             this.Controls.Add(this.lblId);
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -48,7 +48,6 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="ChartGroup" />
                   <Label />
                 </ChartMember>
               </ChartMembers>
@@ -56,18 +55,27 @@
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label />
+                  <Group Name="Chart1_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Nombre.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Series">
+                <ChartSeries Name="Cantidad">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>="SELECT TOP 5 I.idItem , I.nombre AS Nombre , COUNT(I.idItem) AS Cantidad " +
-                " FROM DetalleEventos DE JOIN Items I ON(DE.idItem = I.idItem) GROUP BY  I.idItem, I.nombre ORDER BY Cantidad DESC"</Y>
+                        <Y>Cantidad</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -395,7 +403,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.88392in</Height>
+        <Height>3.27327in</Height>
         <Style />
       </Body>
       <Width>6.74342in</Width>

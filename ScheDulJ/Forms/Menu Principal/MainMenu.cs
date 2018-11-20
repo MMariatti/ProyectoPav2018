@@ -196,7 +196,7 @@ namespace ScheDulJ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmItemsMasSolicitados itemsMasSolicitados = new FrmItemsMasSolicitados();
+            frmREquipamientoMSolicitado itemsMasSolicitados = new frmREquipamientoMSolicitado();
             itemsMasSolicitados.Show();
         }
     }

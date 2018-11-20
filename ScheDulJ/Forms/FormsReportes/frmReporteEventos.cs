@@ -19,6 +19,8 @@ namespace ScheDulJ.Forms.FormsReportes
 
         private void frmReporteEventos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSetScheDulJ.EquipamientoMasUtilizado' table. You can move, or remove it, as needed.
+            this.equipamientoMasUtilizadoTableAdapter.Fill(this.dataSetScheDulJ.EquipamientoMasUtilizado);
             // TODO: This line of code loads data into the 'dataSetScheDulJ.Eventos' table. You can move, or remove it, as needed.
             this.eventosTableAdapter.Fill(this.dataSetScheDulJ.Eventos);
 

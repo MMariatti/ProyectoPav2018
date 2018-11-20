@@ -73,6 +73,9 @@
     <Compile Include="Classes\ClassTiposEventos.cs" />
     <Compile Include="Classes\ClassUsuarios.cs" />
     <Compile Include="Classes\DataManager.cs" />
+    <Compile Include="DataSetScheDulJ.cs">
+      <DependentUpon>DataSetScheDulJ.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetScheDulJ.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,12 +86,6 @@
     </Compile>
     <Compile Include="Forms\FormsReportes\FrmEventosXMes.Designer.cs">
       <DependentUpon>FrmEventosXMes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormsReportes\FrmItemsMasSolicitados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormsReportes\FrmItemsMasSolicitados.Designer.cs">
-      <DependentUpon>FrmItemsMasSolicitados.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsReportes\frmReporteEquipamiento.cs">
       <SubType>Form</SubType>
@@ -149,6 +146,12 @@
     </Compile>
     <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.Designer.cs">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmREquipamientoMSolicitado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmREquipamientoMSolicitado.Designer.cs">
+      <DependentUpon>frmREquipamientoMSolicitado.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Usuarios\AgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -211,9 +214,6 @@
     <EmbeddedResource Include="Forms\FormsReportes\FrmEventosXMes.resx">
       <DependentUpon>FrmEventosXMes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormsReportes\FrmItemsMasSolicitados.resx">
-      <DependentUpon>FrmItemsMasSolicitados.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsReportes\frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TiposEvento\frmAdministrarTipoEventos.resx">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmREquipamientoMSolicitado.resx">
+      <DependentUpon>frmREquipamientoMSolicitado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usuarios\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
@@ -283,7 +286,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes\RClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReportEventoXmes.rdlc" />
-    <EmbeddedResource Include="Reportes\ReportIemsMasPedido.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportIemsMasPedido.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\REquipamiento.rdlc" />
     <EmbeddedResource Include="Reportes\REventos.rdlc" />
     <None Include="DataSetScheDulJ.xsc">

@@ -32,17 +32,17 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteClientes));
             this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.eventosfkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.ClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EventosTableAdapter();
             this.clientesTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.ClientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,16 +50,6 @@
             // 
             this.clientesBindingSource1.DataMember = "Clientes";
             this.clientesBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
-            // 
-            // dataSetScheDulJBindingSource
-            // 
-            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
-            this.dataSetScheDulJBindingSource.Position = 0;
-            // 
-            // dataSetScheDulJ
-            // 
-            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
-            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -73,11 +63,22 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(634, 561);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // eventosfkBindingSource
             // 
             this.eventosfkBindingSource.DataMember = "eventos_fk";
             this.eventosfkBindingSource.DataSource = this.ClientesBindingSource;
+            // 
+            // dataSetScheDulJBindingSource
+            // 
+            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
+            this.dataSetScheDulJBindingSource.Position = 0;
+            // 
+            // dataSetScheDulJ
+            // 
+            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
+            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ClientesBindingSource
             // 
@@ -104,9 +105,9 @@
             this.Text = "Reporte Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosfkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
