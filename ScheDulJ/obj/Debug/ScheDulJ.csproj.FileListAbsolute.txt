@@ -70,7 +70,6 @@ C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.exe
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.pdb
 C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Eventos.frmModificarEvento.resources
-C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.Estadisticas.frmEstadisticas.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.Winforms.dll
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
@@ -161,3 +160,4 @@ C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FormsReportes.frmReporteEquipamiento.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FormsReportes.FrmEventosXMes.resources
 C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.frmREquipamientoMSolicitado.resources
+C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\obj\Debug\ScheDulJ.Forms.FormsReportes.frmReporteTipoEventos.resources

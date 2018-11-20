@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Reporting.WinForms; 
+using Microsoft.Reporting.WinForms;
+using ScheDulJ.DataSetScheDulJTableAdapters;
 
 namespace ScheDulJ.Forms
 {
@@ -20,10 +21,15 @@ namespace ScheDulJ.Forms
 
         private void frmREquipamientoMSolicitado_Load(object sender, EventArgs e)
         {
-           
-            reportViewer1.LocalReport.DataSources.Clear();
+            var myDataTable = new DataSetScheDulJ.EquipamientoMasUtilizadoDataTable();
+            var myTableAdapter = new EquipamientoMasUtilizadoTableAdapter();
+            myTableAdapter.Fill(myDataTable);
+            var rds = new ReportDataSource("EquipamientoMasSolicitado", myDataTable as DataTable);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
+
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

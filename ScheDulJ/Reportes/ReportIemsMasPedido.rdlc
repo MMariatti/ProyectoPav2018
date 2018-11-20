@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="EquipamientoMasSolicitado">
       <Query>
         <DataSourceName>DataSetScheDulJ</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -32,7 +32,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetScheDulJ</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\User\Documents\GitHub\ProyectoPav2018\ScheDulJ\DataSetScheDulJ.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\DataSetScheDulJ.xsd</rd:SchemaPath>
         <rd:TableName>EquipamientoMasUtilizado</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -48,6 +48,7 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
+                  <Group Name="ChartGroup" />
                   <Label />
                 </ChartMember>
               </ChartMembers>
@@ -75,7 +76,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>Cantidad</Y>
+                        <Y>=Sum(Fields!Cantidad.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -359,7 +360,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Título del gráfico</Caption>
+                <Caption>Equipamiento mas Solicitado</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -380,7 +381,7 @@
               </Style>
             </ChartBorderSkin>
             <ChartNoDataMessage Name="NoDataMessage">
-              <Caption>Sin datos disponibles</Caption>
+              <Caption>No Data Available</Caption>
               <Style>
                 <BackgroundGradientType>None</BackgroundGradientType>
                 <FontWeight>Bold</FontWeight>
@@ -388,11 +389,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>0.81703cm</Top>
-            <Left>0.68474cm</Left>
-            <Height>5.52917cm</Height>
-            <Width>15.01479cm</Width>
+            <DataSetName>EquipamientoMasSolicitado</DataSetName>
+            <Top>0.17639cm</Top>
+            <Left>1.84891cm</Left>
+            <Height>7.11667cm</Height>
+            <Width>13.16208cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>

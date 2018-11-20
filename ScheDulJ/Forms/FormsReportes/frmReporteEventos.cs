@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using Microsoft.Reporting.WinForms; 
-
+using Microsoft.Reporting.WinForms;
+using ScheDulJ.DataSetScheDulJTableAdapters; 
 
 namespace ScheDulJ.Forms.FormsReportes
 {
@@ -23,21 +23,25 @@ namespace ScheDulJ.Forms.FormsReportes
 
         private void frmReporteEventos_Load(object sender, EventArgs e)
         {
-     
+            
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            
-            string sql = "SELECT Eventos.* FROM Eventos WHERE YEAR(fecha) =" + Convert.ToInt32(txtAño.Text); 
-            DataSet ds = DBHelper.generarDataSet(sql);
-            if (ds.Tables[0].Rows.Count > 0)
+            if (txtAño.Text != "")
             {
-                ReportDataSource rds = new ReportDataSource("dsEventos", ds.Tables[0]);
+                var myDataTable = new DataSetScheDulJ.EventosDataTable();
+                var myTableAdapter = new EventosTableAdapter();
+                myTableAdapter.Fill(myDataTable, Convert.ToInt32(txtAño.Text));
+                var rds = new ReportDataSource("ReporteEventos", myDataTable as DataTable);
+
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(rds);
-                reportViewer1.LocalReport.Refresh();
                 reportViewer1.RefreshReport();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.None); 
             }
         }
 

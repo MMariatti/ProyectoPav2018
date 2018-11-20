@@ -22,8 +22,7 @@ namespace ScheDulJ.Forms
             // TODO: This line of code loads data into the 'dataSetScheDulJ.Clientes' table. You can move, or remove it, as needed.
             this.clientesTableAdapter.Fill(this.dataSetScheDulJ.Clientes);
             // TODO: This line of code loads data into the 'dataSetScheDulJ.Eventos' table. You can move, or remove it, as needed.
-            this.eventosTableAdapter.Fill(this.dataSetScheDulJ.Eventos);
-
+         
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();

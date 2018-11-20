@@ -123,12 +123,6 @@
     <Compile Include="Forms\Equipamiento\frmEquipoEvento.Designer.cs">
       <DependentUpon>frmEquipoEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Estadisticas\Estadisticas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Estadisticas\Estadisticas.Designer.cs">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Eventos\frmAgregarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,16 +135,22 @@
     <Compile Include="Forms\Eventos\frmModificarEvento .Designer.cs">
       <DependentUpon>frmModificarEvento .cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteTipoEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsReportes\frmReporteTipoEventos.Designer.cs">
+      <DependentUpon>frmReporteTipoEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\TiposEvento\frmAdministrarTipoEventos.Designer.cs">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmREquipamientoMSolicitado.cs">
+    <Compile Include="Forms\FormsReportes\frmREquipamientoMSolicitado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmREquipamientoMSolicitado.Designer.cs">
+    <Compile Include="Forms\FormsReportes\frmREquipamientoMSolicitado.Designer.cs">
       <DependentUpon>frmREquipamientoMSolicitado.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Usuarios\AgregarUsuario.cs">
@@ -226,9 +226,6 @@
     <EmbeddedResource Include="Forms\Equipamiento\frmEquipoEvento.resx">
       <DependentUpon>frmEquipoEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Estadisticas\Estadisticas.resx">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eventos\frmAgregarEvento.resx">
       <DependentUpon>frmAgregarEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,10 +238,13 @@
     <EmbeddedResource Include="Forms\FormsReportes\frmReporteEventos.resx">
       <DependentUpon>frmReporteEventos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsReportes\frmReporteTipoEventos.resx">
+      <DependentUpon>frmReporteTipoEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TiposEvento\frmAdministrarTipoEventos.resx">
       <DependentUpon>frmAdministrarTipoEventos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmREquipamientoMSolicitado.resx">
+    <EmbeddedResource Include="Forms\FormsReportes\frmREquipamientoMSolicitado.resx">
       <DependentUpon>frmREquipamientoMSolicitado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usuarios\AgregarUsuario.resx">
@@ -291,6 +291,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\REquipamiento.rdlc" />
     <EmbeddedResource Include="Reportes\REventos.rdlc" />
+    <EmbeddedResource Include="Reportes\RTipoEventos.rdlc" />
     <None Include="DataSetScheDulJ.xsc">
       <DependentUpon>DataSetScheDulJ.xsd</DependentUpon>
     </None>

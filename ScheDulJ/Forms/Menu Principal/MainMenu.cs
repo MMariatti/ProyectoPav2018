@@ -11,7 +11,6 @@ using ScheDulJ.Forms;
 using ScheDulJ.Forms.Eventos;
 using ScheDulJ.Classes;
 using ScheDulJ.Forms.Equipamiento;
-using ScheDulJ.Forms.Estadisticas;
 using ScheDulJ.Forms.FormsReportes;
 
 namespace ScheDulJ
@@ -171,8 +170,8 @@ namespace ScheDulJ
 
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
-            frmEstadisticas estadisticas = new frmEstadisticas();
-            estadisticas.Show(); 
+            frmReporteTipoEventos reporte = new frmReporteTipoEventos();
+            reporte.Show(); 
         }
 
         private void btnReporteEventos_Click(object sender, EventArgs e)

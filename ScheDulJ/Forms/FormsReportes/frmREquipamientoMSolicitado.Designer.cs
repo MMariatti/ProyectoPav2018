@@ -49,7 +49,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmREquipamientoMSolicitado";
-            this.Text = "frmREquipamientoMSolicitado";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Equipamiento mas Solicitado";
             this.Load += new System.EventHandler(this.frmREquipamientoMSolicitado_Load);
             this.ResumeLayout(false);
 

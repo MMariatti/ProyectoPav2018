@@ -50,6 +50,7 @@
             this.lblEventos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnReporteEventos = new System.Windows.Forms.Button();
             this.btnRefrescarE = new System.Windows.Forms.Button();
             this.btnTipoEvento = new System.Windows.Forms.Button();
@@ -61,14 +62,13 @@
             this.btnAgregarEquipo = new System.Windows.Forms.Button();
             this.btnCargarEquipamiento = new System.Windows.Forms.Button();
             this.panelEquipamiento = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnReporteEquipamiento = new System.Windows.Forms.Button();
             this.panelAdministracion = new System.Windows.Forms.Panel();
             this.lblAdministracion = new System.Windows.Forms.Label();
             this.chartEventos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTipoEvento = new System.Windows.Forms.Label();
             this.btnEstadisticas = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEventos)).BeginInit();
             this.panelEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEquipamiento)).BeginInit();
@@ -253,6 +253,16 @@
             this.panelEventos.Size = new System.Drawing.Size(760, 285);
             this.panelEventos.TabIndex = 8;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(491, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Estadistica Eventos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // btnReporteEventos
             // 
             this.btnReporteEventos.Location = new System.Drawing.Point(606, 5);
@@ -370,11 +380,21 @@
             this.panelEquipamiento.Size = new System.Drawing.Size(360, 249);
             this.panelEquipamiento.TabIndex = 9;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(136, 194);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 38);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Equipo más solicitado";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // btnReporteEquipamiento
             // 
-            this.btnReporteEquipamiento.Location = new System.Drawing.Point(136, 194);
+            this.btnReporteEquipamiento.Location = new System.Drawing.Point(242, 194);
             this.btnReporteEquipamiento.Name = "btnReporteEquipamiento";
-            this.btnReporteEquipamiento.Size = new System.Drawing.Size(97, 23);
+            this.btnReporteEquipamiento.Size = new System.Drawing.Size(92, 23);
             this.btnReporteEquipamiento.TabIndex = 10;
             this.btnReporteEquipamiento.Text = "Reporte Equipo";
             this.btnReporteEquipamiento.UseVisualStyleBackColor = true;
@@ -453,29 +473,9 @@
             this.btnEstadisticas.Name = "btnEstadisticas";
             this.btnEstadisticas.Size = new System.Drawing.Size(106, 23);
             this.btnEstadisticas.TabIndex = 9;
-            this.btnEstadisticas.Text = "Mas Estadisticas";
+            this.btnEstadisticas.Text = "Generar Reporte";
             this.btnEstadisticas.UseVisualStyleBackColor = true;
             this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(369, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 38);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Reporte de Eventos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(243, 194);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 38);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Equipo más solicitado";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FrmMainMenu
             // 

@@ -28,37 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteEventos));
-            this.eventosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.eventosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.eventosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.equipamientoMasUtilizadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnGenerar = new System.Windows.Forms.Button();
             this.txtAño = new System.Windows.Forms.TextBox();
             this.lblAño = new System.Windows.Forms.Label();
-            this.dataSetScheDulJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetScheDulJ = new ScheDulJ.DataSetScheDulJ();
             this.eventosTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EventosTableAdapter();
-            this.equipamientoMasUtilizadoTableAdapter = new ScheDulJ.DataSetScheDulJTableAdapters.EquipamientoMasUtilizadoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipamientoMasUtilizadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).BeginInit();
             this.SuspendLayout();
             // 
-            // eventosBindingSource2
+            // dataSetScheDulJ
             // 
-            this.eventosBindingSource2.DataMember = "Eventos";
-            this.eventosBindingSource2.DataSource = this.dataSetScheDulJBindingSource;
-            // 
-            // eventosBindingSource
-            // 
-            this.eventosBindingSource.DataMember = "Eventos";
-            this.eventosBindingSource.DataSource = this.dataSetScheDulJBindingSource;
+            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
+            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -68,16 +51,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(634, 520);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // eventosBindingSource1
-            // 
-            this.eventosBindingSource1.DataMember = "Eventos";
-            this.eventosBindingSource1.DataSource = this.dataSetScheDulJBindingSource;
-            // 
-            // equipamientoMasUtilizadoBindingSource
-            // 
-            this.equipamientoMasUtilizadoBindingSource.DataMember = "EquipamientoMasUtilizado";
-            this.equipamientoMasUtilizadoBindingSource.DataSource = this.dataSetScheDulJBindingSource;
             // 
             // btnGenerar
             // 
@@ -106,23 +79,9 @@
             this.lblAño.TabIndex = 3;
             this.lblAño.Text = "Año*:";
             // 
-            // dataSetScheDulJBindingSource
-            // 
-            this.dataSetScheDulJBindingSource.DataSource = this.dataSetScheDulJ;
-            this.dataSetScheDulJBindingSource.Position = 0;
-            // 
-            // dataSetScheDulJ
-            // 
-            this.dataSetScheDulJ.DataSetName = "DataSetScheDulJ";
-            this.dataSetScheDulJ.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // eventosTableAdapter
             // 
             this.eventosTableAdapter.ClearBeforeFill = true;
-            // 
-            // equipamientoMasUtilizadoTableAdapter
-            // 
-            this.equipamientoMasUtilizadoTableAdapter.ClearBeforeFill = true;
             // 
             // frmReporteEventos
             // 
@@ -138,11 +97,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Eventos";
             this.Load += new System.EventHandler(this.frmReporteEventos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipamientoMasUtilizadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetScheDulJ)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,13 +107,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private DataSetScheDulJ dataSetScheDulJ;
-        private System.Windows.Forms.BindingSource dataSetScheDulJBindingSource;
-        private System.Windows.Forms.BindingSource eventosBindingSource;
         private DataSetScheDulJTableAdapters.EventosTableAdapter eventosTableAdapter;
-        private System.Windows.Forms.BindingSource eventosBindingSource1;
-        private System.Windows.Forms.BindingSource equipamientoMasUtilizadoBindingSource;
-        private DataSetScheDulJTableAdapters.EquipamientoMasUtilizadoTableAdapter equipamientoMasUtilizadoTableAdapter;
-        private System.Windows.Forms.BindingSource eventosBindingSource2;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Label lblAño;

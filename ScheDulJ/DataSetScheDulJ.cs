@@ -10,9 +10,12 @@
     }
 }
 
-namespace ScheDulJ.DataSetScheDulJTableAdapters {
-    
-    
+namespace ScheDulJ.DataSetScheDulJTableAdapters
+{
+    partial class EventosTableAdapter
+    {
+    }
+
     public partial class EquipamientoMasUtilizadoTableAdapter {
     }
 }

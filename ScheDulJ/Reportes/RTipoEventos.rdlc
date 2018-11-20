@@ -7,18 +7,18 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>f8e731c1-10c7-4ee4-a0e8-0c8d2607cae7</rd:DataSourceID>
+      <rd:DataSourceID>c2b88bdc-c5c3-4156-a3f1-e7aec85743e7</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="EventosXMes">
+    <DataSet Name="TiposEventos">
       <Query>
         <DataSourceName>DataSetScheDulJ</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Mes">
-          <DataField>Mes</DataField>
+        <Field Name="TipoEvento">
+          <DataField>TipoEvento</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Cantidad">
@@ -29,10 +29,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetScheDulJ</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Francisco\Documents\GitHub\ProyectoPav2018\ScheDulJ\DataSetScheDulJ.xsd</rd:SchemaPath>
-        <rd:TableName>EventosXMes</rd:TableName>
+        <rd:TableName>TiposEventos</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>EventosXMesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>TiposEventosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -40,38 +40,29 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Chart Name="Chart6">
+          <Chart Name="Chart1">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart6_CategoryGroup">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!Mes.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!Mes.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
-                  <Label>=Fields!Mes.Value</Label>
+                  <Group Name="ChartGroup" />
+                  <Label />
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart6_SeriesGroup">
+                  <Group Name="Chart1_SeriesGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Mes.Value</GroupExpression>
+                      <GroupExpression>=Fields!TipoEvento.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Mes.Value</Value>
+                      <Value>=Fields!TipoEvento.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!Mes.Value</Label>
+                  <Label>=Fields!TipoEvento.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -93,6 +84,7 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
+                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -244,7 +236,6 @@
                         <Color>#5c5c5c</Color>
                       </Style>
                     </ChartAxisTitle>
-                    <IntervalType>Number</IntervalType>
                     <ChartMajorGridLines>
                       <Style>
                         <Border>
@@ -351,7 +342,6 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
-                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -366,7 +356,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Eventos por Mes en el año</Caption>
+                <Caption>Tipos de Eventos mas realizados</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -395,11 +385,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>EventosXMes</DataSetName>
-            <Top>1.07849cm</Top>
-            <Left>0.57891cm</Left>
-            <Height>9.86329cm</Height>
-            <Width>18.38259cm</Width>
+            <DataSetName>TiposEventos</DataSetName>
+            <Top>0.13069in</Top>
+            <Left>0.34993in</Left>
+            <Height>2.56597in</Height>
+            <Width>6.02382in</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -410,62 +400,16 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.37723in</Height>
+        <Height>2.73833in</Height>
         <Style />
       </Body>
-      <Width>7.63802in</Width>
+      <Width>6.56125in</Width>
       <Page>
         <PageHeader>
-          <Height>2.54cm</Height>
+          <Height>1in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>djplayingrecords</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>0.55245cm</Top>
-              <Left>0.57891cm</Left>
-              <Height>1.5cm</Height>
-              <Width>1.5cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Eventos por mes</Value>
-                      <Style>
-                        <FontSize>20pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.00858cm</Top>
-              <Left>6.63787cm</Left>
-              <Height>1.04387cm</Height>
-              <Width>5.62208cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="ExecutionTime">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -481,11 +425,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.55245cm</Top>
-              <Left>15.92412cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>2</ZIndex>
+              <Top>0.13417in</Top>
+              <Left>5.37375in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -496,6 +439,56 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Tipos de Evento Mas Realizados</Value>
+                      <Style>
+                        <FontSize>20pt</FontSize>
+                        <TextDecoration>Underline</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox3</rd:DefaultName>
+              <Top>0.13417in</Top>
+              <Left>1.97792in</Left>
+              <Height>0.66667in</Height>
+              <Width>2.84375in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Image Name="Image1">
+              <Source>Embedded</Source>
+              <Value>djplayingrecords</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.52cm</Top>
+              <Left>0.88883cm</Left>
+              <Height>1.5cm</Height>
+              <Width>1.5cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
           </ReportItems>
           <Style>
             <Border>
@@ -504,7 +497,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.54cm</Height>
+          <Height>1in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -523,10 +516,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>1.00604cm</Top>
-              <Left>15.92412cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
+              <Top>0.49875in</Top>
+              <Left>5.37375in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -544,13 +537,10 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>29.7cm</PageHeight>
-        <PageWidth>21cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
-        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -568,6 +558,6 @@
 R5uUjZO7QM7uKoqPa3Clu3XqcJWM3wXBgJrJzaythERwxlZp1fHv3vLPVpqJ+9GF3m+Da8Cd8Yr9yf243p8JAofMd5stPosjR81UxJbpnbIeX6hWwjL2l4D/0iJtSlvl66jBFPqwdy1IBlIJsYxGDeaaY0SvrIMOOFtsx78B1BEchnTW4eIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTEtMTNUMjA6MTk6MDQrMDE6MDBP186xAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTExLTEzVDIwOjE5OjA0KzAxOjAwPop2DQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>fa348c4a-6375-440a-991b-1f74084af467</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>7326488c-20af-44bb-870b-94653d5383b3</rd:ReportID>
 </Report>
