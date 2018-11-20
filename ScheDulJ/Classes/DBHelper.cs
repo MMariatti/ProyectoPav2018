@@ -114,7 +114,21 @@ namespace ScheDulJ
             return rtdo;
         }
 
+        public static DataSet generarDataSet(string sql)
+        {
+            SqlConnection conn = new SqlConnection(cadenaConexion);
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
 
+            conn.Open();
+            da.Fill(ds);
+            conn.Close();
+
+            return ds;
+        }
 
 
 

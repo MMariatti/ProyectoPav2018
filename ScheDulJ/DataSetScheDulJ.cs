@@ -4,6 +4,9 @@
 
     partial class DataSetScheDulJ
     {
+        partial class ItemsDataTable
+        {
+        }
     }
 }
 
